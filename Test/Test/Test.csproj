@@ -66,46 +66,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cash Payment.cs">
+    <Compile Include="Accounts\Cash Payment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cash Payment.Designer.cs">
+    <Compile Include="Accounts\Cash Payment.Designer.cs">
       <DependentUpon>Cash Payment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cash Receipt.cs">
+    <Compile Include="Accounts\Cash Receipt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cash Receipt.Designer.cs">
+    <Compile Include="Accounts\Cash Receipt.Designer.cs">
       <DependentUpon>Cash Receipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Contra Voucher.cs">
+    <Compile Include="Accounts\Contra Voucher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Contra Voucher.Designer.cs">
+    <Compile Include="Accounts\Contra Voucher.Designer.cs">
       <DependentUpon>Contra Voucher.cs</DependentUpon>
     </Compile>
-    <Compile Include="Create UM.cs">
+    <Compile Include="Inventory\Create UM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Create UM.Designer.cs">
+    <Compile Include="Inventory\Create UM.Designer.cs">
       <DependentUpon>Create UM.cs</DependentUpon>
     </Compile>
-    <Compile Include="Credit Note.cs">
+    <Compile Include="Accounts\Credit Note.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Credit Note.Designer.cs">
+    <Compile Include="Accounts\Credit Note.Designer.cs">
       <DependentUpon>Credit Note.cs</DependentUpon>
     </Compile>
-    <Compile Include="Debit Note.cs">
+    <Compile Include="Accounts\Debit Note.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Debit Note.Designer.cs">
+    <Compile Include="Accounts\Debit Note.Designer.cs">
       <DependentUpon>Debit Note.cs</DependentUpon>
     </Compile>
-    <Compile Include="Group Master.cs">
+    <Compile Include="Accounts\Group Master.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Group Master.Designer.cs">
+    <Compile Include="Accounts\Group Master.Designer.cs">
       <DependentUpon>Group Master.cs</DependentUpon>
     </Compile>
     <Compile Include="Hr\Attendance.cs">
@@ -156,16 +156,16 @@
     <Compile Include="Hr\Payroll.Designer.cs">
       <DependentUpon>Payroll.cs</DependentUpon>
     </Compile>
-    <Compile Include="Journal Voucher.cs">
+    <Compile Include="Accounts\Journal Voucher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Journal Voucher.Designer.cs">
+    <Compile Include="Accounts\Journal Voucher.Designer.cs">
       <DependentUpon>Journal Voucher.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ledger List.cs">
+    <Compile Include="Accounts\Ledger List.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ledger List.Designer.cs">
+    <Compile Include="Accounts\Ledger List.Designer.cs">
       <DependentUpon>Ledger List.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -174,28 +174,28 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="New Group.cs">
+    <Compile Include="Accounts\New Group.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="New Group.Designer.cs">
+    <Compile Include="Accounts\New Group.Designer.cs">
       <DependentUpon>New Group.cs</DependentUpon>
     </Compile>
-    <Compile Include="New Ledger.cs">
+    <Compile Include="Accounts\New Ledger.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="New Ledger.Designer.cs">
+    <Compile Include="Accounts\New Ledger.Designer.cs">
       <DependentUpon>New Ledger.cs</DependentUpon>
     </Compile>
-    <Compile Include="Payment Voucher1.cs">
+    <Compile Include="Accounts\Payment Voucher1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Payment Voucher1.Designer.cs">
+    <Compile Include="Accounts\Payment Voucher1.Designer.cs">
       <DependentUpon>Payment Voucher1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Receipt Voucher.cs">
+    <Compile Include="Accounts\Receipt Voucher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Receipt Voucher.Designer.cs">
+    <Compile Include="Accounts\Receipt Voucher.Designer.cs">
       <DependentUpon>Receipt Voucher.cs</DependentUpon>
     </Compile>
     <Compile Include="Sale\New Warranty Claim.cs">
@@ -416,25 +416,25 @@
     <Compile Include="Sale\Warranty Claim List.Designer.cs">
       <DependentUpon>Warranty Claim List.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transactions.cs">
+    <Compile Include="Accounts\Transactions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transactions.Designer.cs">
+    <Compile Include="Accounts\Transactions.Designer.cs">
       <DependentUpon>Transactions.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Cash Payment.resx">
+    <EmbeddedResource Include="Accounts\Cash Payment.resx">
       <DependentUpon>Cash Payment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cash Receipt.resx">
+    <EmbeddedResource Include="Accounts\Cash Receipt.resx">
       <DependentUpon>Cash Receipt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Contra Voucher.resx">
+    <EmbeddedResource Include="Accounts\Contra Voucher.resx">
       <DependentUpon>Contra Voucher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Create UM.resx">
+    <EmbeddedResource Include="Inventory\Create UM.resx">
       <DependentUpon>Create UM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Group Master.resx">
+    <EmbeddedResource Include="Accounts\Group Master.resx">
       <DependentUpon>Group Master.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hr\Attendance.resx">
@@ -461,25 +461,25 @@
     <EmbeddedResource Include="Hr\Payroll.resx">
       <DependentUpon>Payroll.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Journal Voucher.resx">
+    <EmbeddedResource Include="Accounts\Journal Voucher.resx">
       <DependentUpon>Journal Voucher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ledger List.resx">
+    <EmbeddedResource Include="Accounts\Ledger List.resx">
       <DependentUpon>Ledger List.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="New Group.resx">
+    <EmbeddedResource Include="Accounts\New Group.resx">
       <DependentUpon>New Group.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="New Ledger.resx">
+    <EmbeddedResource Include="Accounts\New Ledger.resx">
       <DependentUpon>New Ledger.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Payment Voucher1.resx">
+    <EmbeddedResource Include="Accounts\Payment Voucher1.resx">
       <DependentUpon>Payment Voucher1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Receipt Voucher.resx">
+    <EmbeddedResource Include="Accounts\Receipt Voucher.resx">
       <DependentUpon>Receipt Voucher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sale\New Warranty Claim.resx">
@@ -601,7 +601,7 @@
     <EmbeddedResource Include="Sale\Warranty Claim List.resx">
       <DependentUpon>Warranty Claim List.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transactions.resx">
+    <EmbeddedResource Include="Accounts\Transactions.resx">
       <DependentUpon>Transactions.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
@@ -616,7 +616,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Accounts\" />
     <Folder Include="Report\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
