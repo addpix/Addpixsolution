@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76322C93-0A0C-4CA7-B433-4A89EFC6D6F8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v15.1" />
+    <Reference Include="DevExpress.Data.v15.1" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1" />
+    <Reference Include="DevExpress.Sparkline.v15.1.Core" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.1" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cash Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cash Payment.Designer.cs">
+      <DependentUpon>Cash Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cash Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cash Receipt.Designer.cs">
+      <DependentUpon>Cash Receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contra Voucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contra Voucher.Designer.cs">
+      <DependentUpon>Contra Voucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Credit Note.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Credit Note.Designer.cs">
+      <DependentUpon>Credit Note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debit Note.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debit Note.Designer.cs">
+      <DependentUpon>Debit Note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Group Master.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Group Master.Designer.cs">
+      <DependentUpon>Group Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\Attendance.Designer.cs">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\Attendence List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\Attendence List.Designer.cs">
+      <DependentUpon>Attendence List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commen Form\Add Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commen Form\Add Items.Designer.cs">
+      <DependentUpon>Add Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\Create Payroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\Create Payroll.Designer.cs">
+      <DependentUpon>Create Payroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\Employee List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\Employee List.Designer.cs">
+      <DependentUpon>Employee List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\New Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\New Employee.Designer.cs">
+      <DependentUpon>New Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\Payrol List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\Payrol List.Designer.cs">
+      <DependentUpon>Payrol List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\Payroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\Payroll.Designer.cs">
+      <DependentUpon>Payroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Journal Voucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Journal Voucher.Designer.cs">
+      <DependentUpon>Journal Voucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ledger List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ledger List.Designer.cs">
+      <DependentUpon>Ledger List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New Group.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New Group.Designer.cs">
+      <DependentUpon>New Group.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New Ledger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New Ledger.Designer.cs">
+      <DependentUpon>New Ledger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Voucher1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment Voucher1.Designer.cs">
+      <DependentUpon>Payment Voucher1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receipt Voucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receipt Voucher.Designer.cs">
+      <DependentUpon>Receipt Voucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\New Warranty Claim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\New Warranty Claim.Designer.cs">
+      <DependentUpon>New Warranty Claim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Damage List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\Damage List.Designer.cs">
+      <DependentUpon>Damage List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Lost List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\Lost List.Designer.cs">
+      <DependentUpon>Lost List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Customer List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Customer List.Designer.cs">
+      <DependentUpon>Customer List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commen Form\ItemTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commen Form\ItemTransfer.Designer.cs">
+      <DependentUpon>ItemTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Productname.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Productname.Designer.cs">
+      <DependentUpon>Productname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Newbrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Newbrand.Designer.cs">
+      <DependentUpon>Newbrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\New Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\New Category.Designer.cs">
+      <DependentUpon>New Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\New Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\New Product.Designer.cs">
+      <DependentUpon>New Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Meterial Receipt Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Meterial Receipt Report.Designer.cs">
+      <DependentUpon>Meterial Receipt Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\MRR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\MRR.Designer.cs">
+      <DependentUpon>MRR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\New Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\New Supplier.Designer.cs">
+      <DependentUpon>New Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\New Damage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\New Damage.Designer.cs">
+      <DependentUpon>New Damage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\New Lost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\New Lost.Designer.cs">
+      <DependentUpon>New Lost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\New PO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\New PO.Designer.cs">
+      <DependentUpon>New PO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\New RFQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\New RFQ.Designer.cs">
+      <DependentUpon>New RFQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\PR Open.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\PR Open.Designer.cs">
+      <DependentUpon>PR Open.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Commen Form\Requst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commen Form\Requst.Designer.cs">
+      <DependentUpon>Requst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Purchase Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\Purchase Order.Designer.cs">
+      <DependentUpon>Purchase Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commen Form\Purchase Requst List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commen Form\Purchase Requst List.Designer.cs">
+      <DependentUpon>Purchase Requst List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commen Form\Purchase Requst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commen Form\Purchase Requst.Designer.cs">
+      <DependentUpon>Purchase Requst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\RFQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\RFQ.Designer.cs">
+      <DependentUpon>RFQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\Sales Return.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\Sales Return.Designer.cs">
+      <DependentUpon>Sales Return.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\Sales History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\Sales History.Designer.cs">
+      <DependentUpon>Sales History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\Sales Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\Sales Invoice.Designer.cs">
+      <DependentUpon>Sales Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\Sales Quatation List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\Sales Quatation List.Designer.cs">
+      <DependentUpon>Sales Quatation List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\Sales Quotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\Sales Quotation.Designer.cs">
+      <DependentUpon>Sales Quotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen1.Designer.cs">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commen Form\Stock History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commen Form\Stock History.Designer.cs">
+      <DependentUpon>Stock History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Supplier List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Supplier List.Designer.cs">
+      <DependentUpon>Supplier List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\Working Time.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\Working Time.Designer.cs">
+      <DependentUpon>Working Time.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\Warranty Claim List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\Warranty Claim List.Designer.cs">
+      <DependentUpon>Warranty Claim List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transactions.Designer.cs">
+      <DependentUpon>Transactions.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Cash Payment.resx">
+      <DependentUpon>Cash Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cash Receipt.resx">
+      <DependentUpon>Cash Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contra Voucher.resx">
+      <DependentUpon>Contra Voucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Group Master.resx">
+      <DependentUpon>Group Master.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Attendance.resx">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Attendence List.resx">
+      <DependentUpon>Attendence List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commen Form\Add Items.resx">
+      <DependentUpon>Add Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Create Payroll.resx">
+      <DependentUpon>Create Payroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Employee List.resx">
+      <DependentUpon>Employee List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hr\New Employee.resx">
+      <DependentUpon>New Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Payrol List.resx">
+      <DependentUpon>Payrol List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Payroll.resx">
+      <DependentUpon>Payroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Journal Voucher.resx">
+      <DependentUpon>Journal Voucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ledger List.resx">
+      <DependentUpon>Ledger List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New Group.resx">
+      <DependentUpon>New Group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New Ledger.resx">
+      <DependentUpon>New Ledger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment Voucher1.resx">
+      <DependentUpon>Payment Voucher1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receipt Voucher.resx">
+      <DependentUpon>Receipt Voucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\New Warranty Claim.resx">
+      <DependentUpon>New Warranty Claim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\Damage List.resx">
+      <DependentUpon>Damage List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\Lost List.resx">
+      <DependentUpon>Lost List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Customer List.resx">
+      <DependentUpon>Customer List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commen Form\ItemTransfer.resx">
+      <DependentUpon>ItemTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Productname.resx">
+      <DependentUpon>Productname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Newbrand.resx">
+      <DependentUpon>Newbrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\New Category.resx">
+      <DependentUpon>New Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\New Product.resx">
+      <DependentUpon>New Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Meterial Receipt Report.resx">
+      <DependentUpon>Meterial Receipt Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\MRR.resx">
+      <DependentUpon>MRR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\New Supplier.resx">
+      <DependentUpon>New Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\New Damage.resx">
+      <DependentUpon>New Damage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\New Lost.resx">
+      <DependentUpon>New Lost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\New PO.resx">
+      <DependentUpon>New PO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\New RFQ.resx">
+      <DependentUpon>New RFQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\PR Open.resx">
+      <DependentUpon>PR Open.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Commen Form\Requst.resx">
+      <DependentUpon>Requst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\Purchase Order.resx">
+      <DependentUpon>Purchase Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commen Form\Purchase Requst List.resx">
+      <DependentUpon>Purchase Requst List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commen Form\Purchase Requst.resx">
+      <DependentUpon>Purchase Requst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\RFQ.resx">
+      <DependentUpon>RFQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Sales Return.resx">
+      <DependentUpon>Sales Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Sales History.resx">
+      <DependentUpon>Sales History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Sales Invoice.resx">
+      <DependentUpon>Sales Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Sales Quatation List.resx">
+      <DependentUpon>Sales Quatation List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Sales Quotation.resx">
+      <DependentUpon>Sales Quotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commen Form\Stock History.resx">
+      <DependentUpon>Stock History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Supplier List.resx">
+      <DependentUpon>Supplier List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Working Time.resx">
+      <DependentUpon>Working Time.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Warranty Claim List.resx">
+      <DependentUpon>Warranty Claim List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transactions.resx">
+      <DependentUpon>Transactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Accounts\" />
+    <Folder Include="Report\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
