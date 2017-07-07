@@ -17,5 +17,15 @@ namespace Test
         {
             InitializeComponent();
         }
+
+        private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void New_Category_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
