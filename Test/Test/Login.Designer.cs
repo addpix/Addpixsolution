@@ -207,7 +207,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(103, 22);
             this.simpleButton1.StyleController = this.layoutControl1;
             this.simpleButton1.TabIndex = 7;
-            this.simpleButton1.Text = "Sign in";
+            this.simpleButton1.Text = "Login";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // layoutControlGroup1
