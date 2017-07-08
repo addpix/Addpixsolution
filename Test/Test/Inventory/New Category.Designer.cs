@@ -1,6 +1,6 @@
 namespace Test
 {
-    partial class New_Product
+    partial class New_Category
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@ namespace Test
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(New_Product));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.cmbLocation = new DevExpress.XtraEditors.ComboBoxEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -202,16 +201,16 @@ namespace Test
             this.layoutControl1.Controls.Add(this.txtQRCode);
             this.layoutControl1.Controls.Add(this.txtProduct_code);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 24);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 22);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(900, 490);
+            this.layoutControl1.Size = new System.Drawing.Size(900, 492);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // cmbLocation
             // 
-            this.cmbLocation.Location = new System.Drawing.Point(125, 456);
+            this.cmbLocation.Location = new System.Drawing.Point(125, 458);
             this.cmbLocation.MenuManager = this.barManager1;
             this.cmbLocation.Name = "cmbLocation";
             this.cmbLocation.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -260,9 +259,7 @@ namespace Test
             // barButtonItem2
             // 
             this.barButtonItem2.Caption = "New";
-            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
             this.barButtonItem2.Id = 1;
-            this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
             this.barButtonItem2.Name = "barButtonItem2";
             // 
             // barDockControlTop
@@ -270,7 +267,7 @@ namespace Test
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(900, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(900, 22);
             // 
             // barDockControlBottom
             // 
@@ -283,15 +280,15 @@ namespace Test
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 490);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 22);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 492);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(900, 24);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 490);
+            this.barDockControlRight.Location = new System.Drawing.Point(900, 22);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 492);
             // 
             // labelControl7
             // 
@@ -309,7 +306,6 @@ namespace Test
             this.btnNew_category.StyleController = this.layoutControl1;
             this.btnNew_category.TabIndex = 32;
             this.btnNew_category.Text = "New Category";
-            this.btnNew_category.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // btnNew_brand
             // 
@@ -319,7 +315,6 @@ namespace Test
             this.btnNew_brand.StyleController = this.layoutControl1;
             this.btnNew_brand.TabIndex = 31;
             this.btnNew_brand.Text = "New Brand";
-            this.btnNew_brand.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // memWarranty
             // 
@@ -328,7 +323,7 @@ namespace Test
             this.memWarranty.Name = "memWarranty";
             this.memWarranty.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memWarranty.Properties.Appearance.Options.UseFont = true;
-            this.memWarranty.Size = new System.Drawing.Size(763, 104);
+            this.memWarranty.Size = new System.Drawing.Size(763, 106);
             this.memWarranty.StyleController = this.layoutControl1;
             this.memWarranty.TabIndex = 30;
             // 
@@ -660,7 +655,7 @@ namespace Test
             this.layoutControlItem31});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(900, 490);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(900, 492);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -942,7 +937,7 @@ namespace Test
             this.layoutControlItem27.Control = this.memWarranty;
             this.layoutControlItem27.Location = new System.Drawing.Point(0, 336);
             this.layoutControlItem27.Name = "layoutControlItem27";
-            this.layoutControlItem27.Size = new System.Drawing.Size(880, 108);
+            this.layoutControlItem27.Size = new System.Drawing.Size(880, 110);
             this.layoutControlItem27.Text = "Warrenty Details";
             this.layoutControlItem27.TextSize = new System.Drawing.Size(110, 16);
             // 
@@ -978,7 +973,7 @@ namespace Test
             this.layoutControlItem31.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem31.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem31.Control = this.cmbLocation;
-            this.layoutControlItem31.Location = new System.Drawing.Point(0, 444);
+            this.layoutControlItem31.Location = new System.Drawing.Point(0, 446);
             this.layoutControlItem31.Name = "layoutControlItem31";
             this.layoutControlItem31.Size = new System.Drawing.Size(880, 26);
             this.layoutControlItem31.Text = "Location";
@@ -1021,7 +1016,7 @@ namespace Test
             this.barDockControl4.Location = new System.Drawing.Point(900, 0);
             this.barDockControl4.Size = new System.Drawing.Size(0, 514);
             // 
-            // New_Product
+            // New_Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1036,7 +1031,7 @@ namespace Test
             this.Controls.Add(this.barDockControl2);
             this.Controls.Add(this.barDockControl1);
             this.MaximizeBox = false;
-            this.Name = "New_Product";
+            this.Name = "New_Category";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Product";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
