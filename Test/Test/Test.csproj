@@ -84,6 +84,7 @@
     <Compile Include="Accounts\Contra Voucher.Designer.cs">
       <DependentUpon>Contra Voucher.cs</DependentUpon>
     </Compile>
+    <Compile Include="clsNewCategory.cs" />
     <Compile Include="Inventory\Create UM.cs">
       <SubType>Form</SubType>
     </Compile>
