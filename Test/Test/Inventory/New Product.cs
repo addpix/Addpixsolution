@@ -29,5 +29,10 @@ namespace Test
             New_Category a = new New_Category();
             a.ShowDialog();
         }
+
+        private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }
