@@ -9,53 +9,69 @@ namespace Test
 {
     class clsNewCategory
     {
-        public static string cnnString = "Data Source=.\\SQLEXPRESS;Initial Catalog=MYDB;Persist Security Info=True;User ID=erp;Password=;";
-        SqlCommand Comm;
+        public static string ConString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ERP;Persist Security Info=True;User ID=sa;Password=sa;";
+        SqlCommand Cmd;
         SqlConnection Con;
         SqlTransaction Trans;
 
-        public string strOP { get; set; }
-        public string strDocNo { get; set; }
-        public string strDocType { get; set; }
-        public string strBranch { get; set; }
-        public string strCode { get; set; }
+        public string SlNo { get; set; }
+        public string ProdCode { get; set; }
+        public string ItemName { get; set; }
+        public string UnitMeasure { get; set; }
+        public string BrandName { get; set; }
+        public string Category { get; set; }
+        public string TaxCategory { get; set; }
+        public string PurchaseTax { get; set; }
+        public string SalesTax { get; set; }
+        public string PurchaseRate { get; set; }
+        public string OpeningStock { get; set; }
+        public string ReoderQty { get; set; }
+        public string MinQty { get; set; }
+        public string SalesRate1 { get; set; }
+        public string SalesRate2 { get; set; }
+        public string SalesRate3 { get; set; }
+        public string BatchName { get; set; }
+        public string MfgDate { get; set; }
+        public string ExpDate { get; set; }
+        public string WarrantyDetails { get; set; }
+        public string Location { get; set; }
         string Result = "";
     
 
         public void FnConn()
         {
-            Con = new SqlConnection(cnnString);
+            Con = new SqlConnection(ConString);
             Con.Open();
             Trans = Con.BeginTransaction();
         }
        
         public void  fnTransactionData()
         {
-            Comm = new SqlCommand("SP_DEMO", Con, Trans);
-            Comm.CommandType = CommandType.StoredProcedure;
+            Cmd = new SqlCommand("SP_DEMO", Con, Trans);
+            Cmd.CommandType = CommandType.StoredProcedure;
                         
-            Comm.Parameters.AddWithValue("@SLNO", strOP);
-            Comm.Parameters.AddWithValue("@PRODUCT_CODE", strDocNo);
-            Comm.Parameters.AddWithValue("@ITEM_NAME", strDocType);
-            Comm.Parameters.AddWithValue("@UNIT_MEASURE", strBranch);
-            Comm.Parameters.AddWithValue("@BRAND_NAME", strCode);
-            Comm.Parameters.AddWithValue("@CATEGORY", strOP);
-            Comm.Parameters.AddWithValue("@TAX_CATEGORY", strDocNo);
-            Comm.Parameters.AddWithValue("@PURCHASE_TAX", strDocType);
-            Comm.Parameters.AddWithValue("@SALES_TAX", strBranch);
-            Comm.Parameters.AddWithValue("@PURCHASE_RATE", strCode);           
-            Comm.Parameters.AddWithValue("@OPENING_STOCK", strOP);
-            Comm.Parameters.AddWithValue("@REORDER_QTY", strDocNo);
-            Comm.Parameters.AddWithValue("@MIN_QTY", strDocType);
-            Comm.Parameters.AddWithValue("@SALES_RATE1", strBranch);
-            Comm.Parameters.AddWithValue("@SALES_RATE2", strCode);
-            Comm.Parameters.AddWithValue("@SALES_RATE3", strOP);
-            Comm.Parameters.AddWithValue("@BATCH_NAME", strDocNo);
-            Comm.Parameters.AddWithValue("@MFG_DATE", strDocType);
-            Comm.Parameters.AddWithValue("@EXP_DATE", strBranch);
-            Comm.Parameters.AddWithValue("@WARRANTY_DETAILS", strCode);
-            Comm.Parameters.AddWithValue("@LOCATION", strCode);
-            Comm.ExecuteNonQuery();
+            Cmd.Parameters.AddWithValue("@SLNO", SlNo);
+            Cmd.Parameters.AddWithValue("@PRODUCT_CODE", ProdCode);
+            Cmd.Parameters.AddWithValue("@ITEM_NAME", ItemName);
+            Cmd.Parameters.AddWithValue("@UNIT_MEASURE", UnitMeasure);
+            Cmd.Parameters.AddWithValue("@BRAND_NAME", BrandName);
+            Cmd.Parameters.AddWithValue("@CATEGORY", Category);
+            Cmd.Parameters.AddWithValue("@TAX_CATEGORY", TaxCategory);
+            Cmd.Parameters.AddWithValue("@PURCHASE_TAX", PurchaseTax);
+            Cmd.Parameters.AddWithValue("@SALES_TAX", SalesTax);
+            Cmd.Parameters.AddWithValue("@PURCHASE_RATE", PurchaseRate);           
+            Cmd.Parameters.AddWithValue("@OPENING_STOCK", OpeningStock);
+            Cmd.Parameters.AddWithValue("@REORDER_QTY", ReoderQty);
+            Cmd.Parameters.AddWithValue("@MIN_QTY", MinQty);
+            Cmd.Parameters.AddWithValue("@SALES_RATE1", SalesRate1);
+            Cmd.Parameters.AddWithValue("@SALES_RATE2", SalesRate2);
+            Cmd.Parameters.AddWithValue("@SALES_RATE3", SalesRate3);
+            Cmd.Parameters.AddWithValue("@BATCH_NAME", BatchName);
+            Cmd.Parameters.AddWithValue("@MFG_DATE", MfgDate);
+            Cmd.Parameters.AddWithValue("@EXP_DATE", ExpDate);
+            Cmd.Parameters.AddWithValue("@WARRANTY_DETAILS", WarrantyDetails);
+            Cmd.Parameters.AddWithValue("@LOCATION", Location);
+            Cmd.ExecuteNonQuery();
         }
 
         public string FnTrans()
