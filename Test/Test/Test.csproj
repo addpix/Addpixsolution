@@ -199,6 +199,7 @@
     <Compile Include="Accounts\Receipt Voucher.Designer.cs">
       <DependentUpon>Receipt Voucher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sale\Database\WarrantyClameData.cs" />
     <Compile Include="Sale\New Warranty Claim.cs">
       <SubType>Form</SubType>
     </Compile>
