@@ -210,6 +210,7 @@
             this.barButtonItem3.Caption = "New";
             this.barButtonItem3.Id = 2;
             this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barButtonItem4
             // 

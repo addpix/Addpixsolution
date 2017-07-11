@@ -41,11 +41,11 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.claimeNo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.claimeDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.contactPerson = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ConactNo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.status = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -117,37 +117,37 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(889, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(889, 22);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 467);
-            this.barDockControlBottom.Size = new System.Drawing.Size(889, 22);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 466);
+            this.barDockControlBottom.Size = new System.Drawing.Size(889, 23);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 443);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 22);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 444);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(889, 24);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 443);
+            this.barDockControlRight.Location = new System.Drawing.Point(889, 22);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 444);
             // 
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 24);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 22);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(889, 443);
+            this.layoutControl1.Size = new System.Drawing.Size(889, 444);
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -157,7 +157,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(865, 419);
+            this.gridControl1.Size = new System.Drawing.Size(865, 420);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -165,66 +165,71 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5});
+            this.claimeNo,
+            this.claimeDate,
+            this.contactPerson,
+            this.ConactNo,
+            this.status});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn1
+            // claimeNo
             // 
-            this.gridColumn1.Caption = "Claim No";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.AllowMove = false;
-            this.gridColumn1.OptionsColumn.AllowSize = false;
-            this.gridColumn1.OptionsColumn.FixedWidth = true;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.claimeNo.Caption = "Claim No";
+            this.claimeNo.FieldName = "claimNo";
+            this.claimeNo.Name = "claimeNo";
+            this.claimeNo.OptionsColumn.AllowMove = false;
+            this.claimeNo.OptionsColumn.AllowSize = false;
+            this.claimeNo.OptionsColumn.FixedWidth = true;
+            this.claimeNo.Visible = true;
+            this.claimeNo.VisibleIndex = 0;
             // 
-            // gridColumn2
+            // claimeDate
             // 
-            this.gridColumn2.Caption = "Claim Date";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.OptionsColumn.AllowMove = false;
-            this.gridColumn2.OptionsColumn.AllowSize = false;
-            this.gridColumn2.OptionsColumn.FixedWidth = true;
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.claimeDate.Caption = "Claim Date";
+            this.claimeDate.FieldName = "date";
+            this.claimeDate.Name = "claimeDate";
+            this.claimeDate.OptionsColumn.AllowMove = false;
+            this.claimeDate.OptionsColumn.AllowSize = false;
+            this.claimeDate.OptionsColumn.FixedWidth = true;
+            this.claimeDate.Visible = true;
+            this.claimeDate.VisibleIndex = 1;
             // 
-            // gridColumn3
+            // contactPerson
             // 
-            this.gridColumn3.Caption = "Contact Person";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsColumn.AllowMove = false;
-            this.gridColumn3.OptionsColumn.AllowSize = false;
-            this.gridColumn3.OptionsColumn.FixedWidth = true;
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 150;
+            this.contactPerson.Caption = "Contact Person";
+            this.contactPerson.FieldName = "contactName";
+            this.contactPerson.Name = "contactPerson";
+            this.contactPerson.OptionsColumn.AllowMove = false;
+            this.contactPerson.OptionsColumn.AllowSize = false;
+            this.contactPerson.OptionsColumn.FixedWidth = true;
+            this.contactPerson.Visible = true;
+            this.contactPerson.VisibleIndex = 2;
+            this.contactPerson.Width = 150;
             // 
-            // gridColumn4
+            // ConactNo
             // 
-            this.gridColumn4.Caption = "Contact No";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.OptionsColumn.AllowMove = false;
-            this.gridColumn4.OptionsColumn.AllowSize = false;
-            this.gridColumn4.OptionsColumn.FixedWidth = true;
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 150;
+            this.ConactNo.Caption = "Contact No";
+            this.ConactNo.FieldName = "contactNumber";
+            this.ConactNo.Name = "ConactNo";
+            this.ConactNo.OptionsColumn.AllowMove = false;
+            this.ConactNo.OptionsColumn.AllowSize = false;
+            this.ConactNo.OptionsColumn.FixedWidth = true;
+            this.ConactNo.Visible = true;
+            this.ConactNo.VisibleIndex = 3;
+            this.ConactNo.Width = 150;
             // 
-            // gridColumn5
+            // status
             // 
-            this.gridColumn5.Caption = "Status";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.OptionsColumn.AllowMove = false;
-            this.gridColumn5.OptionsColumn.AllowSize = false;
-            this.gridColumn5.OptionsColumn.FixedWidth = true;
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.status.Caption = "Status";
+            this.status.FieldName = "status";
+            this.status.Name = "status";
+            this.status.OptionsColumn.AllowMove = false;
+            this.status.OptionsColumn.AllowSize = false;
+            this.status.OptionsColumn.FixedWidth = true;
+            this.status.Visible = true;
+            this.status.VisibleIndex = 4;
             // 
             // layoutControlGroup1
             // 
@@ -234,7 +239,7 @@
             this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(889, 443);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(889, 444);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -242,7 +247,7 @@
             this.layoutControlItem1.Control = this.gridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(869, 423);
+            this.layoutControlItem1.Size = new System.Drawing.Size(869, 424);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -258,6 +263,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "Warranty_Claim_List";
             this.Text = "Warranty_Claim_List";
+            this.Load += new System.EventHandler(this.Warranty_Claim_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -284,11 +290,11 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn claimeNo;
+        private DevExpress.XtraGrid.Columns.GridColumn claimeDate;
+        private DevExpress.XtraGrid.Columns.GridColumn contactPerson;
+        private DevExpress.XtraGrid.Columns.GridColumn ConactNo;
+        private DevExpress.XtraGrid.Columns.GridColumn status;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }

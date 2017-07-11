@@ -23,5 +23,20 @@ namespace Test
             New_Warranty_Claim a = new New_Warranty_Claim();
             a.ShowDialog();
         }
+        Sale.Database.WarrantyClameData warrenty = new Sale.Database.WarrantyClameData();
+
+        private void Warranty_Claim_List_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                warrenty.FnConn();
+                DataTable dt = warrenty.FillData();
+                gridControl1.DataSource = dt;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            } 
+        }
     }
 }

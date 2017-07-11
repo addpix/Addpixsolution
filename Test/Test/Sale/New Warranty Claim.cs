@@ -39,5 +39,21 @@ namespace Test
             MessageBox.Show(result);
             
         }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)//btn new 
+        {
+            txtclaimeno.Text="";
+            dtpdate.Text="";
+            txtcontactName.Text="";
+           txtContactNo.Text="";
+            txtmailId.Text="";
+            dtpurchaseDate.Text="";
+            txtSerialNumber.Text="";
+            txtItemNamae.Text="";
+            txtmodelName.Text="";
+            txtcomplaintDeatails.Text="";
+            cmbstatus.Text="";
+
+        }
     }
 }

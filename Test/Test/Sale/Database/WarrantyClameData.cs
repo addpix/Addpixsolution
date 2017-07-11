@@ -25,7 +25,7 @@ namespace Test.Sale.Database
         SqlConnection connection;
         SqlTransaction transaction;
         string Result = "";
-        public static string cnnString = "Data Source=.;Initial Catalog=MYDB;Persist Security Info=True;User ID=sa;Password=123456;";
+        public static string cnnString = "Data Source=.;Initial Catalog=ERP;Persist Security Info=True;User ID=sa;Password=123456;";
 
         public void FnConn()
         {
@@ -41,16 +41,16 @@ namespace Test.Sale.Database
             {
                 DataTable dtReturnTable = new DataTable();
 
-                //coma = new SqlCommand("SP_DEMO", cn, transaction);
+                command = new SqlCommand("spWarrenty", connection, transaction);
 
-                //cm.CommandType = CommandType.StoredProcedure;
+                command.CommandType = CommandType.StoredProcedure;
 
-                //cm.Parameters.AddWithValue("@OP", srOP);
-                //cm.Parameters.AddWithValue("@DOC_NO", strDocNo);
+                command.Parameters.AddWithValue("@OPERATION", "S");
+                
 
-                //SqlDataAdapter adp = new SqlDataAdapter(cm);
+                SqlDataAdapter adp = new SqlDataAdapter(command);
 
-                //adp.Fill(dtReturnTable);
+                adp.Fill(dtReturnTable);
                 return dtReturnTable;
             }
             catch (Exception)
