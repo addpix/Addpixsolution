@@ -2,3 +2,6 @@ G:\project\Git\Test\Test\bin\Debug\Test.exe.config
 G:\project\Git\New folder\Addpixsolution\Test\Test\bin\Debug\Test.exe.config
 G:\project\Git\New folder\Addpixsolution\Test\Test\obj\Debug\Test.exe
 G:\project\Git\New folder\Addpixsolution\Test\Test\obj\Debug\Test.pdb
+G:\project\Git\Addpixsolution\Test\Test\bin\Debug\Test.exe.config
+G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.exe
+G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.pdb
