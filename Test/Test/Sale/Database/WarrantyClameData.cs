@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Test.Sale.Database
 {
@@ -53,8 +54,9 @@ namespace Test.Sale.Database
                 adp.Fill(dtReturnTable);
                 return dtReturnTable;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message.ToString(),"ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return new DataTable();
             }
         }
