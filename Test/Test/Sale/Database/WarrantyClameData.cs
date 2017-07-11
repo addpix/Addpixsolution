@@ -9,7 +9,7 @@ namespace Test.Sale.Database
 {
     class WarrantyClameData
     {
-        //hai
+        //ha
         public string claimeNo { get; set; }
         public string claimeDate { get; set; }
         public string contactName { get; set; }
