@@ -149,6 +149,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpurchaseDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpurchaseDate.Properties.DisplayFormat.FormatString = "yyyy/MM/dd";
+            this.dtpurchaseDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtpurchaseDate.Properties.EditFormat.FormatString = "yyyy/MM/dd";
+            this.dtpurchaseDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtpurchaseDate.Properties.Mask.EditMask = "yyyy/MM/dd";
             this.dtpurchaseDate.Size = new System.Drawing.Size(119, 20);
             this.dtpurchaseDate.StyleController = this.layoutControl1;
             this.dtpurchaseDate.TabIndex = 17;
@@ -328,6 +333,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpdate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpdate.Properties.DisplayFormat.FormatString = "yyyy/MM/dd";
+            this.dtpdate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtpdate.Properties.EditFormat.FormatString = "yyyy/MM/dd";
+            this.dtpdate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtpdate.Properties.Mask.EditMask = "yyyy/MM/dd";
             this.dtpdate.Size = new System.Drawing.Size(105, 20);
             this.dtpdate.StyleController = this.layoutControl1;
             this.dtpdate.TabIndex = 9;

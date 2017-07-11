@@ -35,14 +35,37 @@ namespace Test.Sale.Database
 
         }
 
+        public DataTable FillData()
+        {
+            try
+            {
+                DataTable dtReturnTable = new DataTable();
+
+                //coma = new SqlCommand("SP_DEMO", cn, transaction);
+
+                //cm.CommandType = CommandType.StoredProcedure;
+
+                //cm.Parameters.AddWithValue("@OP", srOP);
+                //cm.Parameters.AddWithValue("@DOC_NO", strDocNo);
+
+                //SqlDataAdapter adp = new SqlDataAdapter(cm);
+
+                //adp.Fill(dtReturnTable);
+                return dtReturnTable;
+            }
+            catch (Exception)
+            {
+                return new DataTable();
+            }
+        }
         public void fnTransactionData()
         {
 
 
-            command = new SqlCommand("SP_warranty", connection, transaction);
+            command = new SqlCommand("spWarrenty", connection, transaction);
 
             command.CommandType = CommandType.StoredProcedure;
-
+            command.Parameters.AddWithValue("@OPERATION", "I");
             command.Parameters.AddWithValue("@claimeno", claimeNo);
             command.Parameters.AddWithValue("@claimedate", claimeDate);
             command.Parameters.AddWithValue("@contactName", contactName);
@@ -51,7 +74,7 @@ namespace Test.Sale.Database
             command.Parameters.AddWithValue("@purchaseDate", purchaseDate);
             command.Parameters.AddWithValue("@itemName", ItemName);
             command.Parameters.AddWithValue("@serialNumber", SerialNumber);
-            command.Parameters.AddWithValue("@modelName",MOdelName);
+            command.Parameters.AddWithValue("@modelName", MOdelName);
             command.Parameters.AddWithValue("@complaintdetails", complaintDetails);
             command.Parameters.AddWithValue("@status", status);
             command.ExecuteNonQuery();

@@ -33,7 +33,11 @@ namespace Test
             warrenty.MOdelName = txtmodelName.Text;
             warrenty.complaintDetails = txtcomplaintDeatails.Text;
             warrenty.status = cmbstatus.Text;
-
+            warrenty.FnConn();
+            warrenty.fnTransactionData();
+            String result=warrenty.FnTrans();
+            MessageBox.Show(result);
+            
         }
     }
 }
