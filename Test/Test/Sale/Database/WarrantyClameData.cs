@@ -26,7 +26,7 @@ namespace Test.Sale.Database
         SqlConnection connection;
         SqlTransaction transaction;
         string Result = "";
-        public static string cnnString = "Data Source=.;Initial Catalog=ERP;Persist Security Info=True;User ID=sa;Password=123456;";
+        public static string cnnString = "Data Source=59.96.174.85;Initial Catalog=ERP;Persist Security Info=True;User ID=sa;Password=123456;";
 
         public void FnConn()
         {
