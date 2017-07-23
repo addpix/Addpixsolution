@@ -235,6 +235,7 @@
     <Compile Include="Purchase\Product List.designer.cs">
       <DependentUpon>Product List.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sale\Database\QuatationData.cs" />
     <Compile Include="Sale\Database\WarrantyClameData.cs" />
     <Compile Include="Sale\Delivery Note List.cs">
       <SubType>Form</SubType>

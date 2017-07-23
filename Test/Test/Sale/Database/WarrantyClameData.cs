@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -26,11 +27,11 @@ namespace Test.Sale.Database
         SqlConnection connection;
         SqlTransaction transaction;
         string Result = "";
-        public static string cnnString = "Data Source=59.96.174.85;Initial Catalog=ERP;Persist Security Info=True;User ID=sa;Password=123456;";
+        //public static string cnnString = "Data Source=59.96.174.85;Initial Catalog=ERP;Persist Security Info=True;User ID=sa;Password=123456;";
 
         public void FnConn()
         {
-            connection = new SqlConnection(cnnString);
+            connection = new SqlConnection(ConfigurationManager.ConnectionStrings["newConnectionString"].ConnectionString);
             connection.Open();
             transaction = connection.BeginTransaction();
 

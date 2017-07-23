@@ -80,6 +80,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -98,7 +99,6 @@
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
@@ -158,7 +158,7 @@
             this.layoutControl1.Controls.Add(this.textEdit3);
             this.layoutControl1.Controls.Add(this.memoEdit1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 24);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 22);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(747, 120);
@@ -270,28 +270,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(747, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(747, 22);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 473);
-            this.barDockControlBottom.Size = new System.Drawing.Size(747, 22);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 472);
+            this.barDockControlBottom.Size = new System.Drawing.Size(747, 23);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 449);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 22);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 450);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(747, 24);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 449);
+            this.barDockControlRight.Location = new System.Drawing.Point(747, 22);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 450);
             // 
             // labelControl3
             // 
@@ -483,16 +483,16 @@
             this.layoutControl2.Controls.Add(this.textEdit7);
             this.layoutControl2.Controls.Add(this.gridControl1);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl2.Location = new System.Drawing.Point(0, 144);
+            this.layoutControl2.Location = new System.Drawing.Point(0, 142);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(747, 329);
+            this.layoutControl2.Size = new System.Drawing.Size(747, 330);
             this.layoutControl2.TabIndex = 5;
             this.layoutControl2.Text = "layoutControl2";
             // 
             // comboBoxEdit1
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(105, 201);
+            this.comboBoxEdit1.Location = new System.Drawing.Point(105, 202);
             this.comboBoxEdit1.MenuManager = this.barManager1;
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -508,7 +508,7 @@
             // dateEdit2
             // 
             this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(105, 249);
+            this.dateEdit2.Location = new System.Drawing.Point(105, 250);
             this.dateEdit2.MenuManager = this.barManager1;
             this.dateEdit2.Name = "dateEdit2";
             this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -521,7 +521,7 @@
             // 
             // textEdit4
             // 
-            this.textEdit4.Location = new System.Drawing.Point(105, 225);
+            this.textEdit4.Location = new System.Drawing.Point(105, 226);
             this.textEdit4.MenuManager = this.barManager1;
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Size = new System.Drawing.Size(51, 20);
@@ -530,7 +530,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(160, 201);
+            this.labelControl2.Location = new System.Drawing.Point(160, 202);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(427, 13);
             this.labelControl2.StyleController = this.layoutControl2;
@@ -538,7 +538,7 @@
             // 
             // textEdit11
             // 
-            this.textEdit11.Location = new System.Drawing.Point(684, 297);
+            this.textEdit11.Location = new System.Drawing.Point(684, 298);
             this.textEdit11.MenuManager = this.barManager1;
             this.textEdit11.Name = "textEdit11";
             this.textEdit11.Size = new System.Drawing.Size(51, 20);
@@ -547,7 +547,7 @@
             // 
             // textEdit10
             // 
-            this.textEdit10.Location = new System.Drawing.Point(684, 273);
+            this.textEdit10.Location = new System.Drawing.Point(684, 274);
             this.textEdit10.MenuManager = this.barManager1;
             this.textEdit10.Name = "textEdit10";
             this.textEdit10.Size = new System.Drawing.Size(51, 20);
@@ -556,7 +556,7 @@
             // 
             // textEdit9
             // 
-            this.textEdit9.Location = new System.Drawing.Point(684, 249);
+            this.textEdit9.Location = new System.Drawing.Point(684, 250);
             this.textEdit9.MenuManager = this.barManager1;
             this.textEdit9.Name = "textEdit9";
             this.textEdit9.Size = new System.Drawing.Size(51, 20);
@@ -565,7 +565,7 @@
             // 
             // textEdit8
             // 
-            this.textEdit8.Location = new System.Drawing.Point(684, 225);
+            this.textEdit8.Location = new System.Drawing.Point(684, 226);
             this.textEdit8.MenuManager = this.barManager1;
             this.textEdit8.Name = "textEdit8";
             this.textEdit8.Size = new System.Drawing.Size(51, 20);
@@ -574,7 +574,7 @@
             // 
             // textEdit7
             // 
-            this.textEdit7.Location = new System.Drawing.Point(684, 201);
+            this.textEdit7.Location = new System.Drawing.Point(684, 202);
             this.textEdit7.MenuManager = this.barManager1;
             this.textEdit7.Name = "textEdit7";
             this.textEdit7.Size = new System.Drawing.Size(51, 20);
@@ -587,7 +587,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(723, 185);
+            this.gridControl1.Size = new System.Drawing.Size(723, 186);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -679,6 +679,17 @@
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
             // 
+            // gridColumn14
+            // 
+            this.gridColumn14.Caption = "Offer";
+            this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.OptionsColumn.AllowMove = false;
+            this.gridColumn14.OptionsColumn.AllowSize = false;
+            this.gridColumn14.OptionsColumn.FixedWidth = true;
+            this.gridColumn14.Visible = true;
+            this.gridColumn14.VisibleIndex = 6;
+            this.gridColumn14.Width = 30;
+            // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Unit Price";
@@ -766,7 +777,7 @@
             this.layoutControlItem5});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(747, 329);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(747, 330);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem12
@@ -774,14 +785,14 @@
             this.layoutControlItem12.Control = this.gridControl1;
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(727, 189);
+            this.layoutControlItem12.Size = new System.Drawing.Size(727, 190);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.textEdit7;
-            this.layoutControlItem13.Location = new System.Drawing.Point(579, 189);
+            this.layoutControlItem13.Location = new System.Drawing.Point(579, 190);
             this.layoutControlItem13.Name = "layoutControlItem13";
             this.layoutControlItem13.Size = new System.Drawing.Size(148, 24);
             this.layoutControlItem13.Text = "Gross Total";
@@ -790,7 +801,7 @@
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.textEdit8;
-            this.layoutControlItem14.Location = new System.Drawing.Point(579, 213);
+            this.layoutControlItem14.Location = new System.Drawing.Point(579, 214);
             this.layoutControlItem14.Name = "layoutControlItem14";
             this.layoutControlItem14.Size = new System.Drawing.Size(148, 24);
             this.layoutControlItem14.Text = "Discount";
@@ -799,7 +810,7 @@
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.textEdit9;
-            this.layoutControlItem15.Location = new System.Drawing.Point(579, 237);
+            this.layoutControlItem15.Location = new System.Drawing.Point(579, 238);
             this.layoutControlItem15.Name = "layoutControlItem15";
             this.layoutControlItem15.Size = new System.Drawing.Size(148, 24);
             this.layoutControlItem15.Text = "Net Total";
@@ -808,7 +819,7 @@
             // layoutControlItem16
             // 
             this.layoutControlItem16.Control = this.textEdit10;
-            this.layoutControlItem16.Location = new System.Drawing.Point(579, 261);
+            this.layoutControlItem16.Location = new System.Drawing.Point(579, 262);
             this.layoutControlItem16.Name = "layoutControlItem16";
             this.layoutControlItem16.Size = new System.Drawing.Size(148, 24);
             this.layoutControlItem16.Text = "Pay Amount";
@@ -817,7 +828,7 @@
             // layoutControlItem17
             // 
             this.layoutControlItem17.Control = this.textEdit11;
-            this.layoutControlItem17.Location = new System.Drawing.Point(579, 285);
+            this.layoutControlItem17.Location = new System.Drawing.Point(579, 286);
             this.layoutControlItem17.Name = "layoutControlItem17";
             this.layoutControlItem17.Size = new System.Drawing.Size(148, 24);
             this.layoutControlItem17.Text = "Balance";
@@ -826,7 +837,7 @@
             // layoutControlItem18
             // 
             this.layoutControlItem18.Control = this.labelControl2;
-            this.layoutControlItem18.Location = new System.Drawing.Point(148, 189);
+            this.layoutControlItem18.Location = new System.Drawing.Point(148, 190);
             this.layoutControlItem18.Name = "layoutControlItem18";
             this.layoutControlItem18.Size = new System.Drawing.Size(431, 120);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
@@ -835,7 +846,7 @@
             // layoutControlItem19
             // 
             this.layoutControlItem19.Control = this.dateEdit2;
-            this.layoutControlItem19.Location = new System.Drawing.Point(0, 237);
+            this.layoutControlItem19.Location = new System.Drawing.Point(0, 238);
             this.layoutControlItem19.Name = "layoutControlItem19";
             this.layoutControlItem19.Size = new System.Drawing.Size(148, 72);
             this.layoutControlItem19.Text = "Payment Due Date";
@@ -844,7 +855,7 @@
             // layoutControlItem20
             // 
             this.layoutControlItem20.Control = this.comboBoxEdit1;
-            this.layoutControlItem20.Location = new System.Drawing.Point(0, 189);
+            this.layoutControlItem20.Location = new System.Drawing.Point(0, 190);
             this.layoutControlItem20.Name = "layoutControlItem20";
             this.layoutControlItem20.Size = new System.Drawing.Size(148, 24);
             this.layoutControlItem20.Text = "Payment Mode";
@@ -853,22 +864,11 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.textEdit4;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 213);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 214);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(148, 24);
             this.layoutControlItem5.Text = "Balance Due";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(90, 13);
-            // 
-            // gridColumn14
-            // 
-            this.gridColumn14.Caption = "Offer";
-            this.gridColumn14.Name = "gridColumn14";
-            this.gridColumn14.OptionsColumn.AllowMove = false;
-            this.gridColumn14.OptionsColumn.AllowSize = false;
-            this.gridColumn14.OptionsColumn.FixedWidth = true;
-            this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 6;
-            this.gridColumn14.Width = 30;
             // 
             // Sales_Invoice
             // 
