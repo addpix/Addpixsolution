@@ -22,5 +22,16 @@ namespace Test
         {
 
         }
+
+        private void Sales_Invoice_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Sales_Invoice_View a = new Sales_Invoice_View();
+            a.ShowDialog();
+        }
     }
 }

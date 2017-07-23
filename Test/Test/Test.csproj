@@ -217,7 +217,37 @@
     <Compile Include="Accounts\Receipt Voucher.Designer.cs">
       <DependentUpon>Receipt Voucher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchase\Create Barcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\Create Barcode.Designer.cs">
+      <DependentUpon>Create Barcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Product for Discount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\Product for Discount.designer.cs">
+      <DependentUpon>Product for Discount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Product List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\Product List.designer.cs">
+      <DependentUpon>Product List.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sale\Database\WarrantyClameData.cs" />
+    <Compile Include="Sale\Delivery Note List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\Delivery Note List.designer.cs">
+      <DependentUpon>Delivery Note List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\Delivery Note.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\Delivery Note.designer.cs">
+      <DependentUpon>Delivery Note.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sale\New Warranty Claim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -376,6 +406,12 @@
     <Compile Include="Purchase\RFQ.Designer.cs">
       <DependentUpon>RFQ.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sale\Sales Invoice View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\Sales Invoice View.designer.cs">
+      <DependentUpon>Sales Invoice View.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sale\Sales Return.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -511,6 +547,21 @@
     <EmbeddedResource Include="Accounts\Receipt Voucher.resx">
       <DependentUpon>Receipt Voucher.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\Create Barcode.resx">
+      <DependentUpon>Create Barcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\Product for Discount.resx">
+      <DependentUpon>Product for Discount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\Product List.resx">
+      <DependentUpon>Product List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Delivery Note List.resx">
+      <DependentUpon>Delivery Note List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Delivery Note.resx">
+      <DependentUpon>Delivery Note.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sale\New Warranty Claim.resx">
       <DependentUpon>New Warranty Claim.cs</DependentUpon>
     </EmbeddedResource>
@@ -599,6 +650,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\RFQ.resx">
       <DependentUpon>RFQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Sales Invoice View.resx">
+      <DependentUpon>Sales Invoice View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sale\Sales Return.resx">
       <DependentUpon>Sales Return.cs</DependentUpon>

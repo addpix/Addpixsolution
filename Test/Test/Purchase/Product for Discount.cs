@@ -10,9 +10,9 @@ using DevExpress.XtraEditors;
 
 namespace Test
 {
-    public partial class Create_UM : DevExpress.XtraEditors.XtraForm
+    public partial class Product_for_Discount : DevExpress.XtraEditors.XtraForm
     {
-        public Create_UM()
+        public Product_for_Discount()
         {
             InitializeComponent();
         }

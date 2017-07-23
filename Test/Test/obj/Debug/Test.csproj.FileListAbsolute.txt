@@ -162,3 +162,9 @@ G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.exe.licenses
 G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.Employee_Right.resources
 G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.Vacation_Leave.resources
 G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.Vacation_Requst.resources
+G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.Create_Barcode.resources
+G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.Product_for_Discount.resources
+G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.Product_List.resources
+G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.Delivery_Note_List.resources
+G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.Delivery_Note.resources
+G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.Sales_Invoice_View.resources

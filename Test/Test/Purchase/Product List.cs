@@ -5,27 +5,21 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
 namespace Test
 {
-    public partial class Sales_History : DevExpress.XtraEditors.XtraForm
+    public partial class Product_List : DevExpress.XtraEditors.XtraForm
     {
-        public Sales_History()
+        public Product_List()
         {
             InitializeComponent();
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
-            Sales_Return a = new Sales_Return();
+            Product_for_Discount a = new Product_for_Discount();
             a.ShowDialog();
         }
     }

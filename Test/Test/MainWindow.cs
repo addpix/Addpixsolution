@@ -270,5 +270,48 @@ namespace Test
             Transactions a = new Transactions();
             a.ShowDialog();
         }
+
+        private void navBarItem22_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            var form = new Product_List();
+            if (ExitForm(form)) return;
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void navBarItem6_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            var form = new Create_Barcode();
+            if (ExitForm(form)) return;
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void navBarItem33_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            var form = new Delivery_Note_List();
+            if (ExitForm(form)) return;
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void navBarControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void navBarItem23_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            Employee_Right a = new Employee_Right();
+            a.ShowDialog();
+        }
+
+        private void navBarItem34_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            var form = new Vacation_Leave();
+            if (ExitForm(form)) return;
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

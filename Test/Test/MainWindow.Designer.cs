@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             this.tileNavPane1 = new DevExpress.XtraBars.Navigation.TileNavPane();
             this.navButton4 = new DevExpress.XtraBars.Navigation.NavButton();
             this.navButton2 = new DevExpress.XtraBars.Navigation.NavButton();
@@ -41,10 +41,15 @@
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.tileNavPane2 = new DevExpress.XtraBars.Navigation.TileNavPane();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem27 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem28 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem29 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem21 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem23 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem25 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem26 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem38 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem39 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem34 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
@@ -53,6 +58,7 @@
             this.navBarItem8 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem18 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem20 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem33 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
@@ -72,19 +78,15 @@
             this.navBarItem17 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem19 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem21 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem23 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem25 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem26 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem38 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem39 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup7 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem27 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem28 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem29 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem30 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem31 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem32 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup7 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.SuspendLayout();
@@ -118,7 +120,7 @@
             // navButton4
             // 
             this.navButton4.Alignment = DevExpress.XtraBars.Navigation.NavButtonAlignment.Left;
-            this.navButton4.Appearance.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navButton4.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navButton4.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("navButton4.Appearance.Image")));
             this.navButton4.Appearance.Options.UseFont = true;
             this.navButton4.Appearance.Options.UseImage = true;
@@ -132,9 +134,9 @@
             this.navButton2.Caption = "";
             this.navButton2.Glyph = ((System.Drawing.Image)(resources.GetObject("navButton2.Glyph")));
             this.navButton2.Name = "navButton2";
-            toolTipTitleItem3.Text = "Minimize";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            this.navButton2.SuperTip = superToolTip3;
+            toolTipTitleItem1.Text = "Minimize";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            this.navButton2.SuperTip = superToolTip1;
             this.navButton2.ElementClick += new DevExpress.XtraBars.Navigation.NavElementClickEventHandler(this.navButton2_ElementClick_1);
             // 
             // navButton3
@@ -143,9 +145,9 @@
             this.navButton3.Caption = "";
             this.navButton3.Glyph = ((System.Drawing.Image)(resources.GetObject("navButton3.Glyph")));
             this.navButton3.Name = "navButton3";
-            toolTipTitleItem4.Text = "Close";
-            superToolTip4.Items.Add(toolTipTitleItem4);
-            this.navButton3.SuperTip = superToolTip4;
+            toolTipTitleItem2.Text = "Close";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            this.navButton3.SuperTip = superToolTip2;
             this.navButton3.ElementClick += new DevExpress.XtraBars.Navigation.NavElementClickEventHandler(this.navButton3_ElementClick);
             // 
             // xtraTabbedMdiManager1
@@ -178,7 +180,7 @@
             // 
             // navBarControl1
             // 
-            this.navBarControl1.ActiveGroup = this.navBarGroup6;
+            this.navBarControl1.ActiveGroup = this.navBarGroup1;
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup1,
@@ -224,7 +226,9 @@
             this.navBarItem29,
             this.navBarItem30,
             this.navBarItem31,
-            this.navBarItem32});
+            this.navBarItem32,
+            this.navBarItem33,
+            this.navBarItem34});
             this.navBarControl1.Location = new System.Drawing.Point(0, 80);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 183;
@@ -232,43 +236,76 @@
             this.navBarControl1.Size = new System.Drawing.Size(183, 440);
             this.navBarControl1.TabIndex = 5;
             this.navBarControl1.Text = "navBarControl1";
+            this.navBarControl1.Click += new System.EventHandler(this.navBarControl1_Click);
             // 
-            // navBarGroup6
+            // navBarGroup5
             // 
-            this.navBarGroup6.Caption = "Accounts";
-            this.navBarGroup6.Expanded = true;
-            this.navBarGroup6.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem27),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem28),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem29),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem30),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem31),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem32)});
-            this.navBarGroup6.Name = "navBarGroup6";
-            this.navBarGroup6.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup6.SmallImage")));
-            this.navBarGroup6.TopVisibleLinkIndex = 2;
+            this.navBarGroup5.Caption = "Hr";
+            this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem21),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem23),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem24),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem25),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem26),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem38),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem39),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem34)});
+            this.navBarGroup5.Name = "navBarGroup5";
+            this.navBarGroup5.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup5.SmallImage")));
+            this.navBarGroup5.TopVisibleLinkIndex = 4;
             // 
-            // navBarItem27
+            // navBarItem21
             // 
-            this.navBarItem27.Caption = "Group Master";
-            this.navBarItem27.Name = "navBarItem27";
-            this.navBarItem27.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem27_LinkClicked);
+            this.navBarItem21.Caption = "Employee ";
+            this.navBarItem21.Name = "navBarItem21";
+            this.navBarItem21.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem21_LinkClicked);
             // 
-            // navBarItem28
+            // navBarItem23
             // 
-            this.navBarItem28.Caption = "Ledger ";
-            this.navBarItem28.Name = "navBarItem28";
-            this.navBarItem28.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem28_LinkClicked);
+            this.navBarItem23.Caption = "Employee Right";
+            this.navBarItem23.Name = "navBarItem23";
+            this.navBarItem23.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem23_LinkClicked);
             // 
-            // navBarItem29
+            // navBarItem24
             // 
-            this.navBarItem29.Caption = "Transactions";
-            this.navBarItem29.Name = "navBarItem29";
-            this.navBarItem29.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem29_LinkClicked);
+            this.navBarItem24.Caption = "Working Time";
+            this.navBarItem24.Name = "navBarItem24";
+            this.navBarItem24.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem24_LinkClicked);
+            // 
+            // navBarItem25
+            // 
+            this.navBarItem25.Caption = "Attendance";
+            this.navBarItem25.Name = "navBarItem25";
+            this.navBarItem25.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem25_LinkClicked);
+            // 
+            // navBarItem26
+            // 
+            this.navBarItem26.Caption = "Attendance List";
+            this.navBarItem26.Name = "navBarItem26";
+            this.navBarItem26.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem26_LinkClicked);
+            // 
+            // navBarItem38
+            // 
+            this.navBarItem38.Caption = "Payrool";
+            this.navBarItem38.Name = "navBarItem38";
+            this.navBarItem38.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem38_LinkClicked);
+            // 
+            // navBarItem39
+            // 
+            this.navBarItem39.Caption = "Payrool List";
+            this.navBarItem39.Name = "navBarItem39";
+            this.navBarItem39.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem39_LinkClicked);
+            // 
+            // navBarItem34
+            // 
+            this.navBarItem34.Caption = "Vacation Requst";
+            this.navBarItem34.Name = "navBarItem34";
+            this.navBarItem34.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem34_LinkClicked);
             // 
             // navBarGroup1
             // 
             this.navBarGroup1.Caption = "Sales";
+            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
@@ -276,10 +313,11 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem8),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem18),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem20)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem20),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem33)});
             this.navBarGroup1.Name = "navBarGroup1";
             this.navBarGroup1.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup1.SmallImage")));
-            this.navBarGroup1.TopVisibleLinkIndex = 3;
+            this.navBarGroup1.TopVisibleLinkIndex = 4;
             // 
             // navBarItem1
             // 
@@ -322,6 +360,12 @@
             this.navBarItem20.Caption = "Warranty Claim";
             this.navBarItem20.Name = "navBarItem20";
             this.navBarItem20.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem20_LinkClicked);
+            // 
+            // navBarItem33
+            // 
+            this.navBarItem33.Caption = "Delivery Note";
+            this.navBarItem33.Name = "navBarItem33";
+            this.navBarItem33.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem33_LinkClicked);
             // 
             // navBarGroup2
             // 
@@ -372,11 +416,13 @@
             // 
             this.navBarItem6.Caption = "Print Barcode / QR Code";
             this.navBarItem6.Name = "navBarItem6";
+            this.navBarItem6.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem6_LinkClicked);
             // 
             // navBarItem22
             // 
             this.navBarItem22.Caption = "Discount For Products";
             this.navBarItem22.Name = "navBarItem22";
+            this.navBarItem22.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem22_LinkClicked);
             // 
             // navBarGroup3
             // 
@@ -455,70 +501,37 @@
             this.navBarItem5.Caption = "Company";
             this.navBarItem5.Name = "navBarItem5";
             // 
-            // navBarGroup5
+            // navBarGroup6
             // 
-            this.navBarGroup5.Caption = "Hr";
-            this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem21),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem23),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem24),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem25),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem26),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem38),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem39)});
-            this.navBarGroup5.Name = "navBarGroup5";
-            this.navBarGroup5.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup5.SmallImage")));
+            this.navBarGroup6.Caption = "Accounts";
+            this.navBarGroup6.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem27),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem28),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem29),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem30),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem31),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem32)});
+            this.navBarGroup6.Name = "navBarGroup6";
+            this.navBarGroup6.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup6.SmallImage")));
+            this.navBarGroup6.TopVisibleLinkIndex = 2;
             // 
-            // navBarItem21
+            // navBarItem27
             // 
-            this.navBarItem21.Caption = "Employee ";
-            this.navBarItem21.Name = "navBarItem21";
-            this.navBarItem21.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem21_LinkClicked);
+            this.navBarItem27.Caption = "Group Master";
+            this.navBarItem27.Name = "navBarItem27";
+            this.navBarItem27.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem27_LinkClicked);
             // 
-            // navBarItem23
+            // navBarItem28
             // 
-            this.navBarItem23.Caption = "Employee Rates";
-            this.navBarItem23.Name = "navBarItem23";
+            this.navBarItem28.Caption = "Ledger ";
+            this.navBarItem28.Name = "navBarItem28";
+            this.navBarItem28.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem28_LinkClicked);
             // 
-            // navBarItem24
+            // navBarItem29
             // 
-            this.navBarItem24.Caption = "Working Time";
-            this.navBarItem24.Name = "navBarItem24";
-            this.navBarItem24.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem24_LinkClicked);
-            // 
-            // navBarItem25
-            // 
-            this.navBarItem25.Caption = "Attendance";
-            this.navBarItem25.Name = "navBarItem25";
-            this.navBarItem25.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem25_LinkClicked);
-            // 
-            // navBarItem26
-            // 
-            this.navBarItem26.Caption = "Attendance List";
-            this.navBarItem26.Name = "navBarItem26";
-            this.navBarItem26.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem26_LinkClicked);
-            // 
-            // navBarItem38
-            // 
-            this.navBarItem38.Caption = "Payrool";
-            this.navBarItem38.Name = "navBarItem38";
-            this.navBarItem38.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem38_LinkClicked);
-            // 
-            // navBarItem39
-            // 
-            this.navBarItem39.Caption = "Payrool List";
-            this.navBarItem39.Name = "navBarItem39";
-            this.navBarItem39.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem39_LinkClicked);
-            // 
-            // navBarGroup7
-            // 
-            this.navBarGroup7.Caption = "Report";
-            this.navBarGroup7.Name = "navBarGroup7";
-            this.navBarGroup7.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup7.SmallImage")));
-            // 
-            // defaultLookAndFeel1
-            // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
+            this.navBarItem29.Caption = "Transactions";
+            this.navBarItem29.Name = "navBarItem29";
+            this.navBarItem29.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem29_LinkClicked);
             // 
             // navBarItem30
             // 
@@ -534,6 +547,16 @@
             // 
             this.navBarItem32.Caption = "Taxs";
             this.navBarItem32.Name = "navBarItem32";
+            // 
+            // navBarGroup7
+            // 
+            this.navBarGroup7.Caption = "Report";
+            this.navBarGroup7.Name = "navBarGroup7";
+            this.navBarGroup7.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup7.SmallImage")));
+            // 
+            // defaultLookAndFeel1
+            // 
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
             // 
             // MainWindow
             // 
@@ -606,6 +629,8 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem30;
         private DevExpress.XtraNavBar.NavBarItem navBarItem31;
         private DevExpress.XtraNavBar.NavBarItem navBarItem32;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem33;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem34;
     }
 }
 
