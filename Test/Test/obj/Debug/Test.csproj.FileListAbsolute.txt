@@ -159,3 +159,6 @@ G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.Warranty_Claim_List.resou
 G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.Transactions.resources
 G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.csproj.GenerateResource.Cache
 G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.exe.licenses
+G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.Employee_Right.resources
+G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.Vacation_Leave.resources
+G:\project\Git\Addpixsolution\Test\Test\obj\Debug\Test.Vacation_Requst.resources

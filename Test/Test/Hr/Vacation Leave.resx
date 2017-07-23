@@ -117,4 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="barButtonItem1.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAWdEVYdFRpdGxlAE5ldztOZXdEb2N1bWVudDuhm7jjAAAAK0lEQVQ4T2P4//8/GPv7+/8nBcP0
+        oRhALBg1YNQAEBg1gJYGkIIh+v4zAAAbI1Eu79uo4wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="barButtonItem1.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAWdEVYdFRpdGxlAE5ldztOZXdEb2N1bWVudDuhm7jjAAAAVUlEQVRYR+3OwQkAIBADQTu8/quJ
+        CPqRPI+IsMJ8Ah47JD1lxyQ7JtkxyY5LVanTff+w47I/tTwCCCCAAAIIIIAAAgj4N6DTff+wY5Idk+yY
+        ZMccjQlqbiWkjG00BQAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

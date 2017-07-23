@@ -17,5 +17,11 @@ namespace Test
         {
             InitializeComponent();
         }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            Payroll a = new Payroll();
+            a.ShowDialog();
+        }
     }
 }

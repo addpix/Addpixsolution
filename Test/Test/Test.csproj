@@ -85,6 +85,24 @@
       <DependentUpon>Contra Voucher.cs</DependentUpon>
     </Compile>
     <Compile Include="clsNewCategory.cs" />
+    <Compile Include="Hr\Employee Right.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\Employee Right.designer.cs">
+      <DependentUpon>Employee Right.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\Vacation Leave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\Vacation Leave.designer.cs">
+      <DependentUpon>Vacation Leave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hr\Vacation Requst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hr\Vacation Requst.designer.cs">
+      <DependentUpon>Vacation Requst.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventory\Create UM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -432,6 +450,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounts\Contra Voucher.resx">
       <DependentUpon>Contra Voucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Employee Right.resx">
+      <DependentUpon>Employee Right.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Vacation Leave.resx">
+      <DependentUpon>Vacation Leave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hr\Vacation Requst.resx">
+      <DependentUpon>Vacation Requst.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\Create UM.resx">
       <DependentUpon>Create UM.cs</DependentUpon>

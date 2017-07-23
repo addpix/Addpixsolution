@@ -120,4 +120,32 @@
   <metadata name="barManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="barButtonItem1.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgdEVYdFRpdGxlAE5ldztOZXdFbXBsb3llZTtOZXdQZXJzb2473llUnAAAANxJREFUOE+Vjj0O
+        QUEUhd8GLIKIQiV0aj0ViSWpLYBS1Do7ENHoFEShIGo/zThH7siZeROP4svMuXO/k8nOi67iNDvnClGx
+        FZ1JIcYXeMnDnA1HS3IFY1CynCtQMcgm8CQTy7mCoh/4gpvlZIGX9FSZXCiTVIEWfbLIZEaZBAUa/AJo
+        gifwMu+c/VxA+uBkDGz2Rp0g2ALFI6hYJmVwAD1mdYKAxwZ4AH57A6qgBrY241tdnbhgbovfmKoTF5yj
+        5RQndeKCfbScYqdOXNABa3C3ZYWzFWirExT8j8tei1+L7pyB/3oAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="barButtonItem1.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgdEVYdFRpdGxlAE5ldztOZXdFbXBsb3llZTtOZXdQZXJzb2473llUnAAAAk9JREFUWEe91btr
+        FFEcxfGg4iNphEXUgEUwBPERNBYqFuIfIHY2oo2PRhGsrCRiITYWlhY2gqAgFooQKxGLRBFUsBDRVjTB
+        B2phfI3fE+4v3FwPkpmYKT7M7Mnc87szm93tGr+z1xk12bSqqv6bKN2KoXTejd9YlV6vw850PsUVNRWl
+        A3iPk9iEChp6CBPQJuZ1A3IAGvwoHZ+k4xHk19mipqJ0BXZAw4exBHoaT7EdHUxvYM/ZkVrc4KDCu9B7
+        rruVXijvybKfGMFC5OULkjz7ixsc4q6WYSP0338OGn4qvVauJxJ3P4AreIMq0bmyfjTagByF7nYsHR+m
+        4zHE8EF8QQwufcRa1N7ABuhToE2shwZvw368wyBUdgNucO4yam9gCzRY53rcP7A8ve6DNqOycbihuReo
+        vYHSLZOpzA0sTWDOG7Ao+wA3NPcS87aBe3BDc9cx+w24UMqS5Djc0Nw+zFjn+oMNpSxJuvEKbrA8wyLM
+        WOf6gw2lLMkMQZ/3cvhb1P8icqG4okwfrkEbkavohbvW9gcbiinSnV/E4SwrHcQFbM4y2x9sKHkBhvEL
+        etT6KnZ3uxKfoGt07WlM/c31BxtKLMYJ5O+1jGIp4prFuI/yOq21/cGGooVYja8oi2UMu7ELD1JW0to1
+        rj/YUFgoZ1LRXJx3/cGGwkJ5nBU19dz1BxsKC+Vfv/2zNen6gw2FhfI5K2rqm+sPNhQWys2sqKnbrj/Y
+        UFgoHVzCa+in+DvckNwkdK1+M7S24/qDDdtkwzbZsE02bJMN21N1/QFsdSAUtE1wggAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
 </root>
