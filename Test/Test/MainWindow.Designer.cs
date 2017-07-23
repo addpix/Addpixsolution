@@ -41,15 +41,6 @@
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.tileNavPane2 = new DevExpress.XtraBars.Navigation.TileNavPane();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem21 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem23 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem25 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem26 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem38 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem39 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem34 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
@@ -78,6 +69,15 @@
             this.navBarItem17 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem19 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem21 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem23 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem25 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem26 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem38 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem39 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem34 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem27 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem28 = new DevExpress.XtraNavBar.NavBarItem();
@@ -238,70 +238,6 @@
             this.navBarControl1.Text = "navBarControl1";
             this.navBarControl1.Click += new System.EventHandler(this.navBarControl1_Click);
             // 
-            // navBarGroup5
-            // 
-            this.navBarGroup5.Caption = "Hr";
-            this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem21),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem23),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem24),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem25),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem26),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem38),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem39),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem34)});
-            this.navBarGroup5.Name = "navBarGroup5";
-            this.navBarGroup5.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup5.SmallImage")));
-            this.navBarGroup5.TopVisibleLinkIndex = 4;
-            // 
-            // navBarItem21
-            // 
-            this.navBarItem21.Caption = "Employee ";
-            this.navBarItem21.Name = "navBarItem21";
-            this.navBarItem21.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem21_LinkClicked);
-            // 
-            // navBarItem23
-            // 
-            this.navBarItem23.Caption = "Employee Right";
-            this.navBarItem23.Name = "navBarItem23";
-            this.navBarItem23.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem23_LinkClicked);
-            // 
-            // navBarItem24
-            // 
-            this.navBarItem24.Caption = "Working Time";
-            this.navBarItem24.Name = "navBarItem24";
-            this.navBarItem24.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem24_LinkClicked);
-            // 
-            // navBarItem25
-            // 
-            this.navBarItem25.Caption = "Attendance";
-            this.navBarItem25.Name = "navBarItem25";
-            this.navBarItem25.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem25_LinkClicked);
-            // 
-            // navBarItem26
-            // 
-            this.navBarItem26.Caption = "Attendance List";
-            this.navBarItem26.Name = "navBarItem26";
-            this.navBarItem26.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem26_LinkClicked);
-            // 
-            // navBarItem38
-            // 
-            this.navBarItem38.Caption = "Payrool";
-            this.navBarItem38.Name = "navBarItem38";
-            this.navBarItem38.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem38_LinkClicked);
-            // 
-            // navBarItem39
-            // 
-            this.navBarItem39.Caption = "Payrool List";
-            this.navBarItem39.Name = "navBarItem39";
-            this.navBarItem39.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem39_LinkClicked);
-            // 
-            // navBarItem34
-            // 
-            this.navBarItem34.Caption = "Vacation Requst";
-            this.navBarItem34.Name = "navBarItem34";
-            this.navBarItem34.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem34_LinkClicked);
-            // 
             // navBarGroup1
             // 
             this.navBarGroup1.Caption = "Sales";
@@ -317,7 +253,7 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem33)});
             this.navBarGroup1.Name = "navBarGroup1";
             this.navBarGroup1.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup1.SmallImage")));
-            this.navBarGroup1.TopVisibleLinkIndex = 4;
+            this.navBarGroup1.TopVisibleLinkIndex = 1;
             // 
             // navBarItem1
             // 
@@ -500,6 +436,70 @@
             // 
             this.navBarItem5.Caption = "Company";
             this.navBarItem5.Name = "navBarItem5";
+            // 
+            // navBarGroup5
+            // 
+            this.navBarGroup5.Caption = "Hr";
+            this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem21),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem23),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem24),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem25),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem26),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem38),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem39),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem34)});
+            this.navBarGroup5.Name = "navBarGroup5";
+            this.navBarGroup5.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup5.SmallImage")));
+            this.navBarGroup5.TopVisibleLinkIndex = 4;
+            // 
+            // navBarItem21
+            // 
+            this.navBarItem21.Caption = "Employee ";
+            this.navBarItem21.Name = "navBarItem21";
+            this.navBarItem21.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem21_LinkClicked);
+            // 
+            // navBarItem23
+            // 
+            this.navBarItem23.Caption = "Employee Right";
+            this.navBarItem23.Name = "navBarItem23";
+            this.navBarItem23.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem23_LinkClicked);
+            // 
+            // navBarItem24
+            // 
+            this.navBarItem24.Caption = "Working Time";
+            this.navBarItem24.Name = "navBarItem24";
+            this.navBarItem24.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem24_LinkClicked);
+            // 
+            // navBarItem25
+            // 
+            this.navBarItem25.Caption = "Attendance";
+            this.navBarItem25.Name = "navBarItem25";
+            this.navBarItem25.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem25_LinkClicked);
+            // 
+            // navBarItem26
+            // 
+            this.navBarItem26.Caption = "Attendance List";
+            this.navBarItem26.Name = "navBarItem26";
+            this.navBarItem26.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem26_LinkClicked);
+            // 
+            // navBarItem38
+            // 
+            this.navBarItem38.Caption = "Payrool";
+            this.navBarItem38.Name = "navBarItem38";
+            this.navBarItem38.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem38_LinkClicked);
+            // 
+            // navBarItem39
+            // 
+            this.navBarItem39.Caption = "Payrool List";
+            this.navBarItem39.Name = "navBarItem39";
+            this.navBarItem39.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem39_LinkClicked);
+            // 
+            // navBarItem34
+            // 
+            this.navBarItem34.Caption = "Vacation Requst";
+            this.navBarItem34.Name = "navBarItem34";
+            this.navBarItem34.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem34_LinkClicked);
             // 
             // navBarGroup6
             // 
