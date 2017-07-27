@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -7,13 +8,8 @@ using System.Text;
 
 namespace Test.Inventory.Database
 {
-    class clsNewCategory
+    class NewCategoryData
     {
-        public static string ConString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ERP;Persist Security Info=True;User ID=sa;Password=sa;";
-        SqlCommand Cmd;
-        SqlConnection Con;
-        SqlTransaction Trans;
-
         public string SlNo { get; set; }
         public string ProdCode { get; set; }
         public string ItemName { get; set; }
@@ -36,11 +32,14 @@ namespace Test.Inventory.Database
         public string WarrantyDetails { get; set; }
         public string Location { get; set; }
         string Result = "";
-    
+
+        SqlCommand Cmd;
+        SqlConnection Con;
+        SqlTransaction Trans;
 
         public void FnConn()
         {
-            Con = new SqlConnection(ConString);
+            Con = new SqlConnection(ConfigurationManager.ConnectionStrings["newConnectionString"].ConnectionString);
             Con.Open();
             Trans = Con.BeginTransaction();
         }
