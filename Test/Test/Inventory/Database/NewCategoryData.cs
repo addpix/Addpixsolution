@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
-namespace Test
+namespace Test.Inventory.Database
 {
     class clsNewCategory
     {
