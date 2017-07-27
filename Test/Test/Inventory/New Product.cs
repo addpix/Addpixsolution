@@ -8,12 +8,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using Test.Inventory.Database;
 
 namespace Test
 {
     public partial class New_Product : DevExpress.XtraEditors.XtraForm
     {
-        clsNewCategory NewCat = new clsNewCategory();
+        NewCategoryData NewCat = new NewCategoryData();
         public New_Product()
         {
             InitializeComponent();
