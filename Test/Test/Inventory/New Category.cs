@@ -22,10 +22,5 @@ namespace Test
         {
 
         }
-
-        private void New_Category_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

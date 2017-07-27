@@ -83,6 +83,7 @@ namespace Test
             this.btnSave.Caption = "Save";
             this.btnSave.Id = 0;
             this.btnSave.Name = "btnSave";
+            this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSave_ItemClick);
             // 
             // bar3
             // 
@@ -192,6 +193,7 @@ namespace Test
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

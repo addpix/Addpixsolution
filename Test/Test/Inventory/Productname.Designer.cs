@@ -33,16 +33,16 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.No = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BrandName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Delete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemToggleSwitch1 = new DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.adornerUIManager1 = new DevExpress.Utils.VisualEffects.AdornerUIManager(this.components);
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNewBrand = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -63,10 +63,10 @@
             // 
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 26);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 24);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(664, 315);
+            this.layoutControl1.Size = new System.Drawing.Size(664, 316);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -77,7 +77,7 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemToggleSwitch1});
-            this.gridControl1.Size = new System.Drawing.Size(640, 291);
+            this.gridControl1.Size = new System.Drawing.Size(640, 292);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -85,53 +85,53 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3});
+            this.No,
+            this.BrandName,
+            this.Delete});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn1
+            // No
             // 
-            this.gridColumn1.Caption = "#";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.AllowEdit = false;
-            this.gridColumn1.OptionsColumn.AllowIncrementalSearch = false;
-            this.gridColumn1.OptionsColumn.AllowMove = false;
-            this.gridColumn1.OptionsColumn.AllowSize = false;
-            this.gridColumn1.OptionsColumn.FixedWidth = true;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 30;
+            this.No.Caption = "#";
+            this.No.Name = "No";
+            this.No.OptionsColumn.AllowEdit = false;
+            this.No.OptionsColumn.AllowIncrementalSearch = false;
+            this.No.OptionsColumn.AllowMove = false;
+            this.No.OptionsColumn.AllowSize = false;
+            this.No.OptionsColumn.FixedWidth = true;
+            this.No.Visible = true;
+            this.No.VisibleIndex = 0;
+            this.No.Width = 30;
             // 
-            // gridColumn2
+            // BrandName
             // 
-            this.gridColumn2.Caption = "Brand Name";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.OptionsColumn.AllowEdit = false;
-            this.gridColumn2.OptionsColumn.AllowIncrementalSearch = false;
-            this.gridColumn2.OptionsColumn.AllowMove = false;
-            this.gridColumn2.OptionsColumn.AllowSize = false;
-            this.gridColumn2.OptionsColumn.FixedWidth = true;
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 200;
+            this.BrandName.Caption = "Brand Name";
+            this.BrandName.Name = "BrandName";
+            this.BrandName.OptionsColumn.AllowEdit = false;
+            this.BrandName.OptionsColumn.AllowIncrementalSearch = false;
+            this.BrandName.OptionsColumn.AllowMove = false;
+            this.BrandName.OptionsColumn.AllowSize = false;
+            this.BrandName.OptionsColumn.FixedWidth = true;
+            this.BrandName.Visible = true;
+            this.BrandName.VisibleIndex = 1;
+            this.BrandName.Width = 200;
             // 
-            // gridColumn3
+            // Delete
             // 
-            this.gridColumn3.Caption = "Delete";
-            this.gridColumn3.ColumnEdit = this.repositoryItemToggleSwitch1;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsColumn.AllowEdit = false;
-            this.gridColumn3.OptionsColumn.AllowIncrementalSearch = false;
-            this.gridColumn3.OptionsColumn.AllowMove = false;
-            this.gridColumn3.OptionsColumn.AllowSize = false;
-            this.gridColumn3.OptionsColumn.FixedWidth = true;
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 35;
+            this.Delete.Caption = "Delete";
+            this.Delete.ColumnEdit = this.repositoryItemToggleSwitch1;
+            this.Delete.Name = "Delete";
+            this.Delete.OptionsColumn.AllowEdit = false;
+            this.Delete.OptionsColumn.AllowIncrementalSearch = false;
+            this.Delete.OptionsColumn.AllowMove = false;
+            this.Delete.OptionsColumn.AllowSize = false;
+            this.Delete.OptionsColumn.FixedWidth = true;
+            this.Delete.Visible = true;
+            this.Delete.VisibleIndex = 2;
+            this.Delete.Width = 35;
             // 
             // repositoryItemToggleSwitch1
             // 
@@ -148,7 +148,7 @@
             this.layoutControlItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(664, 315);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(664, 316);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem2
@@ -156,7 +156,7 @@
             this.layoutControlItem2.Control = this.gridControl1;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(644, 295);
+            this.layoutControlItem2.Size = new System.Drawing.Size(644, 296);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -175,7 +175,7 @@
             this.barManager1.DockControls.Add(this.barDockControlRight);
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barButtonItem1});
+            this.btnNewBrand});
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 1;
             this.barManager1.StatusBar = this.bar3;
@@ -187,21 +187,21 @@
             this.bar2.DockRow = 0;
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnNewBrand, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.AllowQuickCustomization = false;
             this.bar2.OptionsBar.DrawBorder = false;
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
             // 
-            // barButtonItem1
+            // btnNewBrand
             // 
-            this.barButtonItem1.Caption = "New Brand Name";
-            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
-            this.barButtonItem1.Id = 0;
-            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            this.btnNewBrand.Caption = "New Brand Name";
+            this.btnNewBrand.Glyph = ((System.Drawing.Image)(resources.GetObject("btnNewBrand.Glyph")));
+            this.btnNewBrand.Id = 0;
+            this.btnNewBrand.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnNewBrand.LargeGlyph")));
+            this.btnNewBrand.Name = "btnNewBrand";
+            this.btnNewBrand.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // bar3
             // 
@@ -220,28 +220,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(664, 26);
+            this.barDockControlTop.Size = new System.Drawing.Size(664, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 341);
-            this.barDockControlBottom.Size = new System.Drawing.Size(664, 22);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 340);
+            this.barDockControlBottom.Size = new System.Drawing.Size(664, 23);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 26);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 315);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 316);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(664, 26);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 315);
+            this.barDockControlRight.Location = new System.Drawing.Point(664, 24);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 316);
             // 
             // Productname
             // 
@@ -283,11 +283,11 @@
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem btnNewBrand;
         private DevExpress.XtraBars.Bar bar3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn No;
+        private DevExpress.XtraGrid.Columns.GridColumn BrandName;
+        private DevExpress.XtraGrid.Columns.GridColumn Delete;
         private DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch repositoryItemToggleSwitch1;
     }
 }
