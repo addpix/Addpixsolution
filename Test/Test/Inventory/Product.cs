@@ -13,6 +13,7 @@ namespace Test
 {
     public partial class Product : DevExpress.XtraEditors.XtraForm
     {
+        Inventory.Database.ProductData Pdt = new Inventory.Database.ProductData();
         public Product()
         {
             InitializeComponent();
@@ -22,6 +23,20 @@ namespace Test
         {
             New_Product a = new New_Product();
             a.ShowDialog();
+        }
+
+        private void Product_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                Pdt.FnConn();
+                DataTable dt = Pdt.FillData();
+                gridControl1.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            } 
         }
     }
 }
