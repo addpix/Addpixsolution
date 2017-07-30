@@ -37,7 +37,7 @@ namespace Test.Inventory.Database
                 Cmd = new SqlCommand("Product", Con, Trans);
                 Cmd.CommandType = CommandType.StoredProcedure;
                 Cmd.Parameters.AddWithValue("@OPERATION", "S");
-                
+                //
                 SqlDataAdapter adp = new SqlDataAdapter(Cmd);
 
                 adp.Fill(dtReturnTable);
