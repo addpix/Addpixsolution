@@ -70,7 +70,7 @@ namespace Test.Inventory.Database
             Cmd.Parameters.AddWithValue("@EXP_DATE", ExpDate);
             Cmd.Parameters.AddWithValue("@WARRANTY_DETAILS", WarrantyDetails);
             Cmd.Parameters.AddWithValue("@LOCATION", Location);
-            Cmd.ExecuteNonQuery();
+            Cmd.ExecuteNonQuery();//
         }
 
         public string FnTrans()
