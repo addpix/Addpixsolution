@@ -84,7 +84,6 @@
     <Compile Include="Accounts\Contra Voucher.Designer.cs">
       <DependentUpon>Contra Voucher.cs</DependentUpon>
     </Compile>
-    <Compile Include="clsNewCategory.cs" />
     <Compile Include="Hr\Employee Right.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +186,8 @@
     <Compile Include="Accounts\Ledger List.Designer.cs">
       <DependentUpon>Ledger List.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\Database\NewProductData.cs" />
+    <Compile Include="Inventory\Database\ProductData.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

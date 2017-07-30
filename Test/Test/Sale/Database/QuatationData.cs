@@ -58,7 +58,7 @@ namespace Test.Sale.Database
             command.ExecuteNonQuery();
 
         }
-        public DataTable FillData()
+        public DataTable FillData(string operation)
         {
             try
             {
@@ -68,7 +68,7 @@ namespace Test.Sale.Database
 
                 command.CommandType = CommandType.StoredProcedure;
 
-                command.Parameters.AddWithValue("@OPERATION", "M");
+                command.Parameters.AddWithValue("@OPERATION", operation);
 
 
                 SqlDataAdapter adp = new SqlDataAdapter(command);

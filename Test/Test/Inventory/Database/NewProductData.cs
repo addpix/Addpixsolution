@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Test.Inventory.Database
 {
-    class NewCategoryData
+    class NewProductData
     {
         public string SlNo { get; set; }
         public string ProdCode { get; set; }

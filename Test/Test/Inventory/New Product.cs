@@ -14,7 +14,7 @@ namespace Test
 {
     public partial class New_Product : DevExpress.XtraEditors.XtraForm
     {
-        NewCategoryData NewCat = new NewCategoryData();
+        NewProductData NewCat = new NewProductData();
         public New_Product()
         {
             InitializeComponent();
