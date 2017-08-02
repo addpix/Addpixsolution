@@ -30,7 +30,7 @@ namespace Test
                   //  total = total + Convert.ToDouble(source.Rows[i]["totalamount"] + "");
                     total = total +Convert.ToDouble( gridView1.GetRowCellValue(i, "totalAmount").ToString());
                 }
-                catch (Exception Ex)
+                catch (Exception)
                 {
                 }
             }
@@ -103,7 +103,7 @@ namespace Test
                     {
                         quantity = Convert.ToDouble(row["quantity"] + "");
                     }
-                    catch (Exception ex1)
+                    catch (Exception)
                     {
                         row["quantity"] = "0";
                     }
@@ -112,7 +112,7 @@ namespace Test
                     {
                         unitprice = Convert.ToDouble(row["unitprice"] + "");
                     }
-                    catch (Exception invalidstring)
+                    catch (Exception)
                     {
                         row["unitprice"] = "0";
                     }
@@ -142,7 +142,7 @@ namespace Test
                     {
                         quantity = Convert.ToDouble(row["quantity"] + "");
                     }
-                    catch (Exception ex1)
+                    catch (Exception )
                     {
                         row["quantity"] = "0";
                     }
@@ -151,7 +151,7 @@ namespace Test
                     {
                         unitprice = Convert.ToDouble(row["unitprice"] + "");
                     }
-                    catch (Exception invalidstring)
+                    catch (Exception )
                     {
                         row["unitprice"] = "0";
                     }
@@ -162,7 +162,7 @@ namespace Test
                     calculateTotal();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }

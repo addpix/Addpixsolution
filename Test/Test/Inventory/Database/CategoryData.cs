@@ -9,18 +9,16 @@ using System.Windows.Forms;
 
 namespace Test.Inventory.Database
 {
-    class ProductData
+    class CategoryData
     {
-        public string ProductCode { get; set; }
-        public string QRCode { get; set; }
-        public string BrandName { get; set; }
-        public string ProdCategory { get; set; }
-        public string Description { get; set; }
+        public string CatNo { get; set; }
+        public string Category { get; set; }
+        public string Delete { get; set; }
+        public string Result = "";
         SqlCommand Cmd;
         SqlConnection Con;
         SqlTransaction Trans;
-        string Result = "";
-
+        
         public void FnConn()
         {
             Con = new SqlConnection(ConfigurationManager.ConnectionStrings["newConnectionString"].ConnectionString);
@@ -34,7 +32,7 @@ namespace Test.Inventory.Database
             {
                 DataTable dtReturnTable = new DataTable();
 
-                Cmd = new SqlCommand("spProduct", Con, Trans);
+                Cmd = new SqlCommand("spCategory", Con, Trans);
                 Cmd.CommandType = CommandType.StoredProcedure;
                 Cmd.Parameters.AddWithValue("@OPERATION", "S");
                 SqlDataAdapter adp = new SqlDataAdapter(Cmd);
@@ -44,23 +42,18 @@ namespace Test.Inventory.Database
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(),"ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return new DataTable();
             }
         }
         public void fnTransactionData()
         {
-            Cmd = new SqlCommand("spProduct", Con, Trans);
+            Cmd = new SqlCommand("spCategory", Con, Trans);
 
             Cmd.CommandType = CommandType.StoredProcedure;
             Cmd.Parameters.AddWithValue("@OPERATION", "I");
-            Cmd.Parameters.AddWithValue("@PRODUCTCODE", ProductCode);
-            Cmd.Parameters.AddWithValue("@QRCODE", QRCode);
-            Cmd.Parameters.AddWithValue("@BRANDNAME", BrandName);
-            Cmd.Parameters.AddWithValue("@PRODCATEGORY", ProdCategory);
-            Cmd.Parameters.AddWithValue("@DESCRIPTION", Description);
+            Cmd.Parameters.AddWithValue("@CATEGORY", Category);
             Cmd.ExecuteNonQuery();
-
         }
         public string FnTrans()
         {

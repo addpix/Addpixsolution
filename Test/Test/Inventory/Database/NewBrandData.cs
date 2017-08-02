@@ -9,17 +9,15 @@ using System.Windows.Forms;
 
 namespace Test.Inventory.Database
 {
-    class ProductData
+    class NewBrandData
     {
-        public string ProductCode { get; set; }
-        public string QRCode { get; set; }
-        public string BrandName { get; set; }
-        public string ProdCategory { get; set; }
-        public string Description { get; set; }
+        public string Brand { get; set; }
+        public string Vendor { get; set; }
+        public string Result = "";
+
         SqlCommand Cmd;
         SqlConnection Con;
         SqlTransaction Trans;
-        string Result = "";
 
         public void FnConn()
         {
@@ -27,14 +25,13 @@ namespace Test.Inventory.Database
             Con.Open();
             Trans = Con.BeginTransaction();
         }
-
         public DataTable FillData()
         {
             try
             {
                 DataTable dtReturnTable = new DataTable();
 
-                Cmd = new SqlCommand("spProduct", Con, Trans);
+                Cmd = new SqlCommand("spBrand", Con, Trans);
                 Cmd.CommandType = CommandType.StoredProcedure;
                 Cmd.Parameters.AddWithValue("@OPERATION", "S");
                 SqlDataAdapter adp = new SqlDataAdapter(Cmd);
@@ -44,24 +41,21 @@ namespace Test.Inventory.Database
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(),"ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return new DataTable();
             }
         }
         public void fnTransactionData()
         {
-            Cmd = new SqlCommand("spProduct", Con, Trans);
-
+            Cmd = new SqlCommand("spBrand", Con, Trans);
             Cmd.CommandType = CommandType.StoredProcedure;
-            Cmd.Parameters.AddWithValue("@OPERATION", "I");
-            Cmd.Parameters.AddWithValue("@PRODUCTCODE", ProductCode);
-            Cmd.Parameters.AddWithValue("@QRCODE", QRCode);
-            Cmd.Parameters.AddWithValue("@BRANDNAME", BrandName);
-            Cmd.Parameters.AddWithValue("@PRODCATEGORY", ProdCategory);
-            Cmd.Parameters.AddWithValue("@DESCRIPTION", Description);
-            Cmd.ExecuteNonQuery();
 
+            Cmd.Parameters.AddWithValue("@OPERATION", "I");
+            Cmd.Parameters.AddWithValue("@BRAND_NAME", Brand);
+            Cmd.Parameters.AddWithValue("@VENDOR", Vendor);
+            Cmd.ExecuteNonQuery();
         }
+
         public string FnTrans()
         {
             try
@@ -76,6 +70,7 @@ namespace Test.Inventory.Database
                 Result = "Error" + sqlEx.Message;
                 return Result;
             }
+
             finally
             {
                 Con.Close();

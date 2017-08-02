@@ -9,18 +9,19 @@ using System.Windows.Forms;
 
 namespace Test.Inventory.Database
 {
-    class ProductData
+    class MRRData
     {
-        public string ProductCode { get; set; }
-        public string QRCode { get; set; }
-        public string BrandName { get; set; }
-        public string ProdCategory { get; set; }
-        public string Description { get; set; }
+        public string MRRNo { get; set; }
+        public string MRRDate { get; set; }
+        public string DelNoteNo { get; set; }
+        public string ReqNo { get; set; }
+        public string PONo { get; set; }
+        public string StoreKeeper { get; set; }
+        public string Result = "";
         SqlCommand Cmd;
         SqlConnection Con;
         SqlTransaction Trans;
-        string Result = "";
-
+       
         public void FnConn()
         {
             Con = new SqlConnection(ConfigurationManager.ConnectionStrings["newConnectionString"].ConnectionString);
@@ -44,21 +45,21 @@ namespace Test.Inventory.Database
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(),"ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return new DataTable();
             }
         }
         public void fnTransactionData()
         {
-            Cmd = new SqlCommand("spProduct", Con, Trans);
+            Cmd = new SqlCommand("spMrr", Con, Trans);
 
             Cmd.CommandType = CommandType.StoredProcedure;
             Cmd.Parameters.AddWithValue("@OPERATION", "I");
-            Cmd.Parameters.AddWithValue("@PRODUCTCODE", ProductCode);
-            Cmd.Parameters.AddWithValue("@QRCODE", QRCode);
-            Cmd.Parameters.AddWithValue("@BRANDNAME", BrandName);
-            Cmd.Parameters.AddWithValue("@PRODCATEGORY", ProdCategory);
-            Cmd.Parameters.AddWithValue("@DESCRIPTION", Description);
+            Cmd.Parameters.AddWithValue("@MRR_NO", MRRNo);
+            Cmd.Parameters.AddWithValue("@STORE_KEEPER", StoreKeeper);
+            Cmd.Parameters.AddWithValue("@DATE", MRRDate);
+            Cmd.Parameters.AddWithValue("@DEL_NOTE_NO", DelNoteNo);
+            Cmd.Parameters.AddWithValue("@PO_NO", PONo);
             Cmd.ExecuteNonQuery();
 
         }

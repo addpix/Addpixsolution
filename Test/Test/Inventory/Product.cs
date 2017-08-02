@@ -13,7 +13,7 @@ namespace Test
 {
     public partial class Product : DevExpress.XtraEditors.XtraForm
     {
-        Inventory.Database.ProductData Pdt = new Inventory.Database.ProductData();
+       
         public Product()
         {
             InitializeComponent();
@@ -27,6 +27,7 @@ namespace Test
 
         private void Product_Load(object sender, EventArgs e)
         {
+            Inventory.Database.NewProductData Pdt = new Inventory.Database.NewProductData();
             try
             {
                 Pdt.FnConn();

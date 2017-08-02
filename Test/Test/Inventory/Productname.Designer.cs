@@ -33,7 +33,7 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.No = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BrandNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BrandName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Delete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemToggleSwitch1 = new DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch();
@@ -85,7 +85,7 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.No,
+            this.BrandNo,
             this.BrandName,
             this.Delete});
             this.gridView1.GridControl = this.gridControl1;
@@ -93,22 +93,24 @@
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // No
+            // BrandNo
             // 
-            this.No.Caption = "#";
-            this.No.Name = "No";
-            this.No.OptionsColumn.AllowEdit = false;
-            this.No.OptionsColumn.AllowIncrementalSearch = false;
-            this.No.OptionsColumn.AllowMove = false;
-            this.No.OptionsColumn.AllowSize = false;
-            this.No.OptionsColumn.FixedWidth = true;
-            this.No.Visible = true;
-            this.No.VisibleIndex = 0;
-            this.No.Width = 30;
+            this.BrandNo.Caption = "#";
+            this.BrandNo.FieldName = "slno";
+            this.BrandNo.Name = "BrandNo";
+            this.BrandNo.OptionsColumn.AllowEdit = false;
+            this.BrandNo.OptionsColumn.AllowIncrementalSearch = false;
+            this.BrandNo.OptionsColumn.AllowMove = false;
+            this.BrandNo.OptionsColumn.AllowSize = false;
+            this.BrandNo.OptionsColumn.FixedWidth = true;
+            this.BrandNo.Visible = true;
+            this.BrandNo.VisibleIndex = 0;
+            this.BrandNo.Width = 30;
             // 
             // BrandName
             // 
             this.BrandName.Caption = "Brand Name";
+            this.BrandName.FieldName = "brandName";
             this.BrandName.Name = "BrandName";
             this.BrandName.OptionsColumn.AllowEdit = false;
             this.BrandName.OptionsColumn.AllowIncrementalSearch = false;
@@ -123,6 +125,7 @@
             // 
             this.Delete.Caption = "Delete";
             this.Delete.ColumnEdit = this.repositoryItemToggleSwitch1;
+            this.Delete.FieldName = "Delete";
             this.Delete.Name = "Delete";
             this.Delete.OptionsColumn.AllowEdit = false;
             this.Delete.OptionsColumn.AllowIncrementalSearch = false;
@@ -255,6 +258,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "Productname";
             this.Text = "Brand Name";
+            this.Load += new System.EventHandler(this.Productname_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -285,7 +289,7 @@
         private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.BarButtonItem btnNewBrand;
         private DevExpress.XtraBars.Bar bar3;
-        private DevExpress.XtraGrid.Columns.GridColumn No;
+        private DevExpress.XtraGrid.Columns.GridColumn BrandNo;
         private DevExpress.XtraGrid.Columns.GridColumn BrandName;
         private DevExpress.XtraGrid.Columns.GridColumn Delete;
         private DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch repositoryItemToggleSwitch1;
