@@ -171,6 +171,7 @@
             // gridColumn1
             // 
             this.gridColumn1.Caption = "#";
+            this.gridColumn1.FieldName = "slno";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
@@ -186,6 +187,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Category ";
+            this.gridColumn2.FieldName = "category";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
@@ -202,6 +204,7 @@
             // 
             this.gridColumn3.Caption = "Delete";
             this.gridColumn3.ColumnEdit = this.repositoryItemToggleSwitch1;
+            this.gridColumn3.FieldName = "delete";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;

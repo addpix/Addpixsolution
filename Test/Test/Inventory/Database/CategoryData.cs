@@ -14,11 +14,11 @@ namespace Test.Inventory.Database
         public string CatNo { get; set; }
         public string Category { get; set; }
         public string Delete { get; set; }
+        public string Result = "";
         SqlCommand Cmd;
         SqlConnection Con;
         SqlTransaction Trans;
-        string Result = "";
-
+        
         public void FnConn()
         {
             Con = new SqlConnection(ConfigurationManager.ConnectionStrings["newConnectionString"].ConnectionString);

@@ -26,6 +26,7 @@ namespace Test
             NewCat.FnConn();
             NewCat.fnTransactionData();
             NewCat.FnTrans();
+            MessageBox.Show(NewCat.Result);
         }
     }
 }

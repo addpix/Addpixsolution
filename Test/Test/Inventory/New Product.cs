@@ -19,22 +19,28 @@ namespace Test
         {
             InitializeComponent();
         }
-
-        private void simpleButton2_Click(object sender, EventArgs e)
+        
+        private void btnNew_brand_Click(object sender, EventArgs e)
         {
             Newbrand a = new Newbrand();
             a.ShowDialog();
         }
 
-        private void simpleButton3_Click(object sender, EventArgs e)
+        private void btnNew_category_Click(object sender, EventArgs e)
         {
             New_Category a = new New_Category();
             a.ShowDialog();
         }
 
+        private void New_Product_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             NewProd.ProdCode = txtProduct_code.Text;
+            NewProd.QRCode = txtQRCode.Text;
             NewProd.ItemName = txtItem_name.Text;
             NewProd.UnitMeasure = cmbUnit.Text;
             NewProd.BrandName = cmbBrand_name.Text;
@@ -58,6 +64,7 @@ namespace Test
             NewProd.FnConn();
             NewProd.fnTransactionData();
             NewProd.FnTrans();
+            MessageBox.Show(NewProd.Result);
         }
     }
 }

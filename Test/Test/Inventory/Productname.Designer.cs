@@ -96,6 +96,7 @@
             // BrandNo
             // 
             this.BrandNo.Caption = "#";
+            this.BrandNo.FieldName = "slno";
             this.BrandNo.Name = "BrandNo";
             this.BrandNo.OptionsColumn.AllowEdit = false;
             this.BrandNo.OptionsColumn.AllowIncrementalSearch = false;
@@ -109,6 +110,7 @@
             // BrandName
             // 
             this.BrandName.Caption = "Brand Name";
+            this.BrandName.FieldName = "brandName";
             this.BrandName.Name = "BrandName";
             this.BrandName.OptionsColumn.AllowEdit = false;
             this.BrandName.OptionsColumn.AllowIncrementalSearch = false;
@@ -123,6 +125,7 @@
             // 
             this.Delete.Caption = "Delete";
             this.Delete.ColumnEdit = this.repositoryItemToggleSwitch1;
+            this.Delete.FieldName = "Delete";
             this.Delete.Name = "Delete";
             this.Delete.OptionsColumn.AllowEdit = false;
             this.Delete.OptionsColumn.AllowIncrementalSearch = false;

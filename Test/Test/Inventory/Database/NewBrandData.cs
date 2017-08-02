@@ -13,7 +13,7 @@ namespace Test.Inventory.Database
     {
         public string Brand { get; set; }
         public string Vendor { get; set; }
-        string Result = "";
+        public string Result = "";
 
         SqlCommand Cmd;
         SqlConnection Con;
@@ -50,7 +50,8 @@ namespace Test.Inventory.Database
             Cmd = new SqlCommand("spBrand", Con, Trans);
             Cmd.CommandType = CommandType.StoredProcedure;
 
-            Cmd.Parameters.AddWithValue("@CATEGORY", Brand);
+            Cmd.Parameters.AddWithValue("@OPERATION", "I");
+            Cmd.Parameters.AddWithValue("@BRAND_NAME", Brand);
             Cmd.Parameters.AddWithValue("@VENDOR", Vendor);
             Cmd.ExecuteNonQuery();
         }

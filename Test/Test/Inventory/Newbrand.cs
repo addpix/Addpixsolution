@@ -33,6 +33,8 @@ namespace Test
             NewBrand.fnTransactionData();
             NewBrand.FnTrans();
 
+            MessageBox.Show(NewBrand.Result);
+
         }
 
     }

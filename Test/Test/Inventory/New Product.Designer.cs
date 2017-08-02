@@ -307,6 +307,7 @@
             this.btnNew_category.StyleController = this.layoutControl1;
             this.btnNew_category.TabIndex = 32;
             this.btnNew_category.Text = "New Category";
+            this.btnNew_category.Click += new System.EventHandler(this.btnNew_category_Click);
             // 
             // btnNew_brand
             // 
@@ -316,6 +317,7 @@
             this.btnNew_brand.StyleController = this.layoutControl1;
             this.btnNew_brand.TabIndex = 31;
             this.btnNew_brand.Text = "New Brand";
+            this.btnNew_brand.Click += new System.EventHandler(this.btnNew_brand_Click);
             // 
             // memWarranty
             // 
@@ -373,6 +375,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtExp_date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtExp_date.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.dtExp_date.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtExp_date.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dtExp_date.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtExp_date.Properties.Mask.EditMask = "yyyy-MM-dd";
             this.dtExp_date.Size = new System.Drawing.Size(97, 22);
             this.dtExp_date.StyleController = this.layoutControl1;
             this.dtExp_date.TabIndex = 25;
@@ -389,6 +396,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtMfg_date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtMfg_date.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.dtMfg_date.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtMfg_date.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dtMfg_date.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtMfg_date.Properties.Mask.EditMask = "yyyy-MM-dd";
             this.dtMfg_date.Size = new System.Drawing.Size(104, 22);
             this.dtMfg_date.StyleController = this.layoutControl1;
             this.dtMfg_date.TabIndex = 24;
@@ -1035,6 +1047,7 @@
             this.Name = "New_Product";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Product";
+            this.Load += new System.EventHandler(this.New_Product_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cmbLocation.Properties)).EndInit();

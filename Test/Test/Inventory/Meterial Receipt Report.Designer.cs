@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Meterial_Receipt_Report));
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.bmStoreKeeper = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnSave = new DevExpress.XtraBars.BarButtonItem();
             this.btnNewMRR = new DevExpress.XtraBars.BarButtonItem();
@@ -52,11 +52,11 @@
             this.DeliveredQty = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BalanceQty = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Remark = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtPONo = new DevExpress.XtraEditors.TextEdit();
-            this.txtReqNo = new DevExpress.XtraEditors.TextEdit();
-            this.txtDelNoteNo = new DevExpress.XtraEditors.TextEdit();
-            this.dtMRRDate = new DevExpress.XtraEditors.DateEdit();
-            this.MRRNo = new DevExpress.XtraEditors.TextEdit();
+            this.txtPO_no = new DevExpress.XtraEditors.TextEdit();
+            this.txtReq_no = new DevExpress.XtraEditors.TextEdit();
+            this.txtDel_note_no = new DevExpress.XtraEditors.TextEdit();
+            this.dtMRR_date = new DevExpress.XtraEditors.DateEdit();
+            this.txtMRR_no = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -65,18 +65,18 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bmStoreKeeper)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStoreKeeper.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPONo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtReqNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDelNoteNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtMRRDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtMRRDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MRRNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPO_no.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReq_no.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDel_note_no.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtMRR_date.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtMRR_date.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMRR_no.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -87,23 +87,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
-            // barManager1
+            // bmStoreKeeper
             // 
-            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.bmStoreKeeper.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
             this.bar2,
             this.bar3});
-            this.barManager1.DockControls.Add(this.barDockControlTop);
-            this.barManager1.DockControls.Add(this.barDockControlBottom);
-            this.barManager1.DockControls.Add(this.barDockControlLeft);
-            this.barManager1.DockControls.Add(this.barDockControlRight);
-            this.barManager1.Form = this;
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.bmStoreKeeper.DockControls.Add(this.barDockControlTop);
+            this.bmStoreKeeper.DockControls.Add(this.barDockControlBottom);
+            this.bmStoreKeeper.DockControls.Add(this.barDockControlLeft);
+            this.bmStoreKeeper.DockControls.Add(this.barDockControlRight);
+            this.bmStoreKeeper.Form = this;
+            this.bmStoreKeeper.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnSave,
             this.btnNewMRR,
             this.btnClose});
-            this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 3;
-            this.barManager1.StatusBar = this.bar3;
+            this.bmStoreKeeper.MainMenu = this.bar2;
+            this.bmStoreKeeper.MaxItemId = 3;
+            this.bmStoreKeeper.StatusBar = this.bar3;
             // 
             // bar2
             // 
@@ -127,6 +127,7 @@
             this.btnSave.Id = 0;
             this.btnSave.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnSave.LargeGlyph")));
             this.btnSave.Name = "btnSave";
+            this.btnSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSave_ItemClick);
             // 
             // btnNewMRR
             // 
@@ -188,11 +189,11 @@
             // 
             this.layoutControl1.Controls.Add(this.txtStoreKeeper);
             this.layoutControl1.Controls.Add(this.gridControl1);
-            this.layoutControl1.Controls.Add(this.txtPONo);
-            this.layoutControl1.Controls.Add(this.txtReqNo);
-            this.layoutControl1.Controls.Add(this.txtDelNoteNo);
-            this.layoutControl1.Controls.Add(this.dtMRRDate);
-            this.layoutControl1.Controls.Add(this.MRRNo);
+            this.layoutControl1.Controls.Add(this.txtPO_no);
+            this.layoutControl1.Controls.Add(this.txtReq_no);
+            this.layoutControl1.Controls.Add(this.txtDel_note_no);
+            this.layoutControl1.Controls.Add(this.dtMRR_date);
+            this.layoutControl1.Controls.Add(this.txtMRR_no);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 24);
             this.layoutControl1.Name = "layoutControl1";
@@ -204,7 +205,7 @@
             // txtStoreKeeper
             // 
             this.txtStoreKeeper.Location = new System.Drawing.Point(106, 12);
-            this.txtStoreKeeper.MenuManager = this.barManager1;
+            this.txtStoreKeeper.MenuManager = this.bmStoreKeeper;
             this.txtStoreKeeper.Name = "txtStoreKeeper";
             this.txtStoreKeeper.Size = new System.Drawing.Size(542, 20);
             this.txtStoreKeeper.StyleController = this.layoutControl1;
@@ -214,7 +215,7 @@
             // 
             this.gridControl1.Location = new System.Drawing.Point(12, 132);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.barManager1;
+            this.gridControl1.MenuManager = this.bmStoreKeeper;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(898, 315);
             this.gridControl1.TabIndex = 10;
@@ -347,55 +348,55 @@
             this.Remark.VisibleIndex = 7;
             this.Remark.Width = 100;
             // 
-            // txtPONo
+            // txtPO_no
             // 
-            this.txtPONo.Location = new System.Drawing.Point(746, 108);
-            this.txtPONo.MenuManager = this.barManager1;
-            this.txtPONo.Name = "txtPONo";
-            this.txtPONo.Size = new System.Drawing.Size(164, 20);
-            this.txtPONo.StyleController = this.layoutControl1;
-            this.txtPONo.TabIndex = 8;
+            this.txtPO_no.Location = new System.Drawing.Point(746, 108);
+            this.txtPO_no.MenuManager = this.bmStoreKeeper;
+            this.txtPO_no.Name = "txtPO_no";
+            this.txtPO_no.Size = new System.Drawing.Size(164, 20);
+            this.txtPO_no.StyleController = this.layoutControl1;
+            this.txtPO_no.TabIndex = 8;
             // 
-            // txtReqNo
+            // txtReq_no
             // 
-            this.txtReqNo.Location = new System.Drawing.Point(746, 84);
-            this.txtReqNo.MenuManager = this.barManager1;
-            this.txtReqNo.Name = "txtReqNo";
-            this.txtReqNo.Size = new System.Drawing.Size(164, 20);
-            this.txtReqNo.StyleController = this.layoutControl1;
-            this.txtReqNo.TabIndex = 7;
+            this.txtReq_no.Location = new System.Drawing.Point(746, 84);
+            this.txtReq_no.MenuManager = this.bmStoreKeeper;
+            this.txtReq_no.Name = "txtReq_no";
+            this.txtReq_no.Size = new System.Drawing.Size(164, 20);
+            this.txtReq_no.StyleController = this.layoutControl1;
+            this.txtReq_no.TabIndex = 7;
             // 
-            // txtDelNoteNo
+            // txtDel_note_no
             // 
-            this.txtDelNoteNo.Location = new System.Drawing.Point(746, 60);
-            this.txtDelNoteNo.MenuManager = this.barManager1;
-            this.txtDelNoteNo.Name = "txtDelNoteNo";
-            this.txtDelNoteNo.Size = new System.Drawing.Size(164, 20);
-            this.txtDelNoteNo.StyleController = this.layoutControl1;
-            this.txtDelNoteNo.TabIndex = 6;
+            this.txtDel_note_no.Location = new System.Drawing.Point(746, 60);
+            this.txtDel_note_no.MenuManager = this.bmStoreKeeper;
+            this.txtDel_note_no.Name = "txtDel_note_no";
+            this.txtDel_note_no.Size = new System.Drawing.Size(164, 20);
+            this.txtDel_note_no.StyleController = this.layoutControl1;
+            this.txtDel_note_no.TabIndex = 6;
             // 
-            // dtMRRDate
+            // dtMRR_date
             // 
-            this.dtMRRDate.EditValue = null;
-            this.dtMRRDate.Location = new System.Drawing.Point(746, 36);
-            this.dtMRRDate.MenuManager = this.barManager1;
-            this.dtMRRDate.Name = "dtMRRDate";
-            this.dtMRRDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtMRR_date.EditValue = null;
+            this.dtMRR_date.Location = new System.Drawing.Point(746, 36);
+            this.dtMRR_date.MenuManager = this.bmStoreKeeper;
+            this.dtMRR_date.Name = "dtMRR_date";
+            this.dtMRR_date.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtMRRDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtMRR_date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtMRRDate.Size = new System.Drawing.Size(164, 20);
-            this.dtMRRDate.StyleController = this.layoutControl1;
-            this.dtMRRDate.TabIndex = 5;
+            this.dtMRR_date.Size = new System.Drawing.Size(164, 20);
+            this.dtMRR_date.StyleController = this.layoutControl1;
+            this.dtMRR_date.TabIndex = 5;
             // 
-            // MRRNo
+            // txtMRR_no
             // 
-            this.MRRNo.Location = new System.Drawing.Point(746, 12);
-            this.MRRNo.MenuManager = this.barManager1;
-            this.MRRNo.Name = "MRRNo";
-            this.MRRNo.Size = new System.Drawing.Size(164, 20);
-            this.MRRNo.StyleController = this.layoutControl1;
-            this.MRRNo.TabIndex = 4;
+            this.txtMRR_no.Location = new System.Drawing.Point(746, 12);
+            this.txtMRR_no.MenuManager = this.bmStoreKeeper;
+            this.txtMRR_no.Name = "txtMRR_no";
+            this.txtMRR_no.Size = new System.Drawing.Size(164, 20);
+            this.txtMRR_no.StyleController = this.layoutControl1;
+            this.txtMRR_no.TabIndex = 4;
             // 
             // layoutControlGroup1
             // 
@@ -416,7 +417,7 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.MRRNo;
+            this.layoutControlItem1.Control = this.txtMRR_no;
             this.layoutControlItem1.Location = new System.Drawing.Point(640, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(262, 24);
@@ -425,7 +426,7 @@
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.dtMRRDate;
+            this.layoutControlItem2.Control = this.dtMRR_date;
             this.layoutControlItem2.Location = new System.Drawing.Point(640, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(262, 24);
@@ -434,7 +435,7 @@
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.txtDelNoteNo;
+            this.layoutControlItem3.Control = this.txtDel_note_no;
             this.layoutControlItem3.Location = new System.Drawing.Point(640, 48);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(262, 24);
@@ -443,7 +444,7 @@
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.txtReqNo;
+            this.layoutControlItem4.Control = this.txtReq_no;
             this.layoutControlItem4.Location = new System.Drawing.Point(640, 72);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(262, 24);
@@ -452,7 +453,7 @@
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.txtPONo;
+            this.layoutControlItem5.Control = this.txtPO_no;
             this.layoutControlItem5.Location = new System.Drawing.Point(640, 96);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(262, 24);
@@ -493,18 +494,18 @@
             this.Name = "Meterial_Receipt_Report";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Meterial Receipt Report";
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bmStoreKeeper)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtStoreKeeper.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPONo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtReqNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDelNoteNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtMRRDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtMRRDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MRRNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPO_no.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReq_no.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDel_note_no.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtMRR_date.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtMRR_date.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMRR_no.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -520,7 +521,7 @@
 
         #endregion
 
-        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.BarManager bmStoreKeeper;
         private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
@@ -539,11 +540,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn Quantity;
         private DevExpress.XtraGrid.Columns.GridColumn UoM;
         private DevExpress.XtraGrid.Columns.GridColumn DeliveredQty;
-        private DevExpress.XtraEditors.TextEdit txtPONo;
-        private DevExpress.XtraEditors.TextEdit txtReqNo;
-        private DevExpress.XtraEditors.TextEdit txtDelNoteNo;
-        private DevExpress.XtraEditors.DateEdit dtMRRDate;
-        private DevExpress.XtraEditors.TextEdit MRRNo;
+        private DevExpress.XtraEditors.TextEdit txtPO_no;
+        private DevExpress.XtraEditors.TextEdit txtReq_no;
+        private DevExpress.XtraEditors.TextEdit txtDel_note_no;
+        private DevExpress.XtraEditors.DateEdit dtMRR_date;
+        private DevExpress.XtraEditors.TextEdit txtMRR_no;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;

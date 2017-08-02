@@ -34,7 +34,7 @@ namespace Test.Inventory.Database
             {
                 DataTable dtReturnTable = new DataTable();
 
-                Cmd = new SqlCommand("Product", Con, Trans);
+                Cmd = new SqlCommand("spProduct", Con, Trans);
                 Cmd.CommandType = CommandType.StoredProcedure;
                 Cmd.Parameters.AddWithValue("@OPERATION", "S");
                 SqlDataAdapter adp = new SqlDataAdapter(Cmd);
@@ -50,7 +50,7 @@ namespace Test.Inventory.Database
         }
         public void fnTransactionData()
         {
-            Cmd = new SqlCommand("Product", Con, Trans);
+            Cmd = new SqlCommand("spProduct", Con, Trans);
 
             Cmd.CommandType = CommandType.StoredProcedure;
             Cmd.Parameters.AddWithValue("@OPERATION", "I");

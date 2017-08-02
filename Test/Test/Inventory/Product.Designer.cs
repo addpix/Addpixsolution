@@ -177,6 +177,7 @@
             this.ProductCode.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductCode.AppearanceHeader.Options.UseFont = true;
             this.ProductCode.Caption = "Product Code";
+            this.ProductCode.FieldName = "productCode";
             this.ProductCode.Name = "ProductCode";
             this.ProductCode.OptionsColumn.AllowEdit = false;
             this.ProductCode.OptionsColumn.AllowMove = false;
@@ -194,6 +195,7 @@
             this.QRCode.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QRCode.AppearanceHeader.Options.UseFont = true;
             this.QRCode.Caption = "QR Code";
+            this.QRCode.FieldName = "qrCode";
             this.QRCode.Name = "QRCode";
             this.QRCode.OptionsColumn.AllowEdit = false;
             this.QRCode.OptionsColumn.AllowMove = false;
@@ -210,6 +212,7 @@
             this.BrandName.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BrandName.AppearanceHeader.Options.UseFont = true;
             this.BrandName.Caption = "Brand Name";
+            this.BrandName.FieldName = "brandName";
             this.BrandName.Name = "BrandName";
             this.BrandName.OptionsColumn.AllowEdit = false;
             this.BrandName.OptionsColumn.AllowMove = false;
@@ -226,6 +229,7 @@
             this.ProdCategory.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProdCategory.AppearanceHeader.Options.UseFont = true;
             this.ProdCategory.Caption = "Product Category";
+            this.ProdCategory.FieldName = "category";
             this.ProdCategory.Name = "ProdCategory";
             this.ProdCategory.OptionsColumn.AllowEdit = false;
             this.ProdCategory.OptionsColumn.AllowMove = false;
@@ -242,6 +246,7 @@
             this.Description.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Description.AppearanceHeader.Options.UseFont = true;
             this.Description.Caption = "Description";
+            this.Description.FieldName = "warrentyDetails";
             this.Description.Name = "Description";
             this.Description.OptionsColumn.AllowEdit = false;
             this.Description.OptionsColumn.AllowMove = false;

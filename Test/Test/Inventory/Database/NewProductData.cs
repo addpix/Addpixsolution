@@ -5,13 +5,14 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Test.Inventory.Database
 {
     class NewProductData
     {
-        public string SlNo { get; set; }
         public string ProdCode { get; set; }
+        public string QRCode { get; set; }
         public string ItemName { get; set; }
         public string UnitMeasure { get; set; }
         public string BrandName { get; set; }
@@ -31,7 +32,7 @@ namespace Test.Inventory.Database
         public string ExpDate { get; set; }
         public string WarrantyDetails { get; set; }
         public string Location { get; set; }
-        string Result = "";
+        public string Result = "";
 
         SqlCommand Cmd;
         SqlConnection Con;
@@ -43,14 +44,57 @@ namespace Test.Inventory.Database
             Con.Open();
             Trans = Con.BeginTransaction();
         }
-       
+
+        public DataTable FillData()
+        {
+            try
+            {
+                DataTable dtReturnTable = new DataTable();
+
+                Cmd = new SqlCommand("spProduct", Con, Trans);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.AddWithValue("@OPERATION", "S");
+                SqlDataAdapter adp = new SqlDataAdapter(Cmd);
+
+                adp.Fill(dtReturnTable);
+                return dtReturnTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new DataTable();
+            }
+        }
+
+        public DataTable GetDataList(String SPName)
+        {
+            try
+            {
+                DataTable dtReturnTable = new DataTable();
+
+                Cmd = new SqlCommand(SPName, Con, Trans);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.AddWithValue("@OPERATION", "SS");
+                SqlDataAdapter adp = new SqlDataAdapter(Cmd);
+
+                adp.Fill(dtReturnTable);
+                return dtReturnTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new DataTable();
+            }
+        }
+
         public void  fnTransactionData()
         {
-            Cmd = new SqlCommand("SP_DEMO", Con, Trans);
+            Cmd = new SqlCommand("spProduct", Con, Trans);
             Cmd.CommandType = CommandType.StoredProcedure;
-                        
-            Cmd.Parameters.AddWithValue("@SLNO", SlNo);
+
+            Cmd.Parameters.AddWithValue("@OPERATION","I");
             Cmd.Parameters.AddWithValue("@PRODUCT_CODE", ProdCode);
+            Cmd.Parameters.AddWithValue("@QR_CODE", QRCode);
             Cmd.Parameters.AddWithValue("@ITEM_NAME", ItemName);
             Cmd.Parameters.AddWithValue("@UNIT_MEASURE", UnitMeasure);
             Cmd.Parameters.AddWithValue("@BRAND_NAME", BrandName);
@@ -70,7 +114,7 @@ namespace Test.Inventory.Database
             Cmd.Parameters.AddWithValue("@EXP_DATE", ExpDate);
             Cmd.Parameters.AddWithValue("@WARRANTY_DETAILS", WarrantyDetails);
             Cmd.Parameters.AddWithValue("@LOCATION", Location);
-            Cmd.ExecuteNonQuery();//
+            Cmd.ExecuteNonQuery();
         }
 
         public string FnTrans()
