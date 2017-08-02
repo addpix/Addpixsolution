@@ -72,6 +72,7 @@ namespace Test
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             DataTable source = gridControl1.DataSource as DataTable;
+
             DataTable dt = new DataTable();
             dt.Clear();
             dt.Columns.Add("quotationno");

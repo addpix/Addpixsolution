@@ -224,6 +224,7 @@
     <Compile Include="Purchase\Create Barcode.Designer.cs">
       <DependentUpon>Create Barcode.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchase\database\PurchaseOrder.cs" />
     <Compile Include="Purchase\Product for Discount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -689,7 +690,9 @@
     <EmbeddedResource Include="Accounts\Transactions.resx">
       <DependentUpon>Transactions.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
