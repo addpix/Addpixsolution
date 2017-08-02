@@ -17,5 +17,23 @@ namespace Test
         {
             InitializeComponent();
         }
+
+        private void Newbrand_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Inventory.Database.NewBrandData NewBrand = new Inventory.Database.NewBrandData();
+            NewBrand.Brand = txtBrand.Text;
+            NewBrand.Vendor = cmbVendor.Text;
+
+            NewBrand.FnConn();
+            NewBrand.fnTransactionData();
+            NewBrand.FnTrans();
+
+        }
+
     }
 }

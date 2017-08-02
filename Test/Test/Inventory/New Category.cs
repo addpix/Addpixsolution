@@ -20,7 +20,12 @@ namespace Test
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            Test.Inventory.Database.CategoryData NewCat = new Test.Inventory.Database.CategoryData();
+            NewCat.Category = txtCategory.Text;
 
+            NewCat.FnConn();
+            NewCat.fnTransactionData();
+            NewCat.FnTrans();
         }
     }
 }

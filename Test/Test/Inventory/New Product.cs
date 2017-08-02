@@ -14,7 +14,7 @@ namespace Test
 {
     public partial class New_Product : DevExpress.XtraEditors.XtraForm
     {
-        NewProductData NewCat = new NewProductData();
+        NewProductData NewProd = new NewProductData();
         public New_Product()
         {
             InitializeComponent();
@@ -34,30 +34,30 @@ namespace Test
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            NewCat.ProdCode = txtProduct_code.Text;
-            NewCat.ItemName = txtItem_name.Text;
-            NewCat.UnitMeasure = cmbUnit.Text;
-            NewCat.BrandName = cmbBrand_name.Text;
-            NewCat.Category = cmbItem_category.Text;
-            NewCat.TaxCategory = cmbTax_category.Text;
-            NewCat.PurchaseTax = cmbPurchase_Tax.Text;
-            NewCat.SalesTax = cmbSales_tax.Text;
-            NewCat.PurchaseRate = txtPurchase_rate.Text;
-            NewCat.OpeningStock = txtOpening_stock.Text;
-            NewCat.ReoderQty = txtReorder_qty.Text;
-            NewCat.MinQty = txtMin_qty.Text;
-            NewCat.SalesRate1 = txtSales_rate1.Text;
-            NewCat.SalesRate2 = txtSales_rate2.Text;
-            NewCat.SalesRate3 = txtSales_rate3.Text;
-            NewCat.BatchName = txtBatch_name.Text;
-            NewCat.MfgDate = dtMfg_date.Text;
-            NewCat.ExpDate = dtExp_date.Text;
-            NewCat.WarrantyDetails = memWarranty.Text;
-            NewCat.Location = txtProduct_code.Text;
+            NewProd.ProdCode = txtProduct_code.Text;
+            NewProd.ItemName = txtItem_name.Text;
+            NewProd.UnitMeasure = cmbUnit.Text;
+            NewProd.BrandName = cmbBrand_name.Text;
+            NewProd.Category = cmbItem_category.Text;
+            NewProd.TaxCategory = cmbTax_category.Text;
+            NewProd.PurchaseTax = cmbPurchase_Tax.Text;
+            NewProd.SalesTax = cmbSales_tax.Text;
+            NewProd.PurchaseRate = txtPurchase_rate.Text;
+            NewProd.OpeningStock = txtOpening_stock.Text;
+            NewProd.ReoderQty = txtReorder_qty.Text;
+            NewProd.MinQty = txtMin_qty.Text;
+            NewProd.SalesRate1 = txtSales_rate1.Text;
+            NewProd.SalesRate2 = txtSales_rate2.Text;
+            NewProd.SalesRate3 = txtSales_rate3.Text;
+            NewProd.BatchName = txtBatch_name.Text;
+            NewProd.MfgDate = dtMfg_date.Text;
+            NewProd.ExpDate = dtExp_date.Text;
+            NewProd.WarrantyDetails = memWarranty.Text;
+            NewProd.Location = txtProduct_code.Text;
 
-            NewCat.FnConn();
-            NewCat.fnTransactionData();
-            NewCat.FnTrans();
+            NewProd.FnConn();
+            NewProd.fnTransactionData();
+            NewProd.FnTrans();
         }
     }
 }

@@ -186,8 +186,13 @@
     <Compile Include="Accounts\Ledger List.Designer.cs">
       <DependentUpon>Ledger List.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventory\Database\CategoryData.cs" />
+    <Compile Include="Inventory\Database\CreateUMData.cs" />
+    <Compile Include="Inventory\Database\MRRData.cs" />
+    <Compile Include="Inventory\Database\NewBrandData.cs" />
     <Compile Include="Inventory\Database\NewProductData.cs" />
     <Compile Include="Inventory\Database\ProductData.cs" />
+    <Compile Include="Inventory\Database\ProduNameData.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

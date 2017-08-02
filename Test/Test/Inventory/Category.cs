@@ -23,5 +23,20 @@ namespace Test
             New_Category a = new New_Category();
             a.ShowDialog();
         }
+
+        private void Category_Load(object sender, EventArgs e)
+        {
+            Test.Inventory.Database.CategoryData Cat = new Inventory.Database.CategoryData();
+            try
+            {
+                Cat.FnConn();
+                DataTable dt = Cat.FillData();
+                gridControl1.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            } 
+        }
     }
 }

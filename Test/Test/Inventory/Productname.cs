@@ -23,5 +23,20 @@ namespace Test
             Newbrand a = new Newbrand();
             a.ShowDialog();
         }
+
+        private void Productname_Load(object sender, EventArgs e)
+        {
+            Test.Inventory.Database.NewBrandData Brand = new Inventory.Database.NewBrandData();
+            try
+            {
+                Brand.FnConn();
+                DataTable dt = Brand.FillData();
+                gridControl1.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            } 
+        }
     }
 }
