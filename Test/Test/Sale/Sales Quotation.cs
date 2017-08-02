@@ -30,7 +30,7 @@ namespace Test
                   //  total = total + Convert.ToDouble(source.Rows[i]["totalamount"] + "");
                     total = total +Convert.ToDouble( gridView1.GetRowCellValue(i, "totalAmount").ToString());
                 }
-                catch (Exception)
+                catch (Exception Ex)
                 {
                 }
             }
@@ -39,9 +39,10 @@ namespace Test
 
         private void Sales_Quotation_Load(object sender, EventArgs e)
         {
+            txtnetamount.Text = "0";
             Test.Sale.Database.QuatationData quatation = new Sale.Database.QuatationData();
             quatation.FnConn();
-            DataTable dt1=quatation.FillData("M");
+            DataTable dt1=quatation.FillData("M","");
             String res=quatation.FnTrans();
             if (dt1.Rows.Count > 0)
             {
@@ -71,8 +72,8 @@ namespace Test
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            gridView1.RefreshData();
             DataTable source = gridControl1.DataSource as DataTable;
-
             DataTable dt = new DataTable();
             dt.Clear();
             dt.Columns.Add("quotationno");
@@ -87,6 +88,7 @@ namespace Test
             quatationData.FnConn();
             quatationData.fnTransactionData();
             quatationData.FnTrans();
+            MessageBox.Show("Quotation creater", "ALERT", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -94,16 +96,20 @@ namespace Test
         {
             try
             {
+                int slno = gridView1.GetFocusedDataSourceRowIndex();
+                Test.Sale.Database.QuatationData quatation = new Sale.Database.QuatationData();
+                System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+                row["slno"] = (slno + 1) + "";
                 if (gridView1.FocusedColumn.FieldName.Equals("quantity"))
                 {
 
-                    System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+                    
                     double quantity = 0, unitprice = 0;
                     try
                     {
                         quantity = Convert.ToDouble(row["quantity"] + "");
                     }
-                    catch (Exception)
+                    catch (Exception ex1)
                     {
                         row["quantity"] = "0";
                     }
@@ -112,7 +118,7 @@ namespace Test
                     {
                         unitprice = Convert.ToDouble(row["unitprice"] + "");
                     }
-                    catch (Exception)
+                    catch (Exception invalidstring)
                     {
                         row["unitprice"] = "0";
                     }
@@ -136,13 +142,13 @@ namespace Test
                 else if (gridView1.FocusedColumn.FieldName.Equals("unitPrice"))
                 {
 
-                    System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+                   // System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
                     double quantity = 0, unitprice = 0;
                     try
                     {
                         quantity = Convert.ToDouble(row["quantity"] + "");
                     }
-                    catch (Exception )
+                    catch (Exception ex1)
                     {
                         row["quantity"] = "0";
                     }
@@ -151,7 +157,7 @@ namespace Test
                     {
                         unitprice = Convert.ToDouble(row["unitprice"] + "");
                     }
-                    catch (Exception )
+                    catch (Exception invalidstring)
                     {
                         row["unitprice"] = "0";
                     }
@@ -161,8 +167,62 @@ namespace Test
                     gridView1.RefreshRow(index);
                     calculateTotal();
                 }
+                if (gridView1.FocusedColumn.FieldName.Equals("barcode"))
+                {
+                    String barcode = row["barcode"].ToString();
+                    if (barcode != "")
+                    {
+                        quatation.FnConn();
+                        DataTable dt=quatation.FillData("barcodedatails", barcode);
+                        if (dt.Rows.Count > 0)
+                        {
+                            row["itemcode"] = dt.Rows[0]["productCode"].ToString();
+                            row["description"]= dt.Rows[0]["itemName"].ToString();
+                            row["brandName"]= dt.Rows[0]["brandName"].ToString();
+                            row["quantity"] = "0";
+                            row["unitPrice"]= dt.Rows[0]["salesRate1"].ToString();
+                            row["totalAmount"] = "0";
+                        }
+                    }
+                }
+                if (gridView1.FocusedColumn.FieldName.Equals("itemcode"))
+                {
+                    String itemcode = row["itemcode"].ToString();
+                    if (itemcode != "")
+                    {
+                        quatation.FnConn();
+                        DataTable dt = quatation.FillData("itemcodedatails", itemcode);
+                        if (dt.Rows.Count > 0)
+                        {
+                            row["barcode"] = dt.Rows[0]["qrCode"].ToString();
+                            row["description"] = dt.Rows[0]["itemName"].ToString();
+                            row["brandName"] = dt.Rows[0]["brandName"].ToString();
+                            row["quantity"] = "0";
+                            row["unitPrice"] = dt.Rows[0]["salesRate1"].ToString();
+                            row["totalAmount"] = "0";
+                        }
+                    }
+                }
+                if (gridView1.FocusedColumn.FieldName.Equals("description"))
+                {
+                    String description = row["description"].ToString();
+                    if (description != "")
+                    {
+                        quatation.FnConn();
+                        DataTable dt = quatation.FillData("description", description);
+                        if (dt.Rows.Count > 0)
+                        {
+                            row["barcode"] = dt.Rows[0]["qrCode"].ToString();
+                            row["itemcode"] = dt.Rows[0]["productCode"].ToString();
+                            row["brandName"] = dt.Rows[0]["brandName"].ToString();
+                            row["quantity"] = "0";
+                            row["unitPrice"] = dt.Rows[0]["salesRate1"].ToString();
+                            row["totalAmount"] = "0";
+                        }
+                    }
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
             }
         }
@@ -236,7 +296,7 @@ namespace Test
             //}
         }
 
-        private void gridView1_ShownEditor(object sender, EventArgs e)
+        private void gridView1_ShownEditor(object sender, EventArgs e)//used to add autocompletion to the coloum
         {
             Test.Sale.Database.QuatationData quatation = new Sale.Database.QuatationData();
             if (gridView1.FocusedColumn.FieldName.Equals("barcode"))//Don't work only for this column
@@ -247,7 +307,7 @@ namespace Test
                     AutoCompleteStringCollection customSource = new AutoCompleteStringCollection();
                    
                     quatation.FnConn();
-                   DataTable dt= quatation.FillData("barcode");
+                   DataTable dt= quatation.FillData("barcode","");
                   string res=  quatation.FnTrans();
                     if (dt.Rows.Count > 0)
                     {
@@ -273,7 +333,7 @@ namespace Test
                 {
                     AutoCompleteStringCollection customSource = new AutoCompleteStringCollection();
                     quatation.FnConn();
-                    DataTable dt = quatation.FillData("itemcode");
+                    DataTable dt = quatation.FillData("itemcode","");
                     string res = quatation.FnTrans();
                     if (dt.Rows.Count > 0)
                     {
@@ -295,7 +355,7 @@ namespace Test
                 {
                     AutoCompleteStringCollection customSource = new AutoCompleteStringCollection();
                     quatation.FnConn();
-                    DataTable dt = quatation.FillData("name");
+                    DataTable dt = quatation.FillData("name","");
                     string res = quatation.FnTrans();
                     if (dt.Rows.Count > 0)
                     {
@@ -310,6 +370,27 @@ namespace Test
                     currentEditor.MaskBox.AutoCompleteCustomSource = customSource;
                 }
             }
+        }
+
+        private void gridControl1_EditorKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (gridView1.FocusedColumn.FieldName.Equals("quantity"))
+            {
+                if (((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8 && e.KeyChar != 46))
+                {
+                    e.Handled = true;
+                    return;
+                }
+            }
+            if (gridView1.FocusedColumn.FieldName.Equals("unitPrice"))
+            {
+                if (((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8 && e.KeyChar != 46))
+                {
+                    e.Handled = true;
+                    return;
+                }
+            }
+
         }
     }
 }
