@@ -23,5 +23,10 @@ namespace Test
             New_Damage a = new New_Damage();
             a.ShowDialog();
         }
+
+        private void Damage_List_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -22,5 +22,10 @@ namespace Test
             Product_for_Discount a = new Product_for_Discount();
             a.ShowDialog();
         }
+
+        private void Product_List_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

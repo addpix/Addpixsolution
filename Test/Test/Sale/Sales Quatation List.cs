@@ -17,5 +17,16 @@ namespace Test
         {
             InitializeComponent();
         }
+
+        private void Sales_Quatation_List_Load(object sender, EventArgs e)
+        {
+            Sale.Database.QuatationData quatationData = new Sale.Database.QuatationData();
+            quatationData.FnConn();
+           DataTable dt= quatationData.FillData("quo", "");
+            if (dt.Rows.Count > 0)
+            {
+                gridControl1.DataSource = dt;
+            }
+        }
     }
 }

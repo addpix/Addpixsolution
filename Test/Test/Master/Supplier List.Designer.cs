@@ -30,34 +30,34 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SupID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SupplierName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FullName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Address = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Status = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.OppBal = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemToggleSwitch1 = new DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.bar2 = new DevExpress.XtraBars.Bar();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.bar2 = new DevExpress.XtraBars.Bar();
-            this.bar3 = new DevExpress.XtraBars.Bar();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemToggleSwitch1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,17 +71,6 @@
             this.layoutControl1.Size = new System.Drawing.Size(772, 454);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // layoutControlGroup1
-            // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(772, 454);
-            this.layoutControlGroup1.TextVisible = false;
             // 
             // gridControl1
             // 
@@ -98,90 +87,87 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn6,
+            this.SupID,
+            this.SupplierName,
+            this.FullName,
+            this.Address,
+            this.Status,
+            this.OppBal,
             this.gridColumn7});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // layoutControlItem1
+            // SupID
             // 
-            this.layoutControlItem1.Control = this.gridControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(752, 434);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
+            this.SupID.Caption = "ID";
+            this.SupID.FieldName = "supplierId";
+            this.SupID.Name = "SupID";
+            this.SupID.OptionsColumn.AllowMove = false;
+            this.SupID.OptionsColumn.AllowSize = false;
+            this.SupID.OptionsColumn.FixedWidth = true;
+            this.SupID.Visible = true;
+            this.SupID.VisibleIndex = 0;
+            this.SupID.Width = 30;
             // 
-            // gridColumn1
+            // SupplierName
             // 
-            this.gridColumn1.Caption = "No";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.AllowMove = false;
-            this.gridColumn1.OptionsColumn.AllowSize = false;
-            this.gridColumn1.OptionsColumn.FixedWidth = true;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 30;
+            this.SupplierName.Caption = "Name";
+            this.SupplierName.FieldName = "name";
+            this.SupplierName.Name = "SupplierName";
+            this.SupplierName.OptionsColumn.AllowMove = false;
+            this.SupplierName.OptionsColumn.AllowSize = false;
+            this.SupplierName.OptionsColumn.FixedWidth = true;
+            this.SupplierName.Visible = true;
+            this.SupplierName.VisibleIndex = 1;
+            this.SupplierName.Width = 100;
             // 
-            // gridColumn2
+            // FullName
             // 
-            this.gridColumn2.Caption = "Name";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.OptionsColumn.AllowMove = false;
-            this.gridColumn2.OptionsColumn.AllowSize = false;
-            this.gridColumn2.OptionsColumn.FixedWidth = true;
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 100;
+            this.FullName.Caption = "Full Name";
+            this.FullName.FieldName = "fullName";
+            this.FullName.Name = "FullName";
+            this.FullName.OptionsColumn.AllowMove = false;
+            this.FullName.OptionsColumn.AllowSize = false;
+            this.FullName.OptionsColumn.FixedWidth = true;
+            this.FullName.Visible = true;
+            this.FullName.VisibleIndex = 2;
+            this.FullName.Width = 100;
             // 
-            // gridColumn3
+            // Address
             // 
-            this.gridColumn3.Caption = "Full Name";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsColumn.AllowMove = false;
-            this.gridColumn3.OptionsColumn.AllowSize = false;
-            this.gridColumn3.OptionsColumn.FixedWidth = true;
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 100;
+            this.Address.Caption = "Address";
+            this.Address.FieldName = "address";
+            this.Address.Name = "Address";
+            this.Address.OptionsColumn.AllowMove = false;
+            this.Address.OptionsColumn.AllowSize = false;
+            this.Address.OptionsColumn.FixedWidth = true;
+            this.Address.Visible = true;
+            this.Address.VisibleIndex = 3;
+            this.Address.Width = 150;
             // 
-            // gridColumn4
+            // Status
             // 
-            this.gridColumn4.Caption = "Address";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.OptionsColumn.AllowMove = false;
-            this.gridColumn4.OptionsColumn.AllowSize = false;
-            this.gridColumn4.OptionsColumn.FixedWidth = true;
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 150;
+            this.Status.Caption = "Status";
+            this.Status.FieldName = "status";
+            this.Status.Name = "Status";
+            this.Status.OptionsColumn.AllowMove = false;
+            this.Status.OptionsColumn.AllowSize = false;
+            this.Status.OptionsColumn.FixedWidth = true;
+            this.Status.Visible = true;
+            this.Status.VisibleIndex = 4;
             // 
-            // gridColumn5
+            // OppBal
             // 
-            this.gridColumn5.Caption = "Status";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.OptionsColumn.AllowMove = false;
-            this.gridColumn5.OptionsColumn.AllowSize = false;
-            this.gridColumn5.OptionsColumn.FixedWidth = true;
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "OP Balance";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.OptionsColumn.AllowMove = false;
-            this.gridColumn6.OptionsColumn.AllowSize = false;
-            this.gridColumn6.OptionsColumn.FixedWidth = true;
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
+            this.OppBal.Caption = "OP Balance";
+            this.OppBal.FieldName = "oppeningBalance";
+            this.OppBal.Name = "OppBal";
+            this.OppBal.OptionsColumn.AllowMove = false;
+            this.OppBal.OptionsColumn.AllowSize = false;
+            this.OppBal.OptionsColumn.FixedWidth = true;
+            this.OppBal.Visible = true;
+            this.OppBal.VisibleIndex = 5;
             // 
             // gridColumn7
             // 
@@ -201,6 +187,26 @@
             this.repositoryItemToggleSwitch1.OffText = "Close";
             this.repositoryItemToggleSwitch1.OnText = "Edit";
             // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(772, 454);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.gridControl1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(752, 434);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
             // barManager1
             // 
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
@@ -217,6 +223,44 @@
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 2;
             this.barManager1.StatusBar = this.bar3;
+            // 
+            // bar2
+            // 
+            this.bar2.BarName = "Main menu";
+            this.bar2.DockCol = 0;
+            this.bar2.DockRow = 0;
+            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2)});
+            this.bar2.OptionsBar.MultiLine = true;
+            this.bar2.OptionsBar.UseWholeRow = true;
+            this.bar2.Text = "Main menu";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "New";
+            this.barButtonItem1.Id = 0;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Cancel";
+            this.barButtonItem2.Id = 1;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // bar3
+            // 
+            this.bar3.BarName = "Status bar";
+            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
+            this.bar3.DockCol = 0;
+            this.bar3.DockRow = 0;
+            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
+            this.bar3.OptionsBar.AllowQuickCustomization = false;
+            this.bar3.OptionsBar.DrawDragBorder = false;
+            this.bar3.OptionsBar.UseWholeRow = true;
+            this.bar3.Text = "Status bar";
             // 
             // barDockControlTop
             // 
@@ -246,42 +290,6 @@
             this.barDockControlRight.Location = new System.Drawing.Point(772, 22);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 454);
             // 
-            // bar2
-            // 
-            this.bar2.BarName = "Main menu";
-            this.bar2.DockCol = 0;
-            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2)});
-            this.bar2.OptionsBar.MultiLine = true;
-            this.bar2.OptionsBar.UseWholeRow = true;
-            this.bar2.Text = "Main menu";
-            // 
-            // bar3
-            // 
-            this.bar3.BarName = "Status bar";
-            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-            this.bar3.DockCol = 0;
-            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar3.OptionsBar.AllowQuickCustomization = false;
-            this.bar3.OptionsBar.DrawDragBorder = false;
-            this.bar3.OptionsBar.UseWholeRow = true;
-            this.bar3.Text = "Status bar";
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "New";
-            this.barButtonItem1.Id = 0;
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Cancel";
-            this.barButtonItem2.Id = 1;
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
             // Supplier_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,13 +302,14 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "Supplier_List";
             this.Text = "Supplier_List";
+            this.Load += new System.EventHandler(this.Supplier_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemToggleSwitch1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -313,12 +322,12 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn SupID;
+        private DevExpress.XtraGrid.Columns.GridColumn SupplierName;
+        private DevExpress.XtraGrid.Columns.GridColumn FullName;
+        private DevExpress.XtraGrid.Columns.GridColumn Address;
+        private DevExpress.XtraGrid.Columns.GridColumn Status;
+        private DevExpress.XtraGrid.Columns.GridColumn OppBal;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraEditors.Repository.RepositoryItemToggleSwitch repositoryItemToggleSwitch1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;

@@ -23,5 +23,10 @@ namespace Test
             New_PO a = new New_PO();
             a.ShowDialog();
         }
+
+        private void Purchase_Order_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

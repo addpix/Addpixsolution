@@ -62,6 +62,7 @@ namespace Test
             DataRow dr = dt.NewRow();
             dt.Rows.Add(dr);
             gridControl1.DataSource = dt;
+            
         }
 
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

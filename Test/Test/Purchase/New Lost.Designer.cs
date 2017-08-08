@@ -148,28 +148,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(825, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(825, 22);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 439);
-            this.barDockControlBottom.Size = new System.Drawing.Size(825, 22);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 438);
+            this.barDockControlBottom.Size = new System.Drawing.Size(825, 23);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 415);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 22);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 416);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(825, 24);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 415);
+            this.barDockControlRight.Location = new System.Drawing.Point(825, 22);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 416);
             // 
             // layoutControl1
             // 
@@ -180,10 +180,10 @@
             this.layoutControl1.Controls.Add(this.textEdit2);
             this.layoutControl1.Controls.Add(this.dateEdit1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 24);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 22);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(825, 415);
+            this.layoutControl1.Size = new System.Drawing.Size(825, 416);
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -197,7 +197,7 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(67, 383);
+            this.textEdit1.Location = new System.Drawing.Point(67, 384);
             this.textEdit1.MenuManager = this.barManager1;
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(746, 20);
@@ -206,7 +206,7 @@
             // 
             // memoEdit1
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(67, 308);
+            this.memoEdit1.Location = new System.Drawing.Point(67, 309);
             this.memoEdit1.MenuManager = this.barManager1;
             this.memoEdit1.Name = "memoEdit1";
             this.memoEdit1.Size = new System.Drawing.Size(746, 71);
@@ -219,7 +219,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(801, 244);
+            this.gridControl1.Size = new System.Drawing.Size(801, 245);
             this.gridControl1.TabIndex = 7;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -363,7 +363,7 @@
             this.layoutControlItem6});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(825, 415);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(825, 416);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem2
@@ -389,14 +389,14 @@
             this.layoutControlItem1.Control = this.gridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(805, 248);
+            this.layoutControlItem1.Size = new System.Drawing.Size(805, 249);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.memoEdit1;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 296);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 297);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(805, 75);
             this.layoutControlItem4.Text = "Remark";
@@ -405,7 +405,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.textEdit1;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 371);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 372);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(805, 24);
             this.layoutControlItem5.Text = "User Name";
@@ -436,6 +436,7 @@
             this.Name = "New_Lost";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New_Lost";
+            this.Load += new System.EventHandler(this.New_Lost_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

@@ -17,5 +17,10 @@ namespace Test
         {
             InitializeComponent();
         }
+
+        private void New_Damage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -190,7 +190,6 @@
     <Compile Include="Inventory\Database\CreateUMData.cs" />
     <Compile Include="Inventory\Database\MRRData.cs" />
     <Compile Include="Inventory\Database\NewBrandData.cs" />
-    <Compile Include="Inventory\Database\NewProductData.cs" />
     <Compile Include="Inventory\Database\ProductData.cs" />
     <Compile Include="Inventory\Database\ProduNameData.cs" />
     <Compile Include="Login.cs">
@@ -223,6 +222,8 @@
     <Compile Include="Accounts\Receipt Voucher.Designer.cs">
       <DependentUpon>Receipt Voucher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master\Database\CustomerData.cs" />
+    <Compile Include="Master\Database\SupplierData.cs" />
     <Compile Include="Purchase\Create Barcode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +231,8 @@
       <DependentUpon>Create Barcode.cs</DependentUpon>
     </Compile>
     <Compile Include="Purchase\database\PurchaseOrder.cs" />
+    <Compile Include="Purchase\database\PurchaseRequest.cs" />
+    <Compile Include="Purchase\database\Rfq.cs" />
     <Compile Include="Purchase\Product for Discount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +246,7 @@
       <DependentUpon>Product List.cs</DependentUpon>
     </Compile>
     <Compile Include="Sale\Database\QuatationData.cs" />
+    <Compile Include="Sale\Database\SalesData.cs" />
     <Compile Include="Sale\Database\WarrantyClameData.cs" />
     <Compile Include="Sale\Delivery Note List.cs">
       <SubType>Form</SubType>

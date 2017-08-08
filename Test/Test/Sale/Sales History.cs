@@ -28,5 +28,16 @@ namespace Test
             Sales_Return a = new Sales_Return();
             a.ShowDialog();
         }
+
+        private void Sales_History_Load(object sender, EventArgs e)
+        {
+            Sale.Database.SalesData salesData = new Sale.Database.SalesData();
+            salesData.FnConn();
+            DataTable dt= salesData.FillData("s", "", "spsales");
+            if (dt.Rows.Count > 0)
+            {
+                gridControl1.DataSource = dt;
+            }
+        }
     }
 }

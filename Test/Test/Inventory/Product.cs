@@ -27,7 +27,7 @@ namespace Test
 
         private void Product_Load(object sender, EventArgs e)
         {
-            Inventory.Database.NewProductData Pdt = new Inventory.Database.NewProductData();
+            Inventory.Database.ProductData Pdt = new Inventory.Database.ProductData();
             try
             {
                 Pdt.FnConn();

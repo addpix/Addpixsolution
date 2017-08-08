@@ -14,7 +14,7 @@ namespace Test
 {
     public partial class New_Product : DevExpress.XtraEditors.XtraForm
     {
-        NewProductData NewProd = new NewProductData();
+        ProductData NewProd = new ProductData();
         public New_Product()
         {
             InitializeComponent();
@@ -34,7 +34,21 @@ namespace Test
 
         private void New_Product_Load(object sender, EventArgs e)
         {
+            NewBrandData NewBrand = new NewBrandData();
+            NewBrand.FnConn();
+            DataTable dtBrand = NewBrand.FillData();
+            NewBrand.FnTrans();
 
+            foreach (DataRow dr in dtBrand.Rows)
+                cmbBrand_name.Properties.Items.Add(dr["brandName"] + "");
+
+            CategoryData Cat = new CategoryData();
+            Cat.FnConn();
+            DataTable dtCat = Cat.FillData();
+            Cat.FnTrans();
+
+            foreach (DataRow dr in dtCat.Rows)
+                cmbItem_category.Properties.Items.Add(dr["category"] + "");
         }
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

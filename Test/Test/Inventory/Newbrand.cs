@@ -20,7 +20,12 @@ namespace Test
 
         private void Newbrand_Load(object sender, EventArgs e)
         {
-
+            Inventory.Database.NewBrandData NewBrand = new Inventory.Database.NewBrandData();
+            NewBrand.FnConn();
+            DataTable dtBrand = NewBrand.FillData();
+            NewBrand.FnTrans();
+            foreach (DataRow dr in dtBrand.Rows)
+                cmbVendor.Properties.Items.Add(dr["vendor"] + "");
         }
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

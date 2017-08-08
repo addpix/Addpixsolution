@@ -354,7 +354,10 @@
             this.total});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.HiddenEditor += new System.EventHandler(this.gridView1_HiddenEditor);
+            this.gridView1.ShownEditor += new System.EventHandler(this.gridView1_ShownEditor);
             // 
             // slno
             // 

@@ -23,5 +23,20 @@ namespace Test
             New_Supplier a = new New_Supplier();
             a.ShowDialog();
         }
+
+        private void Supplier_List_Load(object sender, EventArgs e)
+        {
+            Master.Database.SupplierData Sup = new Master.Database.SupplierData();
+            try
+            {
+                Sup.FnConn();
+                DataTable dt = Sup.FillData();
+                gridControl1.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
     }
 }

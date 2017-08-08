@@ -16,5 +16,16 @@ namespace Test
         {
             InitializeComponent();
         }
+
+        private void Sales_Invoice_View_Load(object sender, EventArgs e)
+        {
+            Sale.Database.SalesData salesData = new Sale.Database.SalesData();
+            salesData.FnConn();
+            DataTable dt= salesData.FillData("s", "", "spsales");
+            if (dt.Rows.Count > 0)
+            {
+                gridControl1.DataSource = dt;
+            }
+        }
     }
 }

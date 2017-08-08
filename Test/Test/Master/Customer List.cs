@@ -23,5 +23,20 @@ namespace Test
             Customer a = new Customer();
             a.ShowDialog();
         }
+
+        private void Customer_List_Load(object sender, EventArgs e)
+        {
+            Master.Database.CustomerData Cust = new Master.Database.CustomerData();
+            try
+            {
+                Cust.FnConn();
+                DataTable dt = Cust.FillData();
+                gridControl1.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
     }
 }

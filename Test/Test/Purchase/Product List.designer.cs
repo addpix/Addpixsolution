@@ -244,6 +244,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "Product_List";
             this.Text = "Product_List";
+            this.Load += new System.EventHandler(this.Product_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

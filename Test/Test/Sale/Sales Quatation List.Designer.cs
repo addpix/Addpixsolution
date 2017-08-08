@@ -75,11 +75,13 @@
             this.gridColumn4});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Quatation #";
+            this.gridColumn1.FieldName = "quotationNo";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowMove = false;
             this.gridColumn1.OptionsColumn.AllowSize = false;
@@ -91,6 +93,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Date";
+            this.gridColumn2.FieldName = "date";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowMove = false;
             this.gridColumn2.OptionsColumn.AllowSize = false;
@@ -102,6 +105,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Customer Name";
+            this.gridColumn3.FieldName = "customerName";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowMove = false;
             this.gridColumn3.OptionsColumn.AllowSize = false;
@@ -113,6 +117,7 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Net Amount";
+            this.gridColumn4.FieldName = "netAmount";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowMove = false;
             this.gridColumn4.OptionsColumn.AllowSize = false;
@@ -153,6 +158,7 @@
             this.Name = "Sales_Quatation_List";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales_Quotation_List";
+            this.Load += new System.EventHandler(this.Sales_Quatation_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

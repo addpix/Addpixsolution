@@ -16,5 +16,10 @@ namespace Test
         {
             InitializeComponent();
         }
+
+        private void Product_for_Discount_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -68,16 +68,19 @@
             this.gridColumn9});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Invoice #";
+            this.gridColumn1.FieldName = "invoice_no";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowMove = false;
             this.gridColumn1.OptionsColumn.AllowSize = false;
             this.gridColumn1.OptionsColumn.FixedWidth = true;
+            this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 60;
@@ -85,6 +88,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Invoice Date";
+            this.gridColumn2.FieldName = "date";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowMove = false;
             this.gridColumn2.OptionsColumn.AllowSize = false;
@@ -96,6 +100,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Sales Person";
+            this.gridColumn3.FieldName = "salesPerson";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowMove = false;
             this.gridColumn3.OptionsColumn.AllowSize = false;
@@ -107,6 +112,7 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Bill To";
+            this.gridColumn4.FieldName = "customerName";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowMove = false;
             this.gridColumn4.OptionsColumn.AllowSize = false;
@@ -118,6 +124,7 @@
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Invoice Type";
+            this.gridColumn5.FieldName = "type";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowMove = false;
             this.gridColumn5.OptionsColumn.AllowSize = false;
@@ -128,6 +135,7 @@
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Payment mode";
+            this.gridColumn6.FieldName = "paymentMode";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowMove = false;
             this.gridColumn6.OptionsColumn.AllowSize = false;
@@ -138,6 +146,7 @@
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Net Total";
+            this.gridColumn7.FieldName = "netTotal";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowMove = false;
             this.gridColumn7.OptionsColumn.AllowSize = false;
@@ -149,6 +158,7 @@
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Paid Amount";
+            this.gridColumn8.FieldName = "payAmount";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowMove = false;
             this.gridColumn8.OptionsColumn.AllowSize = false;
@@ -160,6 +170,7 @@
             // gridColumn9
             // 
             this.gridColumn9.Caption = "Balance Amount";
+            this.gridColumn9.FieldName = "balance";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowMove = false;
             this.gridColumn9.OptionsColumn.AllowSize = false;
@@ -180,6 +191,7 @@
             this.Name = "Sales_Invoice_View";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sales_Invoice_View";
+            this.Load += new System.EventHandler(this.Sales_Invoice_View_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);

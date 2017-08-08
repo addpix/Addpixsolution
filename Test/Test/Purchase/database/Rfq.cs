@@ -9,16 +9,17 @@ using System.Windows.Forms;
 
 namespace Test.Purchase.database
 {
-    class PurchaseOrder
+    class Rfq
     {
         SqlCommand command;
         SqlConnection connection;
         SqlTransaction transaction;
         DataTable source2, source1;
         string Result = "";
-        public PurchaseOrder()
+
+        public Rfq()
         { }
-        public  PurchaseOrder(DataTable data, DataTable data1)
+        public  Rfq(DataTable data, DataTable data1)
         {
             this.source2 = data;
             this.source1 = data1;
@@ -35,7 +36,7 @@ namespace Test.Purchase.database
         {
 
 
-            command = new SqlCommand("spPurchaseOrder", connection, transaction);
+            command = new SqlCommand("RFQ", connection, transaction);
 
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@OPERATION", "I");
@@ -72,7 +73,7 @@ namespace Test.Purchase.database
             {
                 DataTable dtReturnTable = new DataTable();
 
-                command = new SqlCommand("spPurchaseOrder", connection, transaction);
+                command = new SqlCommand("RFQ", connection, transaction);
 
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -90,6 +91,29 @@ namespace Test.Purchase.database
             }
         }
 
+        public DataTable fillCombo(string operation, string column)
+        {
 
+            try
+            {
+                DataTable dtReturnTable = new DataTable();
+
+                command = new SqlCommand("spSupplier", connection, transaction);
+
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@OPERATION", operation);
+                command.Parameters.AddWithValue("@coloumn", column);
+                SqlDataAdapter adp = new SqlDataAdapter(command);
+
+                adp.Fill(dtReturnTable);
+                return dtReturnTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new DataTable();
+            }
+        }
     }
 }

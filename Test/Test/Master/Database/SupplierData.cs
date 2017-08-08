@@ -7,20 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Test.Inventory.Database
+namespace Test.Master.Database
 {
-    class MRRData
+    class SupplierData
     {
-        DataTable MrrData, MrrGrid;
-        public MRRData(DataTable Data, DataTable Grid)
-        {
-            this.MrrData = Data;
-            this.MrrGrid = Grid;
-        }
-        public string Result = "";
+        public string SupplierName { get; set; }
+        public string FullName { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string WebAddr { get; set; }
+        public string License { get; set; }
+        public string TinNo { get; set; }
+        public string Status { get; set; }
+        public string OppBal { get; set; }
+        public string CreditLimit { get; set; }
+        public string PaymentDays { get; set; }
         SqlCommand Cmd;
         SqlConnection Con;
         SqlTransaction Trans;
+        public string Result = "";
 
         public void FnConn()
         {
@@ -35,7 +41,7 @@ namespace Test.Inventory.Database
             {
                 DataTable dtReturnTable = new DataTable();
 
-                Cmd = new SqlCommand("spMrr", Con, Trans);
+                Cmd = new SqlCommand("spSupplier", Con, Trans);
                 Cmd.CommandType = CommandType.StoredProcedure;
                 Cmd.Parameters.AddWithValue("@OPERATION", "S");
                 SqlDataAdapter adp = new SqlDataAdapter(Cmd);
@@ -51,12 +57,23 @@ namespace Test.Inventory.Database
         }
         public void fnTransactionData()
         {
-            Cmd = new SqlCommand("spMrr", Con, Trans);
+            Cmd = new SqlCommand("spSupplier", Con, Trans);
 
             Cmd.CommandType = CommandType.StoredProcedure;
             Cmd.Parameters.AddWithValue("@OPERATION", "I");
-            Cmd.Parameters.AddWithValue("@MRR_DATA", MrrData);
-            Cmd.Parameters.AddWithValue("@MRR_GRID", MrrGrid);
+            Cmd.Parameters.AddWithValue("@SUP_ID", "1000");
+            Cmd.Parameters.AddWithValue("@NAME", SupplierName);
+            Cmd.Parameters.AddWithValue("@FULL_NAME", FullName);
+            Cmd.Parameters.AddWithValue("@ADDRESS", Address);
+            Cmd.Parameters.AddWithValue("@PHONE", Phone);
+            Cmd.Parameters.AddWithValue("@EMAIL", Email);
+            Cmd.Parameters.AddWithValue("@WEB", WebAddr);
+            Cmd.Parameters.AddWithValue("@LICENSE", License);
+            Cmd.Parameters.AddWithValue("@TIN", TinNo);
+            Cmd.Parameters.AddWithValue("@STATUS", Status);
+            Cmd.Parameters.AddWithValue("@OPP_BAL", OppBal);
+            Cmd.Parameters.AddWithValue("@CREDIT_LIMIT", CreditLimit);
+            Cmd.Parameters.AddWithValue("@PAYMENT_DAYS", PaymentDays);
             Cmd.ExecuteNonQuery();
 
         }

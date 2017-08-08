@@ -235,7 +235,10 @@
             this.Remark});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.HiddenEditor += new System.EventHandler(this.gridView1_HiddenEditor);
+            this.gridView1.ShownEditor += new System.EventHandler(this.gridView1_ShownEditor);
             // 
             // No
             // 
@@ -269,6 +272,7 @@
             // Description
             // 
             this.Description.Caption = "Description";
+            this.Description.FieldName = "desc";
             this.Description.Name = "Description";
             this.Description.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
             this.Description.OptionsColumn.AllowIncrementalSearch = false;
@@ -385,6 +389,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtMRR_date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtMRR_date.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.dtMRR_date.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtMRR_date.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dtMRR_date.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtMRR_date.Properties.Mask.EditMask = "yyyy-MM-dd";
             this.dtMRR_date.Size = new System.Drawing.Size(164, 20);
             this.dtMRR_date.StyleController = this.layoutControl1;
             this.dtMRR_date.TabIndex = 5;

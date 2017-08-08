@@ -150,28 +150,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(442, 26);
+            this.barDockControlTop.Size = new System.Drawing.Size(442, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 230);
-            this.barDockControlBottom.Size = new System.Drawing.Size(442, 22);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 229);
+            this.barDockControlBottom.Size = new System.Drawing.Size(442, 23);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 26);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 204);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 205);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(442, 26);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 204);
+            this.barDockControlRight.Location = new System.Drawing.Point(442, 24);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 205);
             // 
             // layoutControl1
             // 
@@ -187,10 +187,10 @@
             this.layoutControl1.Controls.Add(this.textEdit2);
             this.layoutControl1.Controls.Add(this.textEdit1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 26);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 24);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(442, 204);
+            this.layoutControl1.Size = new System.Drawing.Size(442, 205);
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -336,7 +336,7 @@
             this.layoutControlItem11});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(442, 204);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(442, 205);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -388,7 +388,7 @@
             this.layoutControlItem5.Control = this.dateEdit2;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 153);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(250, 31);
+            this.layoutControlItem5.Size = new System.Drawing.Size(250, 32);
             this.layoutControlItem5.Text = "Discount End of Date";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(123, 14);
             // 
@@ -448,7 +448,7 @@
             this.layoutControlItem11.Control = this.labelControl4;
             this.layoutControlItem11.Location = new System.Drawing.Point(250, 127);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(172, 57);
+            this.layoutControlItem11.Size = new System.Drawing.Size(172, 58);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
@@ -467,6 +467,7 @@
             this.Name = "Product_for_Discount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add / Edit Product Discount";
+            this.Load += new System.EventHandler(this.Product_for_Discount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

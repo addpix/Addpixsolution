@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbcustomer = new DevExpress.XtraEditors.ComboBoxEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -45,13 +45,13 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtsalesperson = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.toggleSwitch1 = new DevExpress.XtraEditors.ToggleSwitch();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
+            this.typecash = new DevExpress.XtraEditors.ToggleSwitch();
+            this.dtpdate = new DevExpress.XtraEditors.DateEdit();
+            this.txtinvoice = new DevExpress.XtraEditors.TextEdit();
+            this.txtphone = new DevExpress.XtraEditors.TextEdit();
+            this.txtaddress = new DevExpress.XtraEditors.MemoEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -63,15 +63,15 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.cmbpaymentmode = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.dtppaymentdue = new DevExpress.XtraEditors.DateEdit();
+            this.txtbalancedue = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit11 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
+            this.txtbalance = new DevExpress.XtraEditors.TextEdit();
+            this.txtpayamount = new DevExpress.XtraEditors.TextEdit();
+            this.txtnettotal = new DevExpress.XtraEditors.TextEdit();
+            this.txtdiscount = new DevExpress.XtraEditors.TextEdit();
+            this.txtgrosstotal = new DevExpress.XtraEditors.TextEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -101,15 +101,15 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbcustomer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsalesperson.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typecash.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtinvoice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtphone.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtaddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
@@ -122,15 +122,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbpaymentmode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtppaymentdue.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtppaymentdue.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtbalancedue.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtbalance.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtpayamount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnettotal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdiscount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtgrosstotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
@@ -148,15 +148,15 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.comboBoxEdit2);
+            this.layoutControl1.Controls.Add(this.cmbcustomer);
             this.layoutControl1.Controls.Add(this.labelControl3);
-            this.layoutControl1.Controls.Add(this.textEdit2);
+            this.layoutControl1.Controls.Add(this.txtsalesperson);
             this.layoutControl1.Controls.Add(this.labelControl1);
-            this.layoutControl1.Controls.Add(this.toggleSwitch1);
-            this.layoutControl1.Controls.Add(this.dateEdit1);
-            this.layoutControl1.Controls.Add(this.textEdit5);
-            this.layoutControl1.Controls.Add(this.textEdit3);
-            this.layoutControl1.Controls.Add(this.memoEdit1);
+            this.layoutControl1.Controls.Add(this.typecash);
+            this.layoutControl1.Controls.Add(this.dtpdate);
+            this.layoutControl1.Controls.Add(this.txtinvoice);
+            this.layoutControl1.Controls.Add(this.txtphone);
+            this.layoutControl1.Controls.Add(this.txtaddress);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.layoutControl1.Location = new System.Drawing.Point(0, 22);
             this.layoutControl1.Name = "layoutControl1";
@@ -165,16 +165,16 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // comboBoxEdit2
+            // cmbcustomer
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(76, 12);
-            this.comboBoxEdit2.MenuManager = this.barManager1;
-            this.comboBoxEdit2.Name = "comboBoxEdit2";
-            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cmbcustomer.Location = new System.Drawing.Point(76, 12);
+            this.cmbcustomer.MenuManager = this.barManager1;
+            this.cmbcustomer.Name = "cmbcustomer";
+            this.cmbcustomer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit2.Size = new System.Drawing.Size(200, 20);
-            this.comboBoxEdit2.StyleController = this.layoutControl1;
-            this.comboBoxEdit2.TabIndex = 18;
+            this.cmbcustomer.Size = new System.Drawing.Size(200, 20);
+            this.cmbcustomer.StyleController = this.layoutControl1;
+            this.cmbcustomer.TabIndex = 18;
             // 
             // barManager1
             // 
@@ -221,6 +221,7 @@
             this.barButtonItem1.Caption = "Save";
             this.barButtonItem1.Id = 0;
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -301,14 +302,14 @@
             this.labelControl3.StyleController = this.layoutControl1;
             this.labelControl3.TabIndex = 17;
             // 
-            // textEdit2
+            // txtsalesperson
             // 
-            this.textEdit2.Location = new System.Drawing.Point(654, 12);
-            this.textEdit2.MenuManager = this.barManager1;
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(81, 20);
-            this.textEdit2.StyleController = this.layoutControl1;
-            this.textEdit2.TabIndex = 16;
+            this.txtsalesperson.Location = new System.Drawing.Point(654, 12);
+            this.txtsalesperson.MenuManager = this.barManager1;
+            this.txtsalesperson.Name = "txtsalesperson";
+            this.txtsalesperson.Size = new System.Drawing.Size(81, 20);
+            this.txtsalesperson.StyleController = this.layoutControl1;
+            this.txtsalesperson.TabIndex = 16;
             // 
             // labelControl1
             // 
@@ -318,57 +319,63 @@
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 15;
             // 
-            // toggleSwitch1
+            // typecash
             // 
-            this.toggleSwitch1.Location = new System.Drawing.Point(590, 84);
-            this.toggleSwitch1.MenuManager = this.barManager1;
-            this.toggleSwitch1.Name = "toggleSwitch1";
-            this.toggleSwitch1.Properties.OffText = "Cash";
-            this.toggleSwitch1.Properties.OnText = "Credit";
-            this.toggleSwitch1.Size = new System.Drawing.Size(145, 24);
-            this.toggleSwitch1.StyleController = this.layoutControl1;
-            this.toggleSwitch1.TabIndex = 11;
+            this.typecash.Location = new System.Drawing.Point(590, 84);
+            this.typecash.MenuManager = this.barManager1;
+            this.typecash.Name = "typecash";
+            this.typecash.Properties.OffText = "Cash";
+            this.typecash.Properties.OnText = "Credit";
+            this.typecash.Size = new System.Drawing.Size(145, 24);
+            this.typecash.StyleController = this.layoutControl1;
+            this.typecash.TabIndex = 11;
+            this.typecash.Toggled += new System.EventHandler(this.type_Toggled);
             // 
-            // dateEdit1
+            // dtpdate
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(654, 60);
-            this.dateEdit1.MenuManager = this.barManager1;
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtpdate.EditValue = null;
+            this.dtpdate.Location = new System.Drawing.Point(654, 60);
+            this.dtpdate.MenuManager = this.barManager1;
+            this.dtpdate.Name = "dtpdate";
+            this.dtpdate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtpdate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(81, 20);
-            this.dateEdit1.StyleController = this.layoutControl1;
-            this.dateEdit1.TabIndex = 10;
+            this.dtpdate.Properties.DisplayFormat.FormatString = "yyyy/MM/dd";
+            this.dtpdate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtpdate.Properties.EditFormat.FormatString = "yyyy/MM/dd";
+            this.dtpdate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtpdate.Properties.Mask.EditMask = "yyyy/MM/dd";
+            this.dtpdate.Size = new System.Drawing.Size(81, 20);
+            this.dtpdate.StyleController = this.layoutControl1;
+            this.dtpdate.TabIndex = 10;
             // 
-            // textEdit5
+            // txtinvoice
             // 
-            this.textEdit5.Location = new System.Drawing.Point(654, 36);
-            this.textEdit5.MenuManager = this.barManager1;
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(81, 20);
-            this.textEdit5.StyleController = this.layoutControl1;
-            this.textEdit5.TabIndex = 9;
+            this.txtinvoice.Location = new System.Drawing.Point(654, 36);
+            this.txtinvoice.MenuManager = this.barManager1;
+            this.txtinvoice.Name = "txtinvoice";
+            this.txtinvoice.Size = new System.Drawing.Size(81, 20);
+            this.txtinvoice.StyleController = this.layoutControl1;
+            this.txtinvoice.TabIndex = 9;
             // 
-            // textEdit3
+            // txtphone
             // 
-            this.textEdit3.Location = new System.Drawing.Point(76, 88);
-            this.textEdit3.MenuManager = this.barManager1;
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(66, 20);
-            this.textEdit3.StyleController = this.layoutControl1;
-            this.textEdit3.TabIndex = 7;
+            this.txtphone.Location = new System.Drawing.Point(76, 88);
+            this.txtphone.MenuManager = this.barManager1;
+            this.txtphone.Name = "txtphone";
+            this.txtphone.Size = new System.Drawing.Size(66, 20);
+            this.txtphone.StyleController = this.layoutControl1;
+            this.txtphone.TabIndex = 7;
             // 
-            // memoEdit1
+            // txtaddress
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(76, 36);
-            this.memoEdit1.MenuManager = this.barManager1;
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(200, 48);
-            this.memoEdit1.StyleController = this.layoutControl1;
-            this.memoEdit1.TabIndex = 6;
+            this.txtaddress.Location = new System.Drawing.Point(76, 36);
+            this.txtaddress.MenuManager = this.barManager1;
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.Size = new System.Drawing.Size(200, 48);
+            this.txtaddress.StyleController = this.layoutControl1;
+            this.txtaddress.TabIndex = 6;
             // 
             // layoutControlGroup1
             // 
@@ -391,7 +398,7 @@
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.memoEdit1;
+            this.layoutControlItem3.Control = this.txtaddress;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(268, 52);
@@ -400,7 +407,7 @@
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.textEdit3;
+            this.layoutControlItem4.Control = this.txtphone;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 76);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(134, 24);
@@ -409,7 +416,7 @@
             // 
             // layoutControlItem6
             // 
-            this.layoutControlItem6.Control = this.textEdit5;
+            this.layoutControlItem6.Control = this.txtinvoice;
             this.layoutControlItem6.Location = new System.Drawing.Point(578, 24);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(149, 24);
@@ -418,7 +425,7 @@
             // 
             // layoutControlItem7
             // 
-            this.layoutControlItem7.Control = this.dateEdit1;
+            this.layoutControlItem7.Control = this.dtpdate;
             this.layoutControlItem7.Location = new System.Drawing.Point(578, 48);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(149, 24);
@@ -427,7 +434,7 @@
             // 
             // layoutControlItem8
             // 
-            this.layoutControlItem8.Control = this.toggleSwitch1;
+            this.layoutControlItem8.Control = this.typecash;
             this.layoutControlItem8.Location = new System.Drawing.Point(578, 72);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(149, 28);
@@ -445,7 +452,7 @@
             // 
             // layoutControlItem9
             // 
-            this.layoutControlItem9.Control = this.textEdit2;
+            this.layoutControlItem9.Control = this.txtsalesperson;
             this.layoutControlItem9.Location = new System.Drawing.Point(578, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(149, 24);
@@ -463,7 +470,7 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.comboBoxEdit2;
+            this.layoutControlItem1.Control = this.cmbcustomer;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(268, 24);
@@ -472,15 +479,15 @@
             // 
             // layoutControl2
             // 
-            this.layoutControl2.Controls.Add(this.comboBoxEdit1);
-            this.layoutControl2.Controls.Add(this.dateEdit2);
-            this.layoutControl2.Controls.Add(this.textEdit4);
+            this.layoutControl2.Controls.Add(this.cmbpaymentmode);
+            this.layoutControl2.Controls.Add(this.dtppaymentdue);
+            this.layoutControl2.Controls.Add(this.txtbalancedue);
             this.layoutControl2.Controls.Add(this.labelControl2);
-            this.layoutControl2.Controls.Add(this.textEdit11);
-            this.layoutControl2.Controls.Add(this.textEdit10);
-            this.layoutControl2.Controls.Add(this.textEdit9);
-            this.layoutControl2.Controls.Add(this.textEdit8);
-            this.layoutControl2.Controls.Add(this.textEdit7);
+            this.layoutControl2.Controls.Add(this.txtbalance);
+            this.layoutControl2.Controls.Add(this.txtpayamount);
+            this.layoutControl2.Controls.Add(this.txtnettotal);
+            this.layoutControl2.Controls.Add(this.txtdiscount);
+            this.layoutControl2.Controls.Add(this.txtgrosstotal);
             this.layoutControl2.Controls.Add(this.gridControl1);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl2.Location = new System.Drawing.Point(0, 142);
@@ -490,43 +497,48 @@
             this.layoutControl2.TabIndex = 5;
             this.layoutControl2.Text = "layoutControl2";
             // 
-            // comboBoxEdit1
+            // cmbpaymentmode
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(105, 202);
-            this.comboBoxEdit1.MenuManager = this.barManager1;
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cmbpaymentmode.Location = new System.Drawing.Point(105, 202);
+            this.cmbpaymentmode.MenuManager = this.barManager1;
+            this.cmbpaymentmode.Name = "cmbpaymentmode";
+            this.cmbpaymentmode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            this.cmbpaymentmode.Properties.Items.AddRange(new object[] {
             "Counter Cash",
             "Bank Transfer",
             "Cheque Issue"});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(51, 20);
-            this.comboBoxEdit1.StyleController = this.layoutControl2;
-            this.comboBoxEdit1.TabIndex = 13;
+            this.cmbpaymentmode.Size = new System.Drawing.Size(51, 20);
+            this.cmbpaymentmode.StyleController = this.layoutControl2;
+            this.cmbpaymentmode.TabIndex = 13;
             // 
-            // dateEdit2
+            // dtppaymentdue
             // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(105, 250);
-            this.dateEdit2.MenuManager = this.barManager1;
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtppaymentdue.EditValue = null;
+            this.dtppaymentdue.Location = new System.Drawing.Point(105, 250);
+            this.dtppaymentdue.MenuManager = this.barManager1;
+            this.dtppaymentdue.Name = "dtppaymentdue";
+            this.dtppaymentdue.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtppaymentdue.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Size = new System.Drawing.Size(51, 20);
-            this.dateEdit2.StyleController = this.layoutControl2;
-            this.dateEdit2.TabIndex = 12;
+            this.dtppaymentdue.Properties.DisplayFormat.FormatString = "yyyy/MM/dd";
+            this.dtppaymentdue.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtppaymentdue.Properties.EditFormat.FormatString = "yyyy/MM/dd";
+            this.dtppaymentdue.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtppaymentdue.Properties.Mask.EditMask = "yyyy/MM/dd";
+            this.dtppaymentdue.Size = new System.Drawing.Size(51, 20);
+            this.dtppaymentdue.StyleController = this.layoutControl2;
+            this.dtppaymentdue.TabIndex = 12;
             // 
-            // textEdit4
+            // txtbalancedue
             // 
-            this.textEdit4.Location = new System.Drawing.Point(105, 226);
-            this.textEdit4.MenuManager = this.barManager1;
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(51, 20);
-            this.textEdit4.StyleController = this.layoutControl2;
-            this.textEdit4.TabIndex = 11;
+            this.txtbalancedue.Location = new System.Drawing.Point(105, 226);
+            this.txtbalancedue.MenuManager = this.barManager1;
+            this.txtbalancedue.Name = "txtbalancedue";
+            this.txtbalancedue.Size = new System.Drawing.Size(51, 20);
+            this.txtbalancedue.StyleController = this.layoutControl2;
+            this.txtbalancedue.TabIndex = 11;
             // 
             // labelControl2
             // 
@@ -536,50 +548,62 @@
             this.labelControl2.StyleController = this.layoutControl2;
             this.labelControl2.TabIndex = 10;
             // 
-            // textEdit11
+            // txtbalance
             // 
-            this.textEdit11.Location = new System.Drawing.Point(684, 298);
-            this.textEdit11.MenuManager = this.barManager1;
-            this.textEdit11.Name = "textEdit11";
-            this.textEdit11.Size = new System.Drawing.Size(51, 20);
-            this.textEdit11.StyleController = this.layoutControl2;
-            this.textEdit11.TabIndex = 9;
+            this.txtbalance.EditValue = "0";
+            this.txtbalance.Location = new System.Drawing.Point(684, 298);
+            this.txtbalance.MenuManager = this.barManager1;
+            this.txtbalance.Name = "txtbalance";
+            this.txtbalance.Properties.ReadOnly = true;
+            this.txtbalance.Size = new System.Drawing.Size(51, 20);
+            this.txtbalance.StyleController = this.layoutControl2;
+            this.txtbalance.TabIndex = 9;
             // 
-            // textEdit10
+            // txtpayamount
             // 
-            this.textEdit10.Location = new System.Drawing.Point(684, 274);
-            this.textEdit10.MenuManager = this.barManager1;
-            this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Size = new System.Drawing.Size(51, 20);
-            this.textEdit10.StyleController = this.layoutControl2;
-            this.textEdit10.TabIndex = 8;
+            this.txtpayamount.EditValue = "0";
+            this.txtpayamount.Location = new System.Drawing.Point(684, 274);
+            this.txtpayamount.MenuManager = this.barManager1;
+            this.txtpayamount.Name = "txtpayamount";
+            this.txtpayamount.Size = new System.Drawing.Size(51, 20);
+            this.txtpayamount.StyleController = this.layoutControl2;
+            this.txtpayamount.TabIndex = 8;
+            this.txtpayamount.EditValueChanged += new System.EventHandler(this.txtpayamount_EditValueChanged);
             // 
-            // textEdit9
+            // txtnettotal
             // 
-            this.textEdit9.Location = new System.Drawing.Point(684, 250);
-            this.textEdit9.MenuManager = this.barManager1;
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Size = new System.Drawing.Size(51, 20);
-            this.textEdit9.StyleController = this.layoutControl2;
-            this.textEdit9.TabIndex = 7;
+            this.txtnettotal.EditValue = "0";
+            this.txtnettotal.Location = new System.Drawing.Point(684, 250);
+            this.txtnettotal.MenuManager = this.barManager1;
+            this.txtnettotal.Name = "txtnettotal";
+            this.txtnettotal.Properties.ReadOnly = true;
+            this.txtnettotal.Size = new System.Drawing.Size(51, 20);
+            this.txtnettotal.StyleController = this.layoutControl2;
+            this.txtnettotal.TabIndex = 7;
+            this.txtnettotal.EditValueChanged += new System.EventHandler(this.txtnettotal_EditValueChanged);
             // 
-            // textEdit8
+            // txtdiscount
             // 
-            this.textEdit8.Location = new System.Drawing.Point(684, 226);
-            this.textEdit8.MenuManager = this.barManager1;
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Size = new System.Drawing.Size(51, 20);
-            this.textEdit8.StyleController = this.layoutControl2;
-            this.textEdit8.TabIndex = 6;
+            this.txtdiscount.EditValue = "0";
+            this.txtdiscount.Location = new System.Drawing.Point(684, 226);
+            this.txtdiscount.MenuManager = this.barManager1;
+            this.txtdiscount.Name = "txtdiscount";
+            this.txtdiscount.Size = new System.Drawing.Size(51, 20);
+            this.txtdiscount.StyleController = this.layoutControl2;
+            this.txtdiscount.TabIndex = 6;
+            this.txtdiscount.EditValueChanged += new System.EventHandler(this.txtdiscount_EditValueChanged);
             // 
-            // textEdit7
+            // txtgrosstotal
             // 
-            this.textEdit7.Location = new System.Drawing.Point(684, 202);
-            this.textEdit7.MenuManager = this.barManager1;
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(51, 20);
-            this.textEdit7.StyleController = this.layoutControl2;
-            this.textEdit7.TabIndex = 5;
+            this.txtgrosstotal.EditValue = "0";
+            this.txtgrosstotal.Location = new System.Drawing.Point(684, 202);
+            this.txtgrosstotal.MenuManager = this.barManager1;
+            this.txtgrosstotal.Name = "txtgrosstotal";
+            this.txtgrosstotal.Properties.ReadOnly = true;
+            this.txtgrosstotal.Size = new System.Drawing.Size(51, 20);
+            this.txtgrosstotal.StyleController = this.layoutControl2;
+            this.txtgrosstotal.TabIndex = 5;
+            this.txtgrosstotal.EditValueChanged += new System.EventHandler(this.txtgrosstotal_EditValueChanged);
             // 
             // gridControl1
             // 
@@ -612,11 +636,15 @@
             this.gridColumn13});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.HiddenEditor += new System.EventHandler(this.gridView1_HiddenEditor);
+            this.gridView1.ShownEditor += new System.EventHandler(this.gridView1_ShownEditor);
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "#";
+            this.gridColumn1.FieldName = "slno";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowMove = false;
             this.gridColumn1.OptionsColumn.AllowSize = false;
@@ -628,6 +656,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Barcode ID";
+            this.gridColumn2.FieldName = "barcode";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowMove = false;
             this.gridColumn2.OptionsColumn.AllowSize = false;
@@ -639,6 +668,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Item No";
+            this.gridColumn3.FieldName = "itemcode";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowMove = false;
             this.gridColumn3.OptionsColumn.AllowSize = false;
@@ -650,6 +680,7 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Item Name";
+            this.gridColumn4.FieldName = "description";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowMove = false;
             this.gridColumn4.OptionsColumn.AllowSize = false;
@@ -661,6 +692,7 @@
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Brand Name";
+            this.gridColumn5.FieldName = "brandName";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowMove = false;
             this.gridColumn5.OptionsColumn.AllowSize = false;
@@ -672,6 +704,7 @@
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Quantity";
+            this.gridColumn6.FieldName = "quantity";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowMove = false;
             this.gridColumn6.OptionsColumn.AllowSize = false;
@@ -682,6 +715,7 @@
             // gridColumn14
             // 
             this.gridColumn14.Caption = "Offer";
+            this.gridColumn14.FieldName = "offer";
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.OptionsColumn.AllowMove = false;
             this.gridColumn14.OptionsColumn.AllowSize = false;
@@ -693,6 +727,7 @@
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Unit Price";
+            this.gridColumn7.FieldName = "unitPrice";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowMove = false;
             this.gridColumn7.OptionsColumn.AllowSize = false;
@@ -703,6 +738,7 @@
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Amount";
+            this.gridColumn8.FieldName = "amount";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowMove = false;
             this.gridColumn8.OptionsColumn.AllowSize = false;
@@ -713,6 +749,7 @@
             // gridColumn9
             // 
             this.gridColumn9.Caption = "Discount %";
+            this.gridColumn9.FieldName = "discountPercent";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowMove = false;
             this.gridColumn9.OptionsColumn.AllowSize = false;
@@ -723,6 +760,7 @@
             // gridColumn10
             // 
             this.gridColumn10.Caption = "Discount Amount";
+            this.gridColumn10.FieldName = "discountAmount";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.AllowMove = false;
             this.gridColumn10.OptionsColumn.AllowSize = false;
@@ -733,6 +771,7 @@
             // gridColumn11
             // 
             this.gridColumn11.Caption = "Tax %";
+            this.gridColumn11.FieldName = "taxPercent";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.AllowMove = false;
             this.gridColumn11.OptionsColumn.AllowSize = false;
@@ -743,6 +782,7 @@
             // gridColumn12
             // 
             this.gridColumn12.Caption = "Tax Amount";
+            this.gridColumn12.FieldName = "taxAmount";
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.OptionsColumn.AllowMove = false;
             this.gridColumn12.OptionsColumn.AllowSize = false;
@@ -753,6 +793,7 @@
             // gridColumn13
             // 
             this.gridColumn13.Caption = "Total Amount";
+            this.gridColumn13.FieldName = "totalAmount";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.AllowMove = false;
             this.gridColumn13.OptionsColumn.AllowSize = false;
@@ -791,7 +832,7 @@
             // 
             // layoutControlItem13
             // 
-            this.layoutControlItem13.Control = this.textEdit7;
+            this.layoutControlItem13.Control = this.txtgrosstotal;
             this.layoutControlItem13.Location = new System.Drawing.Point(579, 190);
             this.layoutControlItem13.Name = "layoutControlItem13";
             this.layoutControlItem13.Size = new System.Drawing.Size(148, 24);
@@ -800,7 +841,7 @@
             // 
             // layoutControlItem14
             // 
-            this.layoutControlItem14.Control = this.textEdit8;
+            this.layoutControlItem14.Control = this.txtdiscount;
             this.layoutControlItem14.Location = new System.Drawing.Point(579, 214);
             this.layoutControlItem14.Name = "layoutControlItem14";
             this.layoutControlItem14.Size = new System.Drawing.Size(148, 24);
@@ -809,7 +850,7 @@
             // 
             // layoutControlItem15
             // 
-            this.layoutControlItem15.Control = this.textEdit9;
+            this.layoutControlItem15.Control = this.txtnettotal;
             this.layoutControlItem15.Location = new System.Drawing.Point(579, 238);
             this.layoutControlItem15.Name = "layoutControlItem15";
             this.layoutControlItem15.Size = new System.Drawing.Size(148, 24);
@@ -818,7 +859,7 @@
             // 
             // layoutControlItem16
             // 
-            this.layoutControlItem16.Control = this.textEdit10;
+            this.layoutControlItem16.Control = this.txtpayamount;
             this.layoutControlItem16.Location = new System.Drawing.Point(579, 262);
             this.layoutControlItem16.Name = "layoutControlItem16";
             this.layoutControlItem16.Size = new System.Drawing.Size(148, 24);
@@ -827,7 +868,7 @@
             // 
             // layoutControlItem17
             // 
-            this.layoutControlItem17.Control = this.textEdit11;
+            this.layoutControlItem17.Control = this.txtbalance;
             this.layoutControlItem17.Location = new System.Drawing.Point(579, 286);
             this.layoutControlItem17.Name = "layoutControlItem17";
             this.layoutControlItem17.Size = new System.Drawing.Size(148, 24);
@@ -845,7 +886,7 @@
             // 
             // layoutControlItem19
             // 
-            this.layoutControlItem19.Control = this.dateEdit2;
+            this.layoutControlItem19.Control = this.dtppaymentdue;
             this.layoutControlItem19.Location = new System.Drawing.Point(0, 238);
             this.layoutControlItem19.Name = "layoutControlItem19";
             this.layoutControlItem19.Size = new System.Drawing.Size(148, 72);
@@ -854,7 +895,7 @@
             // 
             // layoutControlItem20
             // 
-            this.layoutControlItem20.Control = this.comboBoxEdit1;
+            this.layoutControlItem20.Control = this.cmbpaymentmode;
             this.layoutControlItem20.Location = new System.Drawing.Point(0, 190);
             this.layoutControlItem20.Name = "layoutControlItem20";
             this.layoutControlItem20.Size = new System.Drawing.Size(148, 24);
@@ -863,7 +904,7 @@
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.textEdit4;
+            this.layoutControlItem5.Control = this.txtbalancedue;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 214);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(148, 24);
@@ -886,15 +927,15 @@
             this.Load += new System.EventHandler(this.Sales_Invoice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbcustomer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsalesperson.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typecash.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtinvoice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtphone.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtaddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
@@ -907,15 +948,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbpaymentmode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtppaymentdue.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtppaymentdue.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtbalancedue.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtbalance.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtpayamount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnettotal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdiscount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtgrosstotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
@@ -950,11 +991,11 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraEditors.ToggleSwitch toggleSwitch1;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private DevExpress.XtraEditors.ToggleSwitch typecash;
+        private DevExpress.XtraEditors.DateEdit dtpdate;
+        private DevExpress.XtraEditors.TextEdit txtinvoice;
+        private DevExpress.XtraEditors.TextEdit txtphone;
+        private DevExpress.XtraEditors.MemoEdit txtaddress;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
@@ -980,30 +1021,30 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit11;
-        private DevExpress.XtraEditors.TextEdit textEdit10;
-        private DevExpress.XtraEditors.TextEdit textEdit9;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
+        private DevExpress.XtraEditors.TextEdit txtbalance;
+        private DevExpress.XtraEditors.TextEdit txtpayamount;
+        private DevExpress.XtraEditors.TextEdit txtnettotal;
+        private DevExpress.XtraEditors.TextEdit txtdiscount;
+        private DevExpress.XtraEditors.TextEdit txtgrosstotal;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit txtbalancedue;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbpaymentmode;
+        private DevExpress.XtraEditors.DateEdit dtppaymentdue;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtsalesperson;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbcustomer;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
     }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace Test
 {
@@ -18,12 +19,23 @@ namespace Test
             InitializeComponent();
         }
 
+      
         private void New_PO_Load(object sender, EventArgs e)
         {
             Test.Purchase.database.PurchaseOrder po = new Purchase.database.PurchaseOrder();
             po.FnConn();
 
+            DataTable dt1 = po.FillData("M", "");
+            String res = po.FnTrans();
+
             DataTable dt = new DataTable();
+
+            if (dt1.Rows.Count > 0)
+            {
+                int number = Convert.ToInt32(dt1.Rows[0]["number"].ToString()) + 1;
+                txtPO.Text = "P" + number;
+            }
+
             dt.Columns.Add("slno", Type.GetType("System.Int32"));
             dt.Columns.Add("itemcode", Type.GetType("System.String"));
             dt.Columns.Add("description", Type.GetType("System.String"));
@@ -43,13 +55,7 @@ namespace Test
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             DataTable source = gridControl1.DataSource as DataTable;
-            source.Columns.Add("purchaseOrderNo", typeof(System.Int32));
-
-            foreach (DataRow row in source.Rows)
-            {
-                //need to set value to NewColumn column
-                row["purchaseOrderNo"] = txtPO.Text;   // or set it to some other value
-            }
+           
 
             DataTable dt = new DataTable();
             dt.Clear();
@@ -74,6 +80,129 @@ namespace Test
             purchase.FnConn();
             purchase.fnTransactionData();
             purchase.FnTrans();
+        }
+
+        private void gridView1_HiddenEditor(object sender, EventArgs e)
+        {
+            try
+            {
+
+           
+            int slno = gridView1.GetFocusedDataSourceRowIndex();
+            Test.Purchase.database.PurchaseOrder po = new Purchase.database.PurchaseOrder();
+            System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            row["slno"] = (slno + 1) + "";
+
+            if (gridView1.FocusedColumn.FieldName.Equals("itemcode"))
+            {
+                String itemcode = row["itemcode"].ToString();
+                if (itemcode != "")
+                {
+                    po.FnConn();
+                    DataTable dt = po.FillData("itemdetails", itemcode);
+                    if (dt.Rows.Count > 0)
+                    {
+                        row["description"] = dt.Rows[0]["itemName"].ToString();
+                        row["brand"] = dt.Rows[0]["brandName"].ToString();
+                        row["um"] = dt.Rows[0]["unitMeasure"].ToString();
+                        row["quantity"] = "0";
+                        row["unitPrice"] = dt.Rows[0]["salesRate1"].ToString();
+                        row["total"] = "0";
+                    }
+                }
+            }
+
+            if (gridView1.FocusedColumn.FieldName.Equals("quantity"))
+            {
+
+
+                double quantity = 0, unitprice = 0;
+                try
+                {
+                    quantity = Convert.ToDouble(row["quantity"] + "");
+                }
+                catch (Exception ex1)
+                {
+                    row["quantity"] = "0";
+                }
+
+                try
+                {
+                    unitprice = Convert.ToDouble(row["unitprice"] + "");
+                }
+                catch (Exception invalidstring)
+                {
+                    row["unitprice"] = "";
+                }
+                double total = quantity * unitprice;
+                row["total"] = total + "";
+
+
+                int index = gridView1.GetFocusedDataSourceRowIndex();
+                gridView1.RefreshRow(index);
+               // calculateTotal();
+              
+                gridView1.FocusedColumn = gridView1.GetVisibleColumn(6);
+                gridView1.FocusedRowHandle = index;
+                gridView1.ShowEditor();
+
+            }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void gridView1_ShownEditor(object sender, EventArgs e)
+        {
+            Test.Purchase.database.PurchaseOrder po = new Purchase.database.PurchaseOrder();
+
+             if (gridView1.FocusedColumn.FieldName.Equals("itemcode"))//Don't work only for this column
+            {
+                TextEdit currentEditor = (sender as GridView).ActiveEditor as TextEdit;
+                if (currentEditor != null)
+                {
+                    AutoCompleteStringCollection customSource = new AutoCompleteStringCollection();
+                    po.FnConn();
+                    DataTable dt = po.FillData("itemcode", "");
+                    string res = po.FnTrans();
+                    if (dt.Rows.Count > 0)
+                    {
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            customSource.Add(dt.Rows[i][0].ToString());
+                        }
+                    }
+
+                    currentEditor.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    currentEditor.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                    currentEditor.MaskBox.AutoCompleteCustomSource = customSource;
+                }
+            }
+            else if (gridView1.FocusedColumn.FieldName.Equals("description"))//Don't work only for this column
+            {
+                TextEdit currentEditor = (sender as GridView).ActiveEditor as TextEdit;
+                if (currentEditor != null)
+                {
+                    AutoCompleteStringCollection customSource = new AutoCompleteStringCollection();
+                    po.FnConn();
+                    DataTable dt = po.FillData("name", "");
+                    string res = po.FnTrans();
+                    if (dt.Rows.Count > 0)
+                    {
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            customSource.Add(dt.Rows[i][0].ToString());
+                        }
+                    }
+
+                    currentEditor.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    currentEditor.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                    currentEditor.MaskBox.AutoCompleteCustomSource = customSource;
+                }
+            }
         }
     }
 }

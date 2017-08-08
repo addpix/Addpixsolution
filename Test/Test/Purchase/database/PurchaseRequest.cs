@@ -9,33 +9,32 @@ using System.Windows.Forms;
 
 namespace Test.Purchase.database
 {
-    class PurchaseOrder
+
+    class PurchaseRequest
     {
         SqlCommand command;
         SqlConnection connection;
         SqlTransaction transaction;
         DataTable source2, source1;
         string Result = "";
-        public PurchaseOrder()
+       public PurchaseRequest()
         { }
-        public  PurchaseOrder(DataTable data, DataTable data1)
+        public PurchaseRequest(DataTable data, DataTable data1)
         {
             this.source2 = data;
             this.source1 = data1;
         }
-
         public void FnConn()
         {
             connection = new SqlConnection(ConfigurationManager.ConnectionStrings["newConnectionString"].ConnectionString);
             connection.Open();
             transaction = connection.BeginTransaction();
         }
-
         public void fnTransactionData()
         {
 
 
-            command = new SqlCommand("spPurchaseOrder", connection, transaction);
+            command = new SqlCommand("spPurchaseRequest", connection, transaction);
 
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@OPERATION", "I");
@@ -72,7 +71,7 @@ namespace Test.Purchase.database
             {
                 DataTable dtReturnTable = new DataTable();
 
-                command = new SqlCommand("spPurchaseOrder", connection, transaction);
+                command = new SqlCommand("spPurchaseRequest", connection, transaction);
 
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -89,7 +88,5 @@ namespace Test.Purchase.database
                 return new DataTable();
             }
         }
-
-
     }
 }
