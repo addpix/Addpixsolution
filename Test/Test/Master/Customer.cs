@@ -17,10 +17,11 @@ namespace Test
         {
             InitializeComponent();
         }
-
+        int slno = 0;
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Master.Database.CustomerData Cust = new Master.Database.CustomerData();
+            Cust.CustomerId = "cu000" + slno;
             Cust.CustomerName = txtCustName.Text;
             Cust.Address = memAddr.Text;
             Cust.Phone = txtPhone.Text;
@@ -34,6 +35,19 @@ namespace Test
             Cust.fnTransactionData();
             Cust.FnTrans();
             MessageBox.Show(Cust.Result);
+        }
+
+        private void Customer_Load(object sender, EventArgs e)
+        {
+            Master.Database.CustomerData Cust = new Master.Database.CustomerData();
+            
+            Cust.FnConn();
+           DataTable dt= Cust.FillData("M", "");
+            if (dt.Rows.Count > 0)
+            {
+                slno = Convert.ToInt32(dt.Rows[0][0].ToString())+1;
+
+            }
         }
     }
 }

@@ -499,3 +499,4 @@ C:\Users\Babin\Source\Repos\Addpixsolution\Test\Test\bin\Debug\ja\DevExpress.Off
 C:\Users\Babin\Source\Repos\Addpixsolution\Test\Test\bin\Debug\ru\DevExpress.Office.v15.1.Core.resources.dll
 C:\Users\Babin\Source\Repos\Addpixsolution\Test\Test\obj\Debug\Test.exe
 C:\Users\Babin\Source\Repos\Addpixsolution\Test\Test\obj\Debug\Test.pdb
+C:\Users\Babin\Source\Repos\Addpixsolution\Test\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache

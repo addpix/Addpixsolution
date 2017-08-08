@@ -81,12 +81,14 @@
             this.gridColumn7});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Item Code";
+            this.gridColumn1.FieldName = "productCode";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowMove = false;
             this.gridColumn1.OptionsColumn.AllowSize = false;
@@ -98,6 +100,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "QR Code";
+            this.gridColumn2.FieldName = "qrCode";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowMove = false;
             this.gridColumn2.OptionsColumn.AllowSize = false;
@@ -109,6 +112,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Category";
+            this.gridColumn3.FieldName = "category";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowMove = false;
             this.gridColumn3.OptionsColumn.AllowSize = false;
@@ -120,6 +124,7 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Description";
+            this.gridColumn4.FieldName = "itemName";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowMove = false;
             this.gridColumn4.OptionsColumn.AllowSize = false;
@@ -131,6 +136,7 @@
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Brand Name";
+            this.gridColumn5.FieldName = "brandName";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowMove = false;
             this.gridColumn5.OptionsColumn.AllowSize = false;
@@ -142,6 +148,7 @@
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Locations";
+            this.gridColumn6.FieldName = "location";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowMove = false;
             this.gridColumn6.OptionsColumn.AllowSize = false;
@@ -153,6 +160,7 @@
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Quantity";
+            this.gridColumn7.FieldName = "currentstock";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowMove = false;
             this.gridColumn7.OptionsColumn.AllowSize = false;
@@ -189,6 +197,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "Stock_History";
             this.Text = "Stock_History";
+            this.Load += new System.EventHandler(this.Stock_History_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

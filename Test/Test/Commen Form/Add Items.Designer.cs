@@ -78,8 +78,6 @@
             this.gridColumn1.OptionsColumn.AllowMove = false;
             this.gridColumn1.OptionsColumn.AllowSize = false;
             this.gridColumn1.OptionsColumn.FixedWidth = true;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 30;
             // 
             // gridColumn2
@@ -87,24 +85,26 @@
             this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn2.AppearanceHeader.Options.UseFont = true;
             this.gridColumn2.Caption = "Item Code";
+            this.gridColumn2.FieldName = "productCode";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowMove = false;
             this.gridColumn2.OptionsColumn.AllowSize = false;
             this.gridColumn2.OptionsColumn.FixedWidth = true;
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 0;
             // 
             // gridColumn3
             // 
             this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.Caption = "Description";
+            this.gridColumn3.FieldName = "itemName";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowMove = false;
             this.gridColumn3.OptionsColumn.AllowSize = false;
             this.gridColumn3.OptionsColumn.FixedWidth = true;
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.VisibleIndex = 1;
             this.gridColumn3.Width = 150;
             // 
             // gridColumn6
@@ -112,12 +112,13 @@
             this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.Caption = "Brand";
+            this.gridColumn6.FieldName = "brandName";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowMove = false;
             this.gridColumn6.OptionsColumn.AllowSize = false;
             this.gridColumn6.OptionsColumn.FixedWidth = true;
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 3;
+            this.gridColumn6.VisibleIndex = 2;
             this.gridColumn6.Width = 150;
             // 
             // gridColumn4
@@ -125,12 +126,13 @@
             this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.Caption = "Quantity";
+            this.gridColumn4.FieldName = "currentstock";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowMove = false;
             this.gridColumn4.OptionsColumn.AllowSize = false;
             this.gridColumn4.OptionsColumn.FixedWidth = true;
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 4;
+            this.gridColumn4.VisibleIndex = 3;
             this.gridColumn4.Width = 50;
             // 
             // gridColumn5
@@ -143,7 +145,7 @@
             this.gridColumn5.OptionsColumn.AllowSize = false;
             this.gridColumn5.OptionsColumn.FixedWidth = true;
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 30;
             // 
             // repositoryItemCheckEdit1
@@ -162,6 +164,7 @@
             this.Name = "Add_Items";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Items";
+            this.Load += new System.EventHandler(this.Add_Items_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();

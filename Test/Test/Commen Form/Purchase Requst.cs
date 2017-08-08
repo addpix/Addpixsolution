@@ -24,7 +24,7 @@ namespace Test
             Add_Items a = new Add_Items();
             a.ShowDialog();
         }
-
+        int number = 0;
         private void Purchase_Requst_Load(object sender, EventArgs e)
         {
             Test.Purchase.database.PurchaseRequest pr = new Purchase.database.PurchaseRequest();
@@ -37,7 +37,7 @@ namespace Test
 
             if (dt1.Rows.Count > 0)
             {
-                int number = Convert.ToInt32(dt1.Rows[0]["number"].ToString()) + 1;
+                 number = Convert.ToInt32(dt1.Rows[0]["number"].ToString()) + 1;
                 txtPRNo.Text = "P" + number;
             }
 
@@ -63,7 +63,7 @@ namespace Test
             dt.Columns.Add("requester");
             dt.Columns.Add("location");
             dt.Columns.Add("date");
-            dt.Rows.Add(new object[] { "11", txtPRNo.Text, txtRequester.Text, txtLocation.Text, datePOdate.Text, });
+            dt.Rows.Add(new object[] { number+"", txtPRNo.Text, txtRequester.Text, txtLocation.Text, datePOdate.Text, });
             Test.Purchase.database.PurchaseRequest purchase = new Purchase.database.PurchaseRequest(source, dt);
             purchase.FnConn();
             purchase.fnTransactionData();

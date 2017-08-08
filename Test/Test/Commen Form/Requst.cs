@@ -22,5 +22,10 @@ namespace Test
         {
             this.Close();
         }
+
+        private void Requst_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

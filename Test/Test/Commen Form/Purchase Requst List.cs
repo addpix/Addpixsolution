@@ -23,5 +23,16 @@ namespace Test
             Purchase_Requst a = new Purchase_Requst();
             a.ShowDialog();
         }
+
+        private void Purchase_Requst_List_Load(object sender, EventArgs e)
+        {
+            Purchase.database.PurchaseRequest purchaseRequest = new Purchase.database.PurchaseRequest();
+            purchaseRequest.FnConn();
+            DataTable dt= purchaseRequest.FillData("rqdetails", "");
+            if (dt.Rows.Count > 0)
+            {
+                gridControl1.DataSource = dt;
+            }
+        }
     }
 }

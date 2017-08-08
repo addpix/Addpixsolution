@@ -23,5 +23,10 @@ namespace Test
             Requst a = new Requst();
             a.ShowDialog();
         }
+
+        private void ItemTransfer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

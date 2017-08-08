@@ -30,7 +30,7 @@ namespace Test
             try
             {
                 Cust.FnConn();
-                DataTable dt = Cust.FillData();
+                DataTable dt = Cust.FillData("S","");
                 gridControl1.DataSource = dt;
             }
             catch (Exception ex)

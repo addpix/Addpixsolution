@@ -8,6 +8,7 @@ namespace Test.Master.Database
 {
     class CustomerData
     {
+        public string CustomerId { get; set; }
         public string CustomerName { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
@@ -28,7 +29,7 @@ namespace Test.Master.Database
             Trans = Con.BeginTransaction();
         }
 
-        public DataTable FillData()
+        public DataTable FillData(string operation,string param1)
         {
             try
             {
@@ -36,7 +37,11 @@ namespace Test.Master.Database
 
                 Cmd = new SqlCommand("spCustomer", Con, Trans);
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.Parameters.AddWithValue("@OPERATION", "S");
+                Cmd.Parameters.AddWithValue("@OPERATION", operation);
+                if (param1 != "")
+                {
+                    Cmd.Parameters.AddWithValue("@param1", param1);
+                }
                 SqlDataAdapter adp = new SqlDataAdapter(Cmd);
 
                 adp.Fill(dtReturnTable);
@@ -54,7 +59,7 @@ namespace Test.Master.Database
 
             Cmd.CommandType = CommandType.StoredProcedure;
             Cmd.Parameters.AddWithValue("@OPERATION", "I");
-            Cmd.Parameters.AddWithValue("@CUST_ID", "1000");
+            Cmd.Parameters.AddWithValue("@CUST_ID", CustomerId);        
             Cmd.Parameters.AddWithValue("@NAME", CustomerName);
             Cmd.Parameters.AddWithValue("@ADDRESS", Address);
             Cmd.Parameters.AddWithValue("@PHONE", Phone);

@@ -49,13 +49,13 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtemail = new DevExpress.XtraEditors.TextEdit();
+            this.txtaddress = new DevExpress.XtraEditors.MemoEdit();
+            this.txtCustomerName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtsalesPerson = new DevExpress.XtraEditors.TextEdit();
+            this.dtpdate = new DevExpress.XtraEditors.DateEdit();
+            this.txtdeliveryNo = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -66,18 +66,19 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtemail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtaddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsalesPerson.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdeliveryNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -94,13 +95,13 @@
             // 
             this.layoutControl1.Controls.Add(this.labelControl2);
             this.layoutControl1.Controls.Add(this.gridControl1);
-            this.layoutControl1.Controls.Add(this.textEdit4);
-            this.layoutControl1.Controls.Add(this.memoEdit1);
-            this.layoutControl1.Controls.Add(this.textEdit3);
+            this.layoutControl1.Controls.Add(this.txtemail);
+            this.layoutControl1.Controls.Add(this.txtaddress);
+            this.layoutControl1.Controls.Add(this.txtCustomerName);
             this.layoutControl1.Controls.Add(this.labelControl1);
-            this.layoutControl1.Controls.Add(this.textEdit2);
-            this.layoutControl1.Controls.Add(this.dateEdit1);
-            this.layoutControl1.Controls.Add(this.textEdit1);
+            this.layoutControl1.Controls.Add(this.txtsalesPerson);
+            this.layoutControl1.Controls.Add(this.dtpdate);
+            this.layoutControl1.Controls.Add(this.txtdeliveryNo);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 22);
             this.layoutControl1.Name = "layoutControl1";
@@ -127,6 +128,7 @@
             this.gridControl1.TabIndex = 12;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.EditorKeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridControl1_EditorKeyPress);
             // 
             // gridView1
             // 
@@ -134,14 +136,19 @@
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
-            this.gridColumn4});
+            this.gridColumn4,
+            this.gridColumn5});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.HiddenEditor += new System.EventHandler(this.gridView1_HiddenEditor);
+            this.gridView1.ShownEditor += new System.EventHandler(this.gridView1_ShownEditor);
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "#";
+            this.gridColumn1.FieldName = "slno";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowMove = false;
             this.gridColumn1.OptionsColumn.AllowSize = false;
@@ -153,6 +160,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Barcode / QR";
+            this.gridColumn2.FieldName = "barcode";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowMove = false;
             this.gridColumn2.OptionsColumn.AllowSize = false;
@@ -163,6 +171,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Description";
+            this.gridColumn3.FieldName = "description";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowMove = false;
             this.gridColumn3.OptionsColumn.AllowSize = false;
@@ -174,6 +183,7 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Qty";
+            this.gridColumn4.FieldName = "quantity";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowMove = false;
             this.gridColumn4.OptionsColumn.AllowSize = false;
@@ -222,6 +232,7 @@
             this.barButtonItem1.Caption = "Save";
             this.barButtonItem1.Id = 0;
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -287,32 +298,33 @@
             this.barButtonItem4.Id = 3;
             this.barButtonItem4.Name = "barButtonItem4";
             // 
-            // textEdit4
+            // txtemail
             // 
-            this.textEdit4.Location = new System.Drawing.Point(135, 172);
-            this.textEdit4.MenuManager = this.barManager1;
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(647, 20);
-            this.textEdit4.StyleController = this.layoutControl1;
-            this.textEdit4.TabIndex = 10;
+            this.txtemail.Location = new System.Drawing.Point(135, 172);
+            this.txtemail.MenuManager = this.barManager1;
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(647, 20);
+            this.txtemail.StyleController = this.layoutControl1;
+            this.txtemail.TabIndex = 10;
             // 
-            // memoEdit1
+            // txtaddress
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(135, 108);
-            this.memoEdit1.MenuManager = this.barManager1;
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(647, 60);
-            this.memoEdit1.StyleController = this.layoutControl1;
-            this.memoEdit1.TabIndex = 9;
+            this.txtaddress.Location = new System.Drawing.Point(135, 108);
+            this.txtaddress.MenuManager = this.barManager1;
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.Size = new System.Drawing.Size(647, 60);
+            this.txtaddress.StyleController = this.layoutControl1;
+            this.txtaddress.TabIndex = 9;
             // 
-            // textEdit3
+            // txtCustomerName
             // 
-            this.textEdit3.Location = new System.Drawing.Point(135, 84);
-            this.textEdit3.MenuManager = this.barManager1;
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(647, 20);
-            this.textEdit3.StyleController = this.layoutControl1;
-            this.textEdit3.TabIndex = 8;
+            this.txtCustomerName.Location = new System.Drawing.Point(135, 84);
+            this.txtCustomerName.MenuManager = this.barManager1;
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(647, 20);
+            this.txtCustomerName.StyleController = this.layoutControl1;
+            this.txtCustomerName.TabIndex = 8;
+            this.txtCustomerName.EditValueChanged += new System.EventHandler(this.txtCustomerName_EditValueChanged);
             // 
             // labelControl1
             // 
@@ -322,37 +334,42 @@
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 7;
             // 
-            // textEdit2
+            // txtsalesPerson
             // 
-            this.textEdit2.Location = new System.Drawing.Point(652, 60);
-            this.textEdit2.MenuManager = this.barManager1;
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(130, 20);
-            this.textEdit2.StyleController = this.layoutControl1;
-            this.textEdit2.TabIndex = 6;
+            this.txtsalesPerson.Location = new System.Drawing.Point(652, 60);
+            this.txtsalesPerson.MenuManager = this.barManager1;
+            this.txtsalesPerson.Name = "txtsalesPerson";
+            this.txtsalesPerson.Size = new System.Drawing.Size(130, 20);
+            this.txtsalesPerson.StyleController = this.layoutControl1;
+            this.txtsalesPerson.TabIndex = 6;
             // 
-            // dateEdit1
+            // dtpdate
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(652, 36);
-            this.dateEdit1.MenuManager = this.barManager1;
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtpdate.EditValue = null;
+            this.dtpdate.Location = new System.Drawing.Point(652, 36);
+            this.dtpdate.MenuManager = this.barManager1;
+            this.dtpdate.Name = "dtpdate";
+            this.dtpdate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtpdate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(130, 20);
-            this.dateEdit1.StyleController = this.layoutControl1;
-            this.dateEdit1.TabIndex = 5;
+            this.dtpdate.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.dtpdate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtpdate.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dtpdate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtpdate.Properties.Mask.EditMask = "yyyy-MM-dd";
+            this.dtpdate.Size = new System.Drawing.Size(130, 20);
+            this.dtpdate.StyleController = this.layoutControl1;
+            this.dtpdate.TabIndex = 5;
             // 
-            // textEdit1
+            // txtdeliveryNo
             // 
-            this.textEdit1.Location = new System.Drawing.Point(652, 12);
-            this.textEdit1.MenuManager = this.barManager1;
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(130, 20);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 4;
+            this.txtdeliveryNo.Location = new System.Drawing.Point(652, 12);
+            this.txtdeliveryNo.MenuManager = this.barManager1;
+            this.txtdeliveryNo.Name = "txtdeliveryNo";
+            this.txtdeliveryNo.Size = new System.Drawing.Size(130, 20);
+            this.txtdeliveryNo.StyleController = this.layoutControl1;
+            this.txtdeliveryNo.TabIndex = 4;
             // 
             // layoutControlGroup1
             // 
@@ -375,7 +392,7 @@
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.textEdit1;
+            this.layoutControlItem1.Control = this.txtdeliveryNo;
             this.layoutControlItem1.Location = new System.Drawing.Point(517, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(257, 24);
@@ -384,7 +401,7 @@
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.dateEdit1;
+            this.layoutControlItem2.Control = this.dtpdate;
             this.layoutControlItem2.Location = new System.Drawing.Point(517, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(257, 24);
@@ -393,7 +410,7 @@
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.textEdit2;
+            this.layoutControlItem3.Control = this.txtsalesPerson;
             this.layoutControlItem3.Location = new System.Drawing.Point(517, 48);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(257, 24);
@@ -411,7 +428,7 @@
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.textEdit3;
+            this.layoutControlItem5.Control = this.txtCustomerName;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(774, 24);
@@ -420,7 +437,7 @@
             // 
             // layoutControlItem6
             // 
-            this.layoutControlItem6.Control = this.memoEdit1;
+            this.layoutControlItem6.Control = this.txtaddress;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(774, 64);
@@ -429,7 +446,7 @@
             // 
             // layoutControlItem7
             // 
-            this.layoutControlItem7.Control = this.textEdit4;
+            this.layoutControlItem7.Control = this.txtemail;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 160);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(774, 24);
@@ -454,6 +471,12 @@
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Status";
+            this.gridColumn5.FieldName = "status";
+            this.gridColumn5.Name = "gridColumn5";
+            // 
             // Delivery_Note
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,18 +493,19 @@
             this.Name = "Delivery_Note";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delivery_Note";
+            this.Load += new System.EventHandler(this.Delivery_Note_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtemail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtaddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCustomerName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsalesPerson.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdeliveryNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -520,13 +544,13 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtemail;
+        private DevExpress.XtraEditors.MemoEdit txtaddress;
+        private DevExpress.XtraEditors.TextEdit txtCustomerName;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtsalesPerson;
+        private DevExpress.XtraEditors.DateEdit dtpdate;
+        private DevExpress.XtraEditors.TextEdit txtdeliveryNo;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
@@ -536,5 +560,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
     }
 }

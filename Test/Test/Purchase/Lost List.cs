@@ -23,5 +23,10 @@ namespace Test
             New_Lost a = new New_Lost();
             a.ShowDialog();
         }
+
+        private void Lost_List_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

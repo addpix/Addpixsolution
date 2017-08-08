@@ -17,5 +17,10 @@ namespace Test
         {
             InitializeComponent();
         }
+
+        private void PR_Open_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

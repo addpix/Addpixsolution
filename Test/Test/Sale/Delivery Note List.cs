@@ -21,6 +21,22 @@ namespace Test
         {
             Delivery_Note a = new Delivery_Note();
             a.ShowDialog();
+            loadData();
+        }
+        void loadData()
+        {
+            Sale.Database.SalesDeliveryData salesDeliveryData = new Sale.Database.SalesDeliveryData();
+            salesDeliveryData.FnConn();
+            DataTable dt = salesDeliveryData.FillData("S", "", "spsalesDelivery");
+            if (dt.Rows.Count > 0)
+            {
+                gridControl1.DataSource = dt;
+            }
+            salesDeliveryData.FnTrans();
+        }
+        private void Delivery_Note_List_Load(object sender, EventArgs e)
+        {
+            loadData();
         }
     }
 }

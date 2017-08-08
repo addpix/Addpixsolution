@@ -62,10 +62,10 @@
             // 
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 26);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 24);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(706, 469);
+            this.layoutControl1.Size = new System.Drawing.Size(706, 470);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -74,7 +74,7 @@
             this.gridControl1.Location = new System.Drawing.Point(12, 12);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(682, 445);
+            this.gridControl1.Size = new System.Drawing.Size(682, 446);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -95,6 +95,7 @@
             // gridColumn1
             // 
             this.gridColumn1.Caption = "No";
+            this.gridColumn1.FieldName = "slno";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowMove = false;
             this.gridColumn1.OptionsColumn.AllowSize = false;
@@ -106,6 +107,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "PR No";
+            this.gridColumn2.FieldName = "prNo";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowMove = false;
             this.gridColumn2.OptionsColumn.AllowSize = false;
@@ -117,6 +119,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "PR Date";
+            this.gridColumn3.FieldName = "date";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowMove = false;
             this.gridColumn3.OptionsColumn.AllowSize = false;
@@ -128,6 +131,7 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Requster";
+            this.gridColumn4.FieldName = "requester";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowMove = false;
             this.gridColumn4.OptionsColumn.AllowSize = false;
@@ -155,7 +159,7 @@
             this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(706, 469);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(706, 470);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -163,7 +167,7 @@
             this.layoutControlItem1.Control = this.gridControl1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(686, 449);
+            this.layoutControlItem1.Size = new System.Drawing.Size(686, 450);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -231,28 +235,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(706, 26);
+            this.barDockControlTop.Size = new System.Drawing.Size(706, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 495);
-            this.barDockControlBottom.Size = new System.Drawing.Size(706, 22);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 494);
+            this.barDockControlBottom.Size = new System.Drawing.Size(706, 23);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 26);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 469);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 470);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(706, 26);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 469);
+            this.barDockControlRight.Location = new System.Drawing.Point(706, 24);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 470);
             // 
             // Purchase_Requst_List
             // 
@@ -266,6 +270,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "Purchase_Requst_List";
             this.Text = "Purchase Requst";
+            this.Load += new System.EventHandler(this.Purchase_Requst_List_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

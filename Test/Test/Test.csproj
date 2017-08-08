@@ -247,6 +247,7 @@
     </Compile>
     <Compile Include="Sale\Database\QuatationData.cs" />
     <Compile Include="Sale\Database\SalesData.cs" />
+    <Compile Include="Sale\Database\SalesDeliveryData.cs" />
     <Compile Include="Sale\Database\WarrantyClameData.cs" />
     <Compile Include="Sale\Delivery Note List.cs">
       <SubType>Form</SubType>

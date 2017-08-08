@@ -17,5 +17,16 @@ namespace Test
         {
             InitializeComponent();
         }
+
+        private void Stock_History_Load(object sender, EventArgs e)
+        {
+            Sale.Database.SalesData salesData = new Sale.Database.SalesData();
+            salesData.FnConn();
+            DataTable dt= salesData.FillData("currentstock", "", "spsales");
+            if (dt.Rows.Count > 0)
+            {
+                gridControl1.DataSource = dt;
+            }
+        }
     }
 }
