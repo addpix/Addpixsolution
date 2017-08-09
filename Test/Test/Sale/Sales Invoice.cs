@@ -48,12 +48,26 @@ namespace Test
             Test.Sale.Database.SalesData sales = new Sale.Database.SalesData();
             sales.FnConn();
             DataTable dt1 = sales.FillData("M", "","spsales");
-            String res = sales.FnTrans();
+            
             if (dt1.Rows.Count > 0)
             {
                 int number = Convert.ToInt32(dt1.Rows[0]["number"].ToString()) + 1;
                 txtinvoice.Text = number+"";
             }
+            DataTable dt2= sales.FillData("S", "", "spCustomer");
+            if (dt2.Rows.Count > 0)
+            {
+                for (int i = 0; i < dt2.Rows.Count; i++)
+                {
+                    try
+                    {
+                        cmbcustomer.Properties.Items.Add(dt2.Rows[i]["name"].ToString());
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+          
+            String res = sales.FnTrans();
             DataTable dt = new DataTable();
             dt.Columns.Add("slno", Type.GetType("System.Int32"));
             dt.Columns.Add("invoice_no", Type.GetType("System.String"));
@@ -180,7 +194,7 @@ namespace Test
             dt.Columns.Add("payAmount");
             dt.Columns.Add("balance");
             
-            dt.Rows.Add(new object[] { txtinvoice.Text,txtsalesperson.Text,dtpdate.Text,type,"c1002",cmbcustomer.Text,txtaddress.Text,txtphone.Text,cmbpaymentmode.Text,txtbalancedue.Text,dtppaymentdue.Text,txtgrosstotal.Text, txtdiscount.Text,txtnettotal.Text,txtpayamount.Text,txtbalance.Text});
+            dt.Rows.Add(new object[] { txtinvoice.Text,txtsalesperson.Text,dtpdate.Text,type,CustomerId,cmbcustomer.Text,txtaddress.Text,txtphone.Text,cmbpaymentmode.Text,txtbalancedue.Text,dtppaymentdue.Text,txtgrosstotal.Text, txtdiscount.Text,txtnettotal.Text,txtpayamount.Text,txtbalance.Text});
             Test.Sale.Database.SalesData salesData = new Test.Sale.Database.SalesData(source,dt);
             salesData.FnConn();
 
@@ -445,6 +459,30 @@ namespace Test
                 ex.ToString();
             }
             txtbalance.Text = (nettotal - payamount) + "";
+        }
+        String CustomerId = "";
+        private void cmbcustomer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbcustomer.Text != "")
+            {
+                Test.Sale.Database.SalesData sales = new Sale.Database.SalesData();
+                sales.FnConn();
+                DataTable dt = sales.FillData("search", cmbcustomer.Text, "spCustomer");
+
+                if (dt.Rows.Count > 0)
+                {
+                    txtaddress.Text = dt.Rows[0]["address"].ToString();
+                    txtphone.Text =  dt.Rows[0]["phone"].ToString();
+                    CustomerId = dt.Rows[0]["customerID"].ToString();
+                }
+                else
+                {
+                    CustomerId = "";
+                    txtaddress.Text = "";
+                    txtphone.Text = "";
+                }
+                sales.FnTrans();
+            }
         }
     }
 }

@@ -175,6 +175,7 @@
             this.cmbcustomer.Size = new System.Drawing.Size(200, 20);
             this.cmbcustomer.StyleController = this.layoutControl1;
             this.cmbcustomer.TabIndex = 18;
+            this.cmbcustomer.SelectedIndexChanged += new System.EventHandler(this.cmbcustomer_SelectedIndexChanged);
             // 
             // barManager1
             // 
