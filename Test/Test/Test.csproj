@@ -230,6 +230,8 @@
     <Compile Include="Purchase\Create Barcode.Designer.cs">
       <DependentUpon>Create Barcode.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchase\database\DamageData.cs" />
+    <Compile Include="Purchase\database\LostData.cs" />
     <Compile Include="Purchase\database\PurchaseOrder.cs" />
     <Compile Include="Purchase\database\PurchaseRequest.cs" />
     <Compile Include="Purchase\database\Rfq.cs" />

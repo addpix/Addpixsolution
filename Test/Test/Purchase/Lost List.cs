@@ -22,11 +22,21 @@ namespace Test
         {
             New_Lost a = new New_Lost();
             a.ShowDialog();
+            loadData();
         }
-
+        void loadData()
+        {
+            Purchase.database.LostData damageData = new Purchase.database.LostData();
+            damageData.FnConn();
+            DataTable dt = damageData.FillData("S", "", "spLost");
+            if (dt.Rows.Count > 0)
+            {
+                gridControl1.DataSource = dt;
+            }
+        }
         private void Lost_List_Load(object sender, EventArgs e)
         {
-
+            loadData();
         }
     }
 }

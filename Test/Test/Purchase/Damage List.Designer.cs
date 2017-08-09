@@ -93,6 +93,7 @@
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Damage #";
+            this.gridColumn1.FieldName = "damageNo";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowMove = false;
             this.gridColumn1.OptionsColumn.AllowSize = false;
@@ -104,6 +105,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Date";
+            this.gridColumn2.FieldName = "date";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowMove = false;
             this.gridColumn2.OptionsColumn.AllowSize = false;
@@ -115,6 +117,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Remark";
+            this.gridColumn3.FieldName = "remark";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowMove = false;
             this.gridColumn3.OptionsColumn.AllowSize = false;
@@ -126,6 +129,7 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "User Name";
+            this.gridColumn4.FieldName = "username";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowMove = false;
             this.gridColumn4.OptionsColumn.AllowSize = false;

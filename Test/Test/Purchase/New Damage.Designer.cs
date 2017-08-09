@@ -41,10 +41,10 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtuserName = new DevExpress.XtraEditors.TextEdit();
+            this.txtremark = new DevExpress.XtraEditors.MemoEdit();
+            this.dtpdate = new DevExpress.XtraEditors.DateEdit();
+            this.txtdamageno = new DevExpress.XtraEditors.TextEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -65,11 +65,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtuserName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtremark.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdamageno.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -118,6 +118,7 @@
             this.barButtonItem1.Caption = "Save";
             this.barButtonItem1.Id = 0;
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -174,10 +175,10 @@
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.labelControl1);
-            this.layoutControl1.Controls.Add(this.textEdit2);
-            this.layoutControl1.Controls.Add(this.memoEdit1);
-            this.layoutControl1.Controls.Add(this.dateEdit1);
-            this.layoutControl1.Controls.Add(this.textEdit1);
+            this.layoutControl1.Controls.Add(this.txtuserName);
+            this.layoutControl1.Controls.Add(this.txtremark);
+            this.layoutControl1.Controls.Add(this.dtpdate);
+            this.layoutControl1.Controls.Add(this.txtdamageno);
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 22);
@@ -195,46 +196,51 @@
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 9;
             // 
-            // textEdit2
+            // txtuserName
             // 
-            this.textEdit2.Location = new System.Drawing.Point(67, 384);
-            this.textEdit2.MenuManager = this.barManager1;
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(746, 20);
-            this.textEdit2.StyleController = this.layoutControl1;
-            this.textEdit2.TabIndex = 8;
+            this.txtuserName.Location = new System.Drawing.Point(67, 384);
+            this.txtuserName.MenuManager = this.barManager1;
+            this.txtuserName.Name = "txtuserName";
+            this.txtuserName.Size = new System.Drawing.Size(746, 20);
+            this.txtuserName.StyleController = this.layoutControl1;
+            this.txtuserName.TabIndex = 8;
             // 
-            // memoEdit1
+            // txtremark
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(67, 309);
-            this.memoEdit1.MenuManager = this.barManager1;
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(746, 71);
-            this.memoEdit1.StyleController = this.layoutControl1;
-            this.memoEdit1.TabIndex = 7;
+            this.txtremark.Location = new System.Drawing.Point(67, 309);
+            this.txtremark.MenuManager = this.barManager1;
+            this.txtremark.Name = "txtremark";
+            this.txtremark.Size = new System.Drawing.Size(746, 71);
+            this.txtremark.StyleController = this.layoutControl1;
+            this.txtremark.TabIndex = 7;
             // 
-            // dateEdit1
+            // dtpdate
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(662, 36);
-            this.dateEdit1.MenuManager = this.barManager1;
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtpdate.EditValue = null;
+            this.dtpdate.Location = new System.Drawing.Point(662, 36);
+            this.dtpdate.MenuManager = this.barManager1;
+            this.dtpdate.Name = "dtpdate";
+            this.dtpdate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtpdate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(151, 20);
-            this.dateEdit1.StyleController = this.layoutControl1;
-            this.dateEdit1.TabIndex = 6;
+            this.dtpdate.Properties.DisplayFormat.FormatString = "yyyy/MM/dd";
+            this.dtpdate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.dtpdate.Properties.EditFormat.FormatString = "yyyy-MM-dd";
+            this.dtpdate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dtpdate.Properties.Mask.EditMask = "yyyy-MM-dd";
+            this.dtpdate.Size = new System.Drawing.Size(151, 20);
+            this.dtpdate.StyleController = this.layoutControl1;
+            this.dtpdate.TabIndex = 6;
             // 
-            // textEdit1
+            // txtdamageno
             // 
-            this.textEdit1.Location = new System.Drawing.Point(662, 12);
-            this.textEdit1.MenuManager = this.barManager1;
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(151, 20);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 5;
+            this.txtdamageno.Location = new System.Drawing.Point(662, 12);
+            this.txtdamageno.MenuManager = this.barManager1;
+            this.txtdamageno.Name = "txtdamageno";
+            this.txtdamageno.Size = new System.Drawing.Size(151, 20);
+            this.txtdamageno.StyleController = this.layoutControl1;
+            this.txtdamageno.TabIndex = 5;
             // 
             // gridControl1
             // 
@@ -246,6 +252,7 @@
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.EditorKeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridControl1_EditorKeyPress);
             // 
             // gridView1
             // 
@@ -260,15 +267,20 @@
             this.gridColumn8});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.HiddenEditor += new System.EventHandler(this.gridView1_HiddenEditor);
+            this.gridView1.ShownEditor += new System.EventHandler(this.gridView1_ShownEditor);
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "#";
+            this.gridColumn1.FieldName = "slno";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowMove = false;
             this.gridColumn1.OptionsColumn.AllowSize = false;
             this.gridColumn1.OptionsColumn.FixedWidth = true;
+            this.gridColumn1.OptionsColumn.ReadOnly = true;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 30;
@@ -276,6 +288,7 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Item Code";
+            this.gridColumn2.FieldName = "itemCode";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowMove = false;
             this.gridColumn2.OptionsColumn.AllowSize = false;
@@ -287,6 +300,7 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Item Name";
+            this.gridColumn3.FieldName = "itemName";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowMove = false;
             this.gridColumn3.OptionsColumn.AllowSize = false;
@@ -298,10 +312,12 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Brand Name";
+            this.gridColumn4.FieldName = "brandName";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowMove = false;
             this.gridColumn4.OptionsColumn.AllowSize = false;
             this.gridColumn4.OptionsColumn.FixedWidth = true;
+            this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
             this.gridColumn4.Width = 150;
@@ -309,10 +325,12 @@
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Category";
+            this.gridColumn5.FieldName = "category";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowMove = false;
             this.gridColumn5.OptionsColumn.AllowSize = false;
             this.gridColumn5.OptionsColumn.FixedWidth = true;
+            this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
             this.gridColumn5.Width = 150;
@@ -320,10 +338,12 @@
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Real Qty";
+            this.gridColumn6.FieldName = "realqty";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowMove = false;
             this.gridColumn6.OptionsColumn.AllowSize = false;
             this.gridColumn6.OptionsColumn.FixedWidth = true;
+            this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
             this.gridColumn6.Width = 65;
@@ -331,6 +351,7 @@
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Damage Qty";
+            this.gridColumn7.FieldName = "damageqty";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowMove = false;
             this.gridColumn7.OptionsColumn.AllowSize = false;
@@ -342,10 +363,12 @@
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Balance Qty";
+            this.gridColumn8.FieldName = "balanceqty";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowMove = false;
             this.gridColumn8.OptionsColumn.AllowSize = false;
             this.gridColumn8.OptionsColumn.FixedWidth = true;
+            this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 7;
             this.gridColumn8.Width = 65;
@@ -377,7 +400,7 @@
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.textEdit1;
+            this.layoutControlItem2.Control = this.txtdamageno;
             this.layoutControlItem2.Location = new System.Drawing.Point(595, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(210, 24);
@@ -386,7 +409,7 @@
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.dateEdit1;
+            this.layoutControlItem3.Control = this.dtpdate;
             this.layoutControlItem3.Location = new System.Drawing.Point(595, 24);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(210, 24);
@@ -395,7 +418,7 @@
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.memoEdit1;
+            this.layoutControlItem4.Control = this.txtremark;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 297);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(805, 75);
@@ -404,7 +427,7 @@
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.textEdit2;
+            this.layoutControlItem5.Control = this.txtuserName;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 372);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(805, 24);
@@ -439,11 +462,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtuserName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtremark.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpdate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdamageno.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -472,10 +495,10 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtuserName;
+        private DevExpress.XtraEditors.MemoEdit txtremark;
+        private DevExpress.XtraEditors.DateEdit dtpdate;
+        private DevExpress.XtraEditors.TextEdit txtdamageno;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
