@@ -14,6 +14,7 @@ namespace Test
 {
     public partial class Sales_Quotation : DevExpress.XtraEditors.XtraForm
     {
+        string CustomerId = "";
         public Sales_Quotation()
         {
             InitializeComponent();
@@ -47,7 +48,8 @@ namespace Test
             if (dt1.Rows.Count > 0)
             {
                 int number = Convert.ToInt32(dt1.Rows[0]["number"].ToString()) + 1;
-                txtquatationnno.Text = "Quo" + number;
+                string quonum = number + "";
+                txtquatationnno.Text = "QU/" + quonum.PadLeft(5, '0');
             }
             DataTable dt = new DataTable();
             dt.Columns.Add("slno", Type.GetType("System.Int32"));
@@ -62,7 +64,22 @@ namespace Test
             DataRow dr = dt.NewRow();
             dt.Rows.Add(dr);
             gridControl1.DataSource = dt;
-            
+            dtpdate.EditValue = DateTime.Now;
+            Test.Sale.Database.SalesData sales = new Sale.Database.SalesData();
+            sales.FnConn();
+            DataTable dt2 = sales.FillData("S", "", "spCustomer");
+            if (dt2.Rows.Count > 0)
+            {
+                for (int i = 0; i < dt2.Rows.Count; i++)
+                {
+                    try
+                    {
+                        cmbcustomer.Properties.Items.Add(dt2.Rows[i]["name"].ToString());
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+            sales.FnTrans();
         }
 
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -84,12 +101,13 @@ namespace Test
             dt.Columns.Add("address");
             dt.Columns.Add("phone");
             dt.Columns.Add("totalamount");
-            dt.Rows.Add(new object[] { txtquatationnno.Text,dtpdate.Text,"cs1002",cmbcustomer.Text,txtaddress.Text,txtphone.Text,txtnetamount.Text });
+            dt.Rows.Add(new object[] { txtquatationnno.Text,dtpdate.Text,CustomerId,cmbcustomer.Text,txtaddress.Text,txtphone.Text,txtnetamount.Text });
             Test.Sale.Database.QuatationData quatationData = new Sale.Database.QuatationData(source,dt);
             quatationData.FnConn();
             quatationData.fnTransactionData();
             quatationData.FnTrans();
             MessageBox.Show("Quotation creater", "ALERT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            barButtonItem1.Enabled = false;
 
         }
 
@@ -392,6 +410,84 @@ namespace Test
                 }
             }
 
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                cmbcustomer.Text = "";
+                txtaddress.Text = "";
+                txtphone.Text = "";
+                txtnetamount.Text = "0";
+                DataTable source = gridControl1.DataSource as DataTable;
+                source.Clear();
+                gridControl1.DataSource = source;
+                Test.Sale.Database.QuatationData quatation = new Sale.Database.QuatationData();
+                quatation.FnConn();
+                DataTable dt1 = quatation.FillData("M", "");
+                String res = quatation.FnTrans();
+                if (dt1.Rows.Count > 0)
+                {
+                    int number = Convert.ToInt32(dt1.Rows[0]["number"].ToString()) + 1;
+                    string quonum = number + "";
+                    txtquatationnno.Text = "QU/" + quonum.PadLeft(5, '0');
+                }
+                barButtonItem1.Enabled = true;
+
+            }
+            catch (Exception)
+            {
+
+               
+            }
+            
+               
+            
+            
+        }
+
+        private void cmbcustomer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (cmbcustomer.Text != "")
+                {
+                    Test.Sale.Database.SalesData quatation = new Sale.Database.SalesData();
+                    quatation.FnConn();
+                    DataTable dt = quatation.FillData("search", cmbcustomer.Text, "spCustomer");
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        txtaddress.Text = dt.Rows[0]["address"].ToString();
+                        txtphone.Text =  dt.Rows[0]["phone"].ToString();
+                        CustomerId = dt.Rows[0]["customerID"].ToString();
+                    }
+                    else
+                    {
+                        CustomerId = "";
+                        txtaddress.Text = "";
+                        txtphone.Text = "";
+                    }
+                    quatation.FnTrans();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Test.Master.Customer cu = new Master.Customer(null);
+            cu.ShowDialog();
+        }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
         }
     }
 }

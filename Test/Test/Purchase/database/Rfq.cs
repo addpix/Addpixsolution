@@ -19,7 +19,7 @@ namespace Test.Purchase.database
 
         public Rfq()
         { }
-        public  Rfq(DataTable data, DataTable data1)
+        public Rfq(DataTable data, DataTable data1)
         {
             this.source2 = data;
             this.source1 = data1;
@@ -113,6 +113,25 @@ namespace Test.Purchase.database
             {
                 MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return new DataTable();
+            }
+        }
+
+        public void updatStatus(string operation, string param1, string param2)
+        {
+
+            try
+            {
+                command = new SqlCommand("RFQ", connection, transaction);
+
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@OPERATION", operation);
+                command.Parameters.AddWithValue("@coloumn", param2);
+                command.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

@@ -55,6 +55,17 @@ namespace Test.Inventory.Database
             Cmd.Parameters.AddWithValue("@CATEGORY", Category);
             Cmd.ExecuteNonQuery();
         }
+
+        public void DeleteData(String Value)
+        {
+            Cmd = new SqlCommand("spCategory", Con, Trans);
+
+            Cmd.CommandType = CommandType.StoredProcedure;
+            Cmd.Parameters.AddWithValue("@OPERATION", "D");
+            Cmd.Parameters.AddWithValue("@SLNO", Value);
+            Cmd.ExecuteNonQuery();
+        }
+
         public string FnTrans()
         {
             try

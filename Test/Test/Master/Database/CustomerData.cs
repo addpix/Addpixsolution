@@ -29,7 +29,7 @@ namespace Test.Master.Database
             Trans = Con.BeginTransaction();
         }
 
-        public DataTable FillData(string operation,string param1)
+        public DataTable FillData()
         {
             try
             {
@@ -37,11 +37,7 @@ namespace Test.Master.Database
 
                 Cmd = new SqlCommand("spCustomer", Con, Trans);
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.Parameters.AddWithValue("@OPERATION", operation);
-                if (param1 != "")
-                {
-                    Cmd.Parameters.AddWithValue("@param1", param1);
-                }
+                Cmd.Parameters.AddWithValue("@OPERATION", "S");
                 SqlDataAdapter adp = new SqlDataAdapter(Cmd);
 
                 adp.Fill(dtReturnTable);
@@ -53,12 +49,52 @@ namespace Test.Master.Database
                 return new DataTable();
             }
         }
-        public void fnTransactionData()
+        public String GetMaxValue()
+        {
+            try
+            {
+                DataTable dtReturnTable = new DataTable();
+                Cmd = new SqlCommand("spCustomer", Con, Trans);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.AddWithValue("@OPERATION", "MAX");
+                SqlDataAdapter adp = new SqlDataAdapter(Cmd);
+
+                adp.Fill(dtReturnTable);
+                return dtReturnTable.Rows[0]["slno"] + "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+        public DataTable GetRow(String Cus_ID)
+        {
+            try
+            {
+                DataTable dtReturnTable = new DataTable();
+
+                Cmd = new SqlCommand("spCustomer", Con, Trans);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.AddWithValue("@OPERATION", "SR");
+                Cmd.Parameters.AddWithValue("@CUST_ID", Cus_ID);
+                SqlDataAdapter adp = new SqlDataAdapter(Cmd);
+
+                adp.Fill(dtReturnTable);
+                return dtReturnTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new DataTable();
+            }
+        }
+        public void fnTransactionData(String Operation)
         {
             Cmd = new SqlCommand("spCustomer", Con, Trans);
 
             Cmd.CommandType = CommandType.StoredProcedure;
-            Cmd.Parameters.AddWithValue("@OPERATION", "I");
+            Cmd.Parameters.AddWithValue("@OPERATION", Operation);
             Cmd.Parameters.AddWithValue("@CUST_ID", CustomerId);        
             Cmd.Parameters.AddWithValue("@NAME", CustomerName);
             Cmd.Parameters.AddWithValue("@ADDRESS", Address);
@@ -70,6 +106,15 @@ namespace Test.Master.Database
             Cmd.Parameters.AddWithValue("@PAYMENT_DAYS", PaymentDays);
             Cmd.ExecuteNonQuery();
 
+        }
+        public void DeleteData(String Value)
+        {
+            Cmd = new SqlCommand("spCustomer", Con, Trans);
+
+            Cmd.CommandType = CommandType.StoredProcedure;
+            Cmd.Parameters.AddWithValue("@OPERATION", "D");
+            Cmd.Parameters.AddWithValue("@CUST_ID", Value);
+            Cmd.ExecuteNonQuery();
         }
         public string FnTrans()
         {

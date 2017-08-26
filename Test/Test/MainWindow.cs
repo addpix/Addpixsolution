@@ -30,7 +30,7 @@ namespace Test
         }
         private void navButton3_ElementClick(object sender, DevExpress.XtraBars.Navigation.NavElementEventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void navButton2_ElementClick(object sender, DevExpress.XtraBars.Navigation.NavElementEventArgs e)
@@ -77,7 +77,7 @@ namespace Test
 
         private void navBarItem16_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            var form = new MRR();
+            var form = new Meterial_Reciept_Report();
             if (ExitForm(form)) return;
             form.MdiParent = this;
             form.Show();
@@ -93,7 +93,7 @@ namespace Test
 
         private void navBarItem9_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            var form = new RFQ();
+            var form = new Requst_for_Quatation();
             if (ExitForm(form)) return;
             form.MdiParent = this;
             form.Show();
@@ -117,7 +117,7 @@ namespace Test
 
         private void navBarItem17_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            var form = new Supplier_List();
+            var form = new Master.Supplier_List();
             if (ExitForm(form)) return;
             form.MdiParent = this;
             form.Show();
@@ -312,6 +312,46 @@ namespace Test
             if (ExitForm(form)) return;
             form.MdiParent = this;
             form.Show();
+        }
+
+        private void navBarItem5_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            Company_Registration a = new Company_Registration();
+            a.ShowDialog();
+        }
+
+        private void navBarItem30_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            Create_Location a = new Create_Location();
+            a.ShowDialog();
+        }
+
+        private void navBarItem31_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            var form = new Proforma_Invoice_List();
+            if (ExitForm(form)) return;
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void navBarItem32_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            var form = new Purchase.Price_Update();
+            if (ExitForm(form)) return;
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void navButton6_ElementClick(object sender, DevExpress.XtraBars.Navigation.NavElementEventArgs e)
+        {
+            this.Close();
+            Login a = new Login();
+            a.ShowDialog();
+        }
+
+        private void navBarItem16_ItemChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -59,6 +59,20 @@ namespace Test.Sale.Database
             }
             catch (Exception ex) { }
         }
+        public void fndeliveryUpdate(string param)
+        {
+
+            try
+            {
+                command = new SqlCommand("spsales", connection, transaction);
+
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@OPERATION", "delivery");
+                command.Parameters.AddWithValue("@param1", param);
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex) { }
+        }
         public DataTable FillData(string operation, string param1,string procedureName)
         {
             try
@@ -104,6 +118,32 @@ namespace Test.Sale.Database
             {
                 connection.Close();
                 connection.Dispose();
+            }
+        }
+        public DataSet FillDataSet(string operation, string param1, string procedureName)
+        {
+            try
+            {
+                DataSet dtReturnTable = new DataSet();
+
+                command = new SqlCommand(procedureName, connection, transaction);
+
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@OPERATION", operation);
+                if (param1 != "")
+                {
+                    command.Parameters.AddWithValue("@param1", param1);
+                }
+                SqlDataAdapter adp = new SqlDataAdapter(command);
+
+                adp.Fill(dtReturnTable);
+                return dtReturnTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new DataSet();
             }
         }
     }

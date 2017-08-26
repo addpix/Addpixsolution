@@ -29,8 +29,10 @@ namespace Test
             if (dt1.Rows.Count > 0)
             {
                  int slno = Convert.ToInt32(dt1.Rows[0][0].ToString())+1;
-                txtdamageno.Text = "Dm000" + slno;
+                string no = slno + "";
+                txtdamageno.Text = "RT-NO:"+no.PadLeft(5,'0');
             }
+            dtpdate.EditValue = DateTime.Now;
             DataTable dt = new DataTable();
             dt.Columns.Add("slno", Type.GetType("System.Int32"));
             dt.Columns.Add("damageno", Type.GetType("System.String"));
@@ -41,6 +43,9 @@ namespace Test
             dt.Columns.Add("realqty", Type.GetType("System.Double"));
             dt.Columns.Add("damageqty", Type.GetType("System.Double"));
             dt.Columns.Add("balanceqty", Type.GetType("System.Double"));
+            dt.Columns.Add("po", Type.GetType("System.String"));
+            dt.Columns.Add("mrr", Type.GetType("System.String"));
+            dt.Columns.Add("reason", Type.GetType("System.String"));
             DataRow dr = dt.NewRow();
             dt.Rows.Add(dr);
             gridControl1.DataSource = dt;
@@ -222,6 +227,32 @@ namespace Test
                     return;
                 }
             }
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                Purchase.database.DamageData damageData = new Purchase.database.DamageData();
+                damageData.FnConn();
+                DataTable dt1 = damageData.FillData("M", "", "spDamage");
+                damageData.FnTrans();
+                if (dt1.Rows.Count > 0)
+                {
+                    int slno = Convert.ToInt32(dt1.Rows[0][0].ToString()) + 1;
+                    string no = slno + "";
+                    txtdamageno.Text = "RT-NO:" + no.PadLeft(5, '0');
+                }
+                dtpdate.EditValue = DateTime.Now;
+                txtremark.Text = "";
+                txtuserName.Text = "";
+            }
+            catch (Exception ex) { }
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
         }
     }
 }

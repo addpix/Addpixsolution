@@ -37,18 +37,21 @@ namespace Test.Sale.Database
 
         }
 
-        public DataTable FillData()
+        public DataTable FillData(string operation,string name,string param)
         {
             try
             {
                 DataTable dtReturnTable = new DataTable();
 
-                command = new SqlCommand("spWarrenty", connection, transaction);
+                command = new SqlCommand(name, connection, transaction);
 
                 command.CommandType = CommandType.StoredProcedure;
 
-                command.Parameters.AddWithValue("@OPERATION", "S");
-                
+                command.Parameters.AddWithValue("@OPERATION", operation);
+                if (param != "")
+                {
+                    command.Parameters.AddWithValue("@param1", param);
+                }
 
                 SqlDataAdapter adp = new SqlDataAdapter(command);
 
@@ -61,14 +64,14 @@ namespace Test.Sale.Database
                 return new DataTable();
             }
         }
-        public void fnTransactionData()
+        public void fnTransactionData(string operation)
         {
 
 
             command = new SqlCommand("spWarrenty", connection, transaction);
 
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@OPERATION", "I");
+            command.Parameters.AddWithValue("@OPERATION", operation);
             command.Parameters.AddWithValue("@claimeno", claimeNo);
             command.Parameters.AddWithValue("@claimedate", claimeDate);
             command.Parameters.AddWithValue("@contactName", contactName);

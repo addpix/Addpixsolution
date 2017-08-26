@@ -57,6 +57,7 @@
             this.PO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DeliveryNote = new DevExpress.XtraGrid.Columns.GridColumn();
             this.StoreKeeper = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.backstageViewTabItem1 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
             this.backstageViewItemSeparator1 = new DevExpress.XtraBars.Ribbon.BackstageViewItemSeparator();
             this.backstageViewTabItem2 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
@@ -195,8 +196,8 @@
             this.backstageViewControl1.Items.Add(this.backstageViewItemSeparator2);
             this.backstageViewControl1.Location = new System.Drawing.Point(12, 12);
             this.backstageViewControl1.Name = "backstageViewControl1";
-            this.backstageViewControl1.SelectedTab = this.backstageViewTabItem1;
-            this.backstageViewControl1.SelectedTabIndex = 0;
+            this.backstageViewControl1.SelectedTab = this.backstageViewTabItem2;
+            this.backstageViewControl1.SelectedTabIndex = 2;
             this.backstageViewControl1.Size = new System.Drawing.Size(732, 426);
             this.backstageViewControl1.TabIndex = 4;
             this.backstageViewControl1.Text = "backstageViewControl1";
@@ -230,12 +231,15 @@
             this.Status});
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
             this.gridView2.OptionsFind.AlwaysVisible = true;
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView2_RowClick);
             // 
             // No
             // 
             this.No.Caption = "No";
+            this.No.FieldName = "slno";
             this.No.Name = "No";
             this.No.OptionsColumn.AllowMove = false;
             this.No.OptionsColumn.AllowSize = false;
@@ -247,6 +251,7 @@
             // PONo
             // 
             this.PONo.Caption = "PO #";
+            this.PONo.FieldName = "orderNo";
             this.PONo.Name = "PONo";
             this.PONo.OptionsColumn.AllowMove = false;
             this.PONo.OptionsColumn.AllowSize = false;
@@ -258,6 +263,7 @@
             // PODate
             // 
             this.PODate.Caption = "PO Date";
+            this.PODate.FieldName = "date";
             this.PODate.Name = "PODate";
             this.PODate.OptionsColumn.AllowMove = false;
             this.PODate.OptionsColumn.AllowSize = false;
@@ -269,6 +275,7 @@
             // Status
             // 
             this.Status.Caption = "Status";
+            this.Status.FieldName = "status";
             this.Status.Name = "Status";
             this.Status.OptionsColumn.AllowMove = false;
             this.Status.OptionsColumn.AllowSize = false;
@@ -304,15 +311,19 @@
             this.Date,
             this.PO,
             this.DeliveryNote,
-            this.StoreKeeper});
+            this.StoreKeeper,
+            this.gridColumn1});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             // 
             // MRRNo
             // 
             this.MRRNo.Caption = "MRR #";
+            this.MRRNo.FieldName = "mrrNo";
             this.MRRNo.Name = "MRRNo";
             this.MRRNo.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.MRRNo.OptionsColumn.AllowMove = false;
@@ -325,6 +336,7 @@
             // Date
             // 
             this.Date.Caption = "Date";
+            this.Date.FieldName = "date";
             this.Date.Name = "Date";
             this.Date.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.Date.OptionsColumn.AllowMove = false;
@@ -337,6 +349,7 @@
             // PO
             // 
             this.PO.Caption = "PO #";
+            this.PO.FieldName = "purchaseOrderNo";
             this.PO.Name = "PO";
             this.PO.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.PO.OptionsColumn.AllowMove = false;
@@ -349,6 +362,7 @@
             // DeliveryNote
             // 
             this.DeliveryNote.Caption = "Delivery Note #";
+            this.DeliveryNote.FieldName = "delivaryNoteNo";
             this.DeliveryNote.Name = "DeliveryNote";
             this.DeliveryNote.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.DeliveryNote.OptionsColumn.AllowMove = false;
@@ -361,6 +375,7 @@
             // StoreKeeper
             // 
             this.StoreKeeper.Caption = "Store Keeper";
+            this.StoreKeeper.FieldName = "storeKeeper";
             this.StoreKeeper.Name = "StoreKeeper";
             this.StoreKeeper.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
             this.StoreKeeper.OptionsColumn.AllowMove = false;
@@ -370,12 +385,23 @@
             this.StoreKeeper.VisibleIndex = 4;
             this.StoreKeeper.Width = 100;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Status";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowMove = false;
+            this.gridColumn1.OptionsColumn.AllowSize = false;
+            this.gridColumn1.OptionsColumn.FixedWidth = true;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 5;
+            this.gridColumn1.Width = 60;
+            // 
             // backstageViewTabItem1
             // 
             this.backstageViewTabItem1.Caption = "Purchase Order ( PO )";
             this.backstageViewTabItem1.ContentControl = this.backstageViewClientControl1;
             this.backstageViewTabItem1.Name = "backstageViewTabItem1";
-            this.backstageViewTabItem1.Selected = true;
+            this.backstageViewTabItem1.Selected = false;
             // 
             // backstageViewItemSeparator1
             // 
@@ -386,7 +412,7 @@
             this.backstageViewTabItem2.Caption = "Meterial Receipt Report ( MRR )";
             this.backstageViewTabItem2.ContentControl = this.backstageViewClientControl2;
             this.backstageViewTabItem2.Name = "backstageViewTabItem2";
-            this.backstageViewTabItem2.Selected = false;
+            this.backstageViewTabItem2.Selected = true;
             // 
             // backstageViewItemSeparator2
             // 
@@ -424,6 +450,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "MRR";
             this.Text = "MRR";
+            this.Load += new System.EventHandler(this.MRR_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -477,5 +504,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn PONo;
         private DevExpress.XtraGrid.Columns.GridColumn PODate;
         private DevExpress.XtraGrid.Columns.GridColumn Status;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

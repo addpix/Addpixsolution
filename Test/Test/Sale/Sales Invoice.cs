@@ -19,6 +19,7 @@ namespace Test
             InitializeComponent();
         }
         String type = "Cash";
+        public string deliveryno { get; set; }
         public void calculateTotal()
         {
             gridView1.RefreshData();
@@ -45,6 +46,8 @@ namespace Test
 
         private void Sales_Invoice_Load(object sender, EventArgs e)
         {
+            typecash.IsOn = true;
+            cmbpaymentmode.SelectedIndex=0;
             Test.Sale.Database.SalesData sales = new Sale.Database.SalesData();
             sales.FnConn();
             DataTable dt1 = sales.FillData("M", "","spsales");
@@ -52,7 +55,9 @@ namespace Test
             if (dt1.Rows.Count > 0)
             {
                 int number = Convert.ToInt32(dt1.Rows[0]["number"].ToString()) + 1;
-                txtinvoice.Text = number+"";
+                string invoiceno = number + "";
+                txtinvoice.Text = "INV/"+invoiceno.PadLeft(5, '0');
+                
             }
             DataTable dt2= sales.FillData("S", "", "spCustomer");
             if (dt2.Rows.Count > 0)
@@ -66,7 +71,7 @@ namespace Test
                     catch (Exception ex) { }
                 }
             }
-          
+            dtpdate.EditValue = DateTime.Now;
             String res = sales.FnTrans();
             DataTable dt = new DataTable();
             dt.Columns.Add("slno", Type.GetType("System.Int32"));
@@ -87,6 +92,49 @@ namespace Test
             DataRow dr = dt.NewRow();
             dt.Rows.Add(dr);
             gridControl1.DataSource = dt;
+            if (deliveryno != null)
+            {
+                sales.FnConn();
+                DataSet ds= sales.FillDataSet("searchgrid", deliveryno, "spsalesDelivery");
+                sales.FnTrans();
+                DataTable delivery = ds.Tables[0];
+                DataTable deliverygrid = ds.Tables[1];
+                if (delivery.Rows.Count > 0)
+                {
+                    CustomerId = delivery.Rows[0]["customerid"] + "";
+                    cmbcustomer.Text = delivery.Rows[0]["customerName"] + "";
+                    txtaddress.Text = delivery.Rows[0]["address"] + "";
+                   // txtphone.Text = delivery.Rows[0]["contact"] + "";
+                    txtsalesperson.Text = delivery.Rows[0]["salesPerson"] + "";
+                    dt.Clear();
+                    sales.FnConn();
+                    for (int i = 0; i < deliverygrid.Rows.Count; i++)
+                    {
+                        string barcode = deliverygrid.Rows[i]["barcode"] + "";
+                        double qty =Convert.ToDouble( deliverygrid.Rows[i]["quantity"] + "");
+
+                        if (barcode!=null)
+                        {
+                            DataTable dts = sales.FillData("barcodedatails", barcode, "spQuatation");
+                            if (dts.Rows.Count > 0)
+                            {
+                                string itemCode = dts.Rows[0]["productCode"] + "";
+                                string description = dts.Rows[0]["itemName"] + "";
+                                string brandName = dts.Rows[0]["brandName"] + "";
+
+                                double unitprice = Convert.ToDouble(dts.Rows[0]["salesRate1"] + "");
+                                double totalprice = unitprice * qty;
+                                dt.Rows.Add(i + 1, "", barcode, itemCode, description, brandName, qty, "1", unitprice, totalprice, 0, 0, 0, 0, totalprice);
+                            }
+                        }
+                        
+                    }
+                    sales.FnTrans();
+                    calculateTotal();
+                    
+                }
+
+            }
         }
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -169,48 +217,109 @@ namespace Test
                     currentEditor.MaskBox.AutoCompleteCustomSource = customSource;
                 }
             }
+            else if (gridView1.FocusedColumn.FieldName.Equals("quantity"))//Don't work only for this column
+            {
+                TextEdit currentEditor = (sender as GridView).ActiveEditor as TextEdit;
+                if (currentEditor != null)
+                {
+                    AutoCompleteStringCollection customSource = new AutoCompleteStringCollection();
+                    sales.FnConn();
+                    customSource = null;
+
+                    currentEditor.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    currentEditor.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                    currentEditor.MaskBox.AutoCompleteCustomSource = customSource;
+                }
+            }
         }
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)//btnsave
         {
-            gridView1.RefreshData();
-            DataTable source = gridControl1.DataSource as DataTable;
-            DataTable dt = new DataTable();
-            dt.Clear();
-            dt.Columns.Add("invoice_no");
-            dt.Columns.Add("salesPerson");
-            dt.Columns.Add("date");
-            dt.Columns.Add("type");
-            dt.Columns.Add("customerid");
-            dt.Columns.Add("customerName");
-            dt.Columns.Add("address");
-            dt.Columns.Add("phone");
-            dt.Columns.Add("paymentMode");
-            dt.Columns.Add("balanceDue");
-            dt.Columns.Add("paymentDueDate");
-            dt.Columns.Add("grossTotal");
-            dt.Columns.Add("discount");
-            dt.Columns.Add("netTotal");
-            dt.Columns.Add("payAmount");
-            dt.Columns.Add("balance");
-            
-            dt.Rows.Add(new object[] { txtinvoice.Text,txtsalesperson.Text,dtpdate.Text,type,CustomerId,cmbcustomer.Text,txtaddress.Text,txtphone.Text,cmbpaymentmode.Text,txtbalancedue.Text,dtppaymentdue.Text,txtgrosstotal.Text, txtdiscount.Text,txtnettotal.Text,txtpayamount.Text,txtbalance.Text});
-            Test.Sale.Database.SalesData salesData = new Test.Sale.Database.SalesData(source,dt);
-            salesData.FnConn();
+            int tendercash = Convert.ToInt32(txtpayamount.Text);
+            int flag = 0;     
+            if (tendercash < 1)
+            {
+                try
+                {
+                    DialogResult re = MessageBox.Show("Pay amount not entered please check. Click yes to Save with out pay amount ", "ALERT", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (re == DialogResult.Yes)
+                    {
+                        flag = 0;
+                    }
+                    else
+                    {
+                        flag = 1;
+                    }
+                }
+                catch (Exception) { }
+            }
+            if (flag == 0)
+            {
+                gridView1.RefreshData();
+                DataTable source = gridControl1.DataSource as DataTable;
+                DataTable dt = new DataTable();
+                dt.Clear();
+                dt.Columns.Add("invoice_no");
+                dt.Columns.Add("salesPerson");
+                dt.Columns.Add("date");
+                dt.Columns.Add("type");
+                dt.Columns.Add("customerid");
+                dt.Columns.Add("customerName");
+                dt.Columns.Add("address");
+                dt.Columns.Add("phone");
+                dt.Columns.Add("paymentMode");
+                dt.Columns.Add("balanceDue");
+                dt.Columns.Add("paymentDueDate");
+                dt.Columns.Add("grossTotal");
+                dt.Columns.Add("discount");
+                dt.Columns.Add("netTotal");
+                dt.Columns.Add("payAmount");
+                dt.Columns.Add("balance");
+                //typecash.IsOn = true;
+                double payamount = 0,balance=0;
+                try
+                {
+                    payamount = Convert.ToDouble(txtpayamount.Text);
+                    balance = Convert.ToDouble(txtbalance.Text);
+                    if (balance < 0)
+                    {
+                        balance = 0;
+                        payamount = Convert.ToDouble(txtnettotal.Text);
+                    }
 
-            salesData.fnTransactionData();
-            salesData.FnTrans();
+                }
+                catch(Exception ex)
+                {
+                    
+                }
+                dt.Rows.Add(new object[] { txtinvoice.Text, txtsalesperson.Text, dtpdate.Text, type, CustomerId, cmbcustomer.Text, txtaddress.Text, txtphone.Text, cmbpaymentmode.Text, txtbalancedue.Text, dtppaymentdue.Text, txtgrosstotal.Text, txtdiscount.Text, txtnettotal.Text, payamount+"", balance+"" });
+                Test.Sale.Database.SalesData salesData = new Test.Sale.Database.SalesData(source, dt);
+                salesData.FnConn();
+
+                salesData.fnTransactionData();
+                if (deliveryno != "")
+                {
+                    salesData.fndeliveryUpdate(deliveryno);
+                }
+                string res = salesData.FnTrans();
+                if (res == "Success")
+                {
+                    MessageBox.Show("New Invoice Created", "ALERT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    barButtonItem1.Enabled = false;
+                }
+            }
         }
 
         private void type_Toggled(object sender, EventArgs e)
         {
             if (typecash.IsOn == true)
             {
-                type = "Cash";
+                type = "Credit";
+                
             }
             else
             {
-                type = "Credit";
+                type = "Cash";
             }
         }
 
@@ -437,7 +546,7 @@ namespace Test
 
         private void txtpayamount_EditValueChanged(object sender, EventArgs e)
         {
-            double nettotal = 0, payamount = 0;
+                double nettotal = 0, payamount = 0;
             try
             {
                 nettotal = Convert.ToDouble(txtnettotal.Text);
@@ -458,7 +567,17 @@ namespace Test
                 txtpayamount.Text = "0";
                 ex.ToString();
             }
-            txtbalance.Text = (nettotal - payamount) + "";
+            double balance = nettotal - payamount;
+            
+            txtbalance.Text = balance + "" ;
+            if (balance > 0)
+            {
+                typecash.IsOn = true;
+            }
+            else
+            {
+                typecash.IsOn = false;
+            }
         }
         String CustomerId = "";
         private void cmbcustomer_SelectedIndexChanged(object sender, EventArgs e)
@@ -483,6 +602,60 @@ namespace Test
                 }
                 sales.FnTrans();
             }
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Master.Customer a = new Master.Customer(null);
+            a.ShowDialog();
+        }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                cmbpaymentmode.SelectedIndex = 0;
+                DataTable source = gridControl1.DataSource as DataTable;
+                source.Clear();
+                gridControl1.DataSource = source;
+                cmbcustomer.Text = "";
+                txtaddress.Text = "";
+                CustomerId = "";
+                txtphone.Text = "";
+                txtsalesperson.Text = "";
+                txtgrosstotal.Text = "0";
+                txtdiscount.Text = "0";
+                txtnettotal.Text = "0";
+                txtpayamount.Text = "0";
+                txtbalance.Text = "0";
+                Test.Sale.Database.SalesData sales = new Sale.Database.SalesData();
+                sales.FnConn();
+                DataTable dt1 = sales.FillData("M", "", "spsales");
+
+                if (dt1.Rows.Count > 0)
+                {
+                    int number = Convert.ToInt32(dt1.Rows[0]["number"].ToString()) + 1;
+                    string invoiceno = number + "";
+                    txtinvoice.Text = "INV/"+invoiceno.PadLeft(5, '0'); 
+                }
+                sales.FnTrans();
+                //cmbpaymentmode.Text = "";
+                txtbalancedue.Text = "0";
+                dtppaymentdue.Text = "";
+                barButtonItem1.Enabled = true;
+                deliveryno = "";
+
+            }
+            catch (Exception)
+            {
+                
+            } 
+           
         }
     }
 }

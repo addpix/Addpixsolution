@@ -129,6 +129,7 @@
             this.tileNavPane1.Size = new System.Drawing.Size(330, 40);
             this.tileNavPane1.TabIndex = 5;
             this.tileNavPane1.Text = "tileNavPane1";
+            this.tileNavPane1.Click += new System.EventHandler(this.tileNavPane1_Click);
             // 
             // navButton2
             // 
@@ -143,7 +144,7 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "VS2010";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2013 Light Gray";
             // 
             // layoutControl1
             // 

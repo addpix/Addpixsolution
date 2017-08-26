@@ -20,8 +20,9 @@ namespace Test
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Purchase_Requst a = new Purchase_Requst();
+            Purchase_Requst a = new Purchase_Requst( false,null);
             a.ShowDialog();
+            Purchase_Requst_List_Load(sender, e);
         }
 
         private void Purchase_Requst_List_Load(object sender, EventArgs e)
@@ -34,5 +35,17 @@ namespace Test
                 gridControl1.DataSource = dt;
             }
         }
+
+
+
+        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            String no = row["prNo"].ToString();
+            Purchase_Requst req = new Purchase_Requst(true, no);
+            req.ShowDialog();
+        }
+
+       
     }
 }

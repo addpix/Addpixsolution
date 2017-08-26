@@ -11,6 +11,7 @@ namespace Test.Inventory.Database
 {
     class NewBrandData
     {
+        public string Slno { get; set; }
         public string Brand { get; set; }
         public string Vendor { get; set; }
         public string Result = "";
@@ -45,16 +46,51 @@ namespace Test.Inventory.Database
                 return new DataTable();
             }
         }
-        public void fnTransactionData()
+
+        public DataTable GetRow(String Brand_ID)
+        {
+            try
+            {
+                DataTable dtReturnTable = new DataTable();
+
+                Cmd = new SqlCommand("spBrand", Con, Trans);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.AddWithValue("@OPERATION", "S");
+                Cmd.Parameters.AddWithValue("@SLNO", Brand_ID);
+                SqlDataAdapter adp = new SqlDataAdapter(Cmd);
+
+                adp.Fill(dtReturnTable);
+                return dtReturnTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new DataTable();
+            }
+        }
+
+        public void fnTransactionData(String Operation)
         {
             Cmd = new SqlCommand("spBrand", Con, Trans);
             Cmd.CommandType = CommandType.StoredProcedure;
 
-            Cmd.Parameters.AddWithValue("@OPERATION", "I");
+            Cmd.Parameters.AddWithValue("@OPERATION", Operation);
             Cmd.Parameters.AddWithValue("@BRAND_NAME", Brand);
-            Cmd.Parameters.AddWithValue("@VENDOR", Vendor);
+            Cmd.Parameters.AddWithValue("@VENDOR", Vendor); 
+            Cmd.Parameters.AddWithValue("@SLNO", Slno);
             Cmd.ExecuteNonQuery();
         }
+
+        public void DeleteData(String Value)
+        {
+            Cmd = new SqlCommand("spBrand", Con, Trans);
+
+            Cmd.CommandType = CommandType.StoredProcedure;
+            Cmd.Parameters.AddWithValue("@OPERATION", "D");
+            Cmd.Parameters.AddWithValue("@SLNO", Value);
+            Cmd.ExecuteNonQuery();
+        }
+
 
         public string FnTrans()
         {

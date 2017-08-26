@@ -13,7 +13,8 @@ namespace Test
 {
     public partial class Delivery_Note : DevExpress.XtraEditors.XtraForm
     {
-        Sale.Database.SalesDeliveryData salesDeliveryData; 
+        Sale.Database.SalesDeliveryData salesDeliveryData;
+        public string deliveryNoteNo { get; set; }
         public Delivery_Note()
         {
             InitializeComponent();
@@ -22,16 +23,10 @@ namespace Test
 
         private void Delivery_Note_Load(object sender, EventArgs e)
         {
-            
             salesDeliveryData.FnConn();
-           
             DataTable dt = salesDeliveryData.FillData("S", "", "spCustomer");
-            if (dt.Rows.Count > 0)
-            {
-                
-            }
             AutoCompleteStringCollection collection = new AutoCompleteStringCollection();
-            
+
             if (dt.Rows.Count > 0)
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
@@ -43,21 +38,53 @@ namespace Test
             txtCustomerName.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             txtCustomerName.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
             txtCustomerName.MaskBox.AutoCompleteCustomSource = collection;
-            DataTable dt1= salesDeliveryData.FillData("M", "", "spsalesDelivery");
-            if (dt1.Rows.Count > 0)
+           
+            if (deliveryNoteNo != null)
             {
-                int slno=Convert.ToInt32(dt1.Rows[0][0].ToString())+1;
-                txtdeliveryNo.Text = slno + "";
+                barButtonItem1.Enabled = false;
+                barButtonItem5.Enabled = true;
+                DataSet ds = salesDeliveryData.FillDataSet("searchgrid", deliveryNoteNo, "spsalesDelivery");
+                DataTable tab = ds.Tables[0];
+                salesDeliveryData.FnTrans();
+                if (tab.Rows.Count > 0)
+                {
+                    txtdeliveryNo.Text = tab.Rows[0]["deliveryNo"] + "";
+                    Commen_Form.Functions.DateConverter dc = new Commen_Form.Functions.DateConverter();
+                    dtpdate.EditValue = dc.dateconverter(tab.Rows[0]["date"] + "");
+                    txtsalesPerson.Text = tab.Rows[0]["salesPerson"] + "";
+                    txtCustomerName.Text = tab.Rows[0]["customerName"] + "";
+                    txtaddress.Text = tab.Rows[0]["address"]+"";
+                    txtemail.Text = tab.Rows[0]["contact"] + "";
+                    DataTable gridData = ds.Tables[1];
+                    gridControl1.DataSource = gridData;
+                }
             }
-            salesDeliveryData.FnTrans();
-            DataTable dt3 = new DataTable();
-            dt3.Columns.Add("slno", Type.GetType("System.Int32"));
-            dt3.Columns.Add("deliveryNo", Type.GetType("System.String"));
-            dt3.Columns.Add("barcode", Type.GetType("System.String"));
-            dt3.Columns.Add("description", Type.GetType("System.String"));
-            dt3.Columns.Add("quantity", Type.GetType("System.Double"));
-            dt3.Columns.Add("status", Type.GetType("System.String"));
-            gridControl1.DataSource = dt3;
+            else
+            {
+                dtpdate.EditValue = DateTime.Now;
+                barButtonItem5.Enabled = false;
+                DataTable dt1 = salesDeliveryData.FillData("M", "", "spsalesDelivery");
+                if (dt1.Rows.Count > 0)
+                {
+                    int slno = Convert.ToInt32(dt1.Rows[0][0].ToString()) + 1;
+                    string deno = slno + "";
+
+                    txtdeliveryNo.Text = "DLN/"+deno.PadLeft(5,'0');
+                }
+                DataTable dt3 = new DataTable();
+                dt3.Columns.Add("slno", Type.GetType("System.Int32"));
+                dt3.Columns.Add("deliveryNo", Type.GetType("System.String"));
+                dt3.Columns.Add("barcode", Type.GetType("System.String"));
+                dt3.Columns.Add("description", Type.GetType("System.String"));
+                dt3.Columns.Add("quantity", Type.GetType("System.Double"));
+                dt3.Columns.Add("status", Type.GetType("System.String"));
+                gridControl1.DataSource = dt3;
+                salesDeliveryData.FnTrans();
+            }
+
+          
+
+
         }
         String CustomerId = "";
         private void txtCustomerName_EditValueChanged(object sender, EventArgs e)
@@ -255,10 +282,12 @@ namespace Test
             catch (Exception ex) { }
         }
 
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)//save
         {
+           // Commen_Form.Functions.DateConverter dc = new Commen_Form.Functions.DateConverter();
             gridView1.RefreshData();
             DataTable source = gridControl1.DataSource as DataTable;
+            //source = dc.gridvalidation(source);
             DataTable dt = new DataTable();
             dt.Clear();
             dt.Columns.Add("deliveryno");
@@ -269,12 +298,69 @@ namespace Test
             dt.Columns.Add("address");
             dt.Columns.Add("contact");
             dt.Columns.Add("status");
-            dt.Rows.Add(new object[] { txtdeliveryNo.Text, dtpdate.Text,txtsalesPerson.Text,CustomerId, txtCustomerName.Text,txtaddress.Text, txtemail.Text,"No Invoice" });
+            dt.Rows.Add(new object[] { txtdeliveryNo.Text, dtpdate.Text, txtsalesPerson.Text, CustomerId, txtCustomerName.Text, txtaddress.Text, txtemail.Text, "No Invoice" });
             Test.Sale.Database.SalesDeliveryData quatationData = new Sale.Database.SalesDeliveryData(source, dt);
             quatationData.FnConn();
             quatationData.fnTransactionData();
-            string res=quatationData.FnTrans();
+            string res = quatationData.FnTrans();
             MessageBox.Show(res, "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            barButtonItem1.Enabled = false;
+            barButtonItem5.Enabled = true;
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                dtpdate.EditValue = DateTime.Now;
+                barButtonItem5.Enabled = false;
+                barButtonItem1.Enabled = true;
+                txtsalesPerson.Text = "";
+                txtCustomerName.Text = "";
+                txtaddress.Text = "";
+                txtemail.Text = "";
+                salesDeliveryData.FnConn();
+                DataTable dt1 = salesDeliveryData.FillData("M", "", "spsalesDelivery");
+                if (dt1.Rows.Count > 0)
+                {
+                    int slno = Convert.ToInt32(dt1.Rows[0][0].ToString()) + 1;
+                    string deno = slno + "";
+
+                    txtdeliveryNo.Text = "DLN/" + deno.PadLeft(5, '0');
+                }
+                salesDeliveryData.FnTrans();
+                DataTable source = gridControl1.DataSource as DataTable;
+                source.Clear();
+                gridControl1.DataSource = source;
+                
+            }
+            catch (Exception)
+            {
+
+               
+            }
+        }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string deliveryno = txtdeliveryNo.Text;
+            salesDeliveryData.FnConn();
+            DataTable dt = salesDeliveryData.FillData("search", deliveryno, "spsalesDelivery");
+            salesDeliveryData.FnTrans();
+            if (dt.Rows.Count > 0)
+            {
+                string status = dt.Rows[0]["status"] + "";
+                if (status == "No Invoice")
+                {
+                    Sales_Invoice inv = new Sales_Invoice();
+                    inv.deliveryno = deliveryno;
+                    inv.ShowDialog();
+                }
+                else if (status == "Invoice Created")
+                {
+                    MessageBox.Show("Invocie is created already against this delivery Note " + deliveryno, "ALERT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

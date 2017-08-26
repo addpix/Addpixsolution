@@ -11,6 +11,7 @@ namespace Test.Master.Database
 {
     class SupplierData
     {
+        public string Supplierid { get; set; }
         public string SupplierName { get; set; }
         public string FullName { get; set; }
         public string Address { get; set; }
@@ -55,13 +56,56 @@ namespace Test.Master.Database
                 return new DataTable();
             }
         }
-        public void fnTransactionData()
+
+        public DataTable GetRow(String Sup_ID)
+        {
+            try
+            {
+                DataTable dtReturnTable = new DataTable();
+
+                Cmd = new SqlCommand("spSupplier", Con, Trans);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.AddWithValue("@OPERATION", "SR");
+                Cmd.Parameters.AddWithValue("@SUP_ID", Sup_ID);
+                SqlDataAdapter adp = new SqlDataAdapter(Cmd);
+
+                adp.Fill(dtReturnTable);
+                return dtReturnTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new DataTable();
+            }
+        }
+
+        public void DeleteData(String Value)
         {
             Cmd = new SqlCommand("spSupplier", Con, Trans);
 
             Cmd.CommandType = CommandType.StoredProcedure;
-            Cmd.Parameters.AddWithValue("@OPERATION", "I");
-            Cmd.Parameters.AddWithValue("@SUP_ID", "1000");
+            Cmd.Parameters.AddWithValue("@OPERATION", "D");
+            Cmd.Parameters.AddWithValue("@SUP_ID", Value);
+            Cmd.ExecuteNonQuery();
+        }
+
+        public void UpdateData(String Value)
+        {
+            Cmd = new SqlCommand("spSupplier", Con, Trans);
+
+            Cmd.CommandType = CommandType.StoredProcedure;
+            Cmd.Parameters.AddWithValue("@OPERATION", "U");
+            Cmd.Parameters.AddWithValue("@SUP_ID", Value);
+            Cmd.ExecuteNonQuery();
+        }
+
+        public void fnTransactionData(String Operation)
+        {
+            Cmd = new SqlCommand("spSupplier", Con, Trans);
+
+            Cmd.CommandType = CommandType.StoredProcedure;
+            Cmd.Parameters.AddWithValue("@OPERATION", Operation);
+            Cmd.Parameters.AddWithValue("@SUP_ID", Supplierid);
             Cmd.Parameters.AddWithValue("@NAME", SupplierName);
             Cmd.Parameters.AddWithValue("@FULL_NAME", FullName);
             Cmd.Parameters.AddWithValue("@ADDRESS", Address);
@@ -75,8 +119,49 @@ namespace Test.Master.Database
             Cmd.Parameters.AddWithValue("@CREDIT_LIMIT", CreditLimit);
             Cmd.Parameters.AddWithValue("@PAYMENT_DAYS", PaymentDays);
             Cmd.ExecuteNonQuery();
-
         }
+
+        public String GetMaxValue()
+        {
+            try
+            {
+                DataTable dtReturnTable = new DataTable();
+                Cmd = new SqlCommand("spSupplier", Con, Trans);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.AddWithValue("@OPERATION", "MAX");
+                SqlDataAdapter adp = new SqlDataAdapter(Cmd);
+
+                adp.Fill(dtReturnTable);
+                return dtReturnTable.Rows[0]["slno"] + "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public DataTable DistinctColumn(String SPName)
+        {
+            try
+            {
+                DataTable dtReturnTable = new DataTable();
+
+                Cmd = new SqlCommand(SPName, Con, Trans);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.AddWithValue("@OPERATION", "DISTINCT");
+                SqlDataAdapter adp = new SqlDataAdapter(Cmd);
+
+                adp.Fill(dtReturnTable);
+                return dtReturnTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new DataTable();
+            }
+        }
+
         public string FnTrans()
         {
             try

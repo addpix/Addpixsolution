@@ -30,16 +30,17 @@ namespace Test.Purchase.database
             connection.Open();
             transaction = connection.BeginTransaction();
         }
-        public void fnTransactionData()
+        public void fnTransactionData(String op,String coloumn)
         {
 
 
             command = new SqlCommand("spPurchaseRequest", connection, transaction);
 
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@OPERATION", "I");
+            command.Parameters.AddWithValue("@OPERATION",op);
             command.Parameters.AddWithValue("@datas", source1);
             command.Parameters.AddWithValue("@grd", source2);
+            command.Parameters.AddWithValue("@coloumn", coloumn);
             command.ExecuteNonQuery();
 
         }
@@ -87,6 +88,32 @@ namespace Test.Purchase.database
                 MessageBox.Show(ex.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return new DataTable();
             }
+
+
+
         }
+
+        public void updatStatus(string operation, string param1, string param2)
+        {
+
+            try
+            {
+                command = new SqlCommand("spPurchaseRequest", connection, transaction);
+
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@OPERATION", operation);
+                command.Parameters.AddWithValue("@coloumn", param1);
+                command.Parameters.AddWithValue("@value", param2);
+                command.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
+
+        }
+
     }
 }

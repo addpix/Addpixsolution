@@ -14,9 +14,11 @@ namespace Test
 {
     public partial class New_RFQ : DevExpress.XtraEditors.XtraForm
     {
-        public New_RFQ()
+        String no;
+        public New_RFQ(String no )
         {
             InitializeComponent();
+            this.no = no;
         }
         string vendorId1 = "", vendorId2 = "", vendorId3 = "";
 
@@ -35,10 +37,14 @@ namespace Test
             if (dt1.Rows.Count > 0)
             {
                 int number = Convert.ToInt32(dt1.Rows[0]["number"].ToString()) + 1;
-                txtRFQNO.Text = "RFQ" + number;
+                string invoiceno = number + "";
+                txtRFQNO.Text = "RFQ-NO:" + invoiceno.PadLeft(5, '0');
+                
             }
 
-            dt.Columns.Add("No", Type.GetType("System.Int32"));
+
+
+            dt.Columns.Add("slno", Type.GetType("System.Int32"));
             dt.Columns.Add("description", Type.GetType("System.String"));
             dt.Columns.Add("brand", Type.GetType("System.String"));
             dt.Columns.Add("quantity", Type.GetType("System.Int32"));
@@ -57,9 +63,22 @@ namespace Test
                 cmbVendor2.Properties.Items.Add(dr1["name"] + "");
                 cmbVendor3.Properties.Items.Add(dr1["name"] + "");
             }
-
-
+          
             String res = pr.FnTrans();
+
+            Test.Purchase.database.PurchaseRequest pr1 = new Purchase.database.PurchaseRequest();
+            pr1.FnConn();
+            DataTable dtd = pr1.FillData("updatedata", no);
+            DataTable dtg = pr1.FillData("updategrd", no);
+
+            gridControl1.DataSource = dtg;
+            txtPO.Text = dtd.Rows[0]["prNo"].ToString();
+            Test.Commen_Form.Functions.DateConverter c = new Commen_Form.Functions.DateConverter();
+            dateRFQdate.EditValue = c.dateconverter(dtd.Rows[0]["date"]+"");
+            txtLocation.Text = dtd.Rows[0]["location"] + "";
+
+
+
         }
 
        
@@ -87,7 +106,7 @@ namespace Test
                 int slno = gridView1.GetFocusedDataSourceRowIndex();
                 Test.Purchase.database.Rfq po = new Purchase.database.Rfq();
                 System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
-                row["No"] = (slno + 1) + "";
+                row["slno"] = (slno + 1) + "";
 
 
 
@@ -159,12 +178,12 @@ namespace Test
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            btnSave.Enabled = false;
             gridControl1.RefreshDataSource();
             DataTable source = gridControl1.DataSource as DataTable;
 
             DataTable dt = new DataTable();
             dt.Clear();
-            dt.Columns.Add("slno");
             dt.Columns.Add("RFQNo");
             dt.Columns.Add("ourchaseOrderNo");
             dt.Columns.Add("date");
@@ -181,11 +200,29 @@ namespace Test
             dt.Columns.Add("vendoeId1");
             dt.Columns.Add("vendoeId2");
             dt.Columns.Add("vendoeId3");
-            dt.Rows.Add(new object[] { "11", txtRFQNO.Text, txtPO.Text, dateRFQdate.Text, txtRequster.Text,cmbVendor1.Text,txtAddress1.Text,txtPh1.Text,cmbVendor2.Text,txtAddress2.Text,txtPh2.Text,cmbVendor3.Text,txtAddress3.Text,txtPh3.Text,vendorId1,vendorId2,vendorId3 });
+            dt.Columns.Add("location");
+            dt.Columns.Add("ststus");
+            dt.Rows.Add(new object[] { txtRFQNO.Text, txtPO.Text, dateRFQdate.Text, txtRequster.Text,cmbVendor1.Text,txtAddress1.Text,txtPh1.Text,cmbVendor2.Text,txtAddress2.Text,txtPh2.Text,cmbVendor3.Text,txtAddress3.Text,txtPh3.Text,vendorId1,vendorId2,vendorId3,txtLocation.Text,"RFQ Created" });
             Test.Purchase.database.Rfq rfq = new Purchase.database.Rfq(source, dt);
             rfq.FnConn();
             rfq.fnTransactionData();
             rfq.FnTrans();
+            MessageBox.Show("Request for Quotation Created.", "ALERT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            Test.Purchase.database.PurchaseRequest purchase = new Purchase.database.PurchaseRequest(source, dt);
+            purchase.FnConn();
+            purchase.updatStatus("updateStatus", txtPO.Text, "RFQ ISSUED");
+            purchase.FnTrans();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtRequster_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void cmbVendor2_SelectedIndexChanged(object sender, EventArgs e)

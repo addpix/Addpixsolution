@@ -30,5 +30,10 @@ namespace Test
             a.Show();
             
         }
+
+        private void tileNavPane1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

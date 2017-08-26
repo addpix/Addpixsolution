@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sales_Quotation));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -128,53 +129,82 @@
             this.bar2.DockRow = 0;
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem4),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem6),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem2, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem3, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem4, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem6, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem5, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.bar2.OptionsBar.AllowQuickCustomization = false;
+            this.bar2.OptionsBar.DrawDragBorder = false;
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
             // 
             // barButtonItem1
             // 
+            this.barButtonItem1.Border = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.barButtonItem1.Caption = "Save";
+            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
             this.barButtonItem1.Id = 0;
+            this.barButtonItem1.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F1);
+            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem2
             // 
+            this.barButtonItem2.Border = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.barButtonItem2.Caption = "Print";
+            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
             this.barButtonItem2.Id = 1;
+            this.barButtonItem2.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F2);
+            this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
             this.barButtonItem2.Name = "barButtonItem2";
             // 
             // barButtonItem3
             // 
+            this.barButtonItem3.Border = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.barButtonItem3.Caption = "New";
+            this.barButtonItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.Glyph")));
             this.barButtonItem3.Id = 2;
+            this.barButtonItem3.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F3);
+            this.barButtonItem3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.LargeGlyph")));
             this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barButtonItem4
             // 
+            this.barButtonItem4.Border = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.barButtonItem4.Caption = "Customer";
+            this.barButtonItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.Glyph")));
             this.barButtonItem4.Id = 3;
+            this.barButtonItem4.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C));
+            this.barButtonItem4.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.LargeGlyph")));
             this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // barButtonItem6
             // 
+            this.barButtonItem6.Border = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.barButtonItem6.Caption = "View";
+            this.barButtonItem6.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.Glyph")));
             this.barButtonItem6.Id = 5;
+            this.barButtonItem6.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V));
+            this.barButtonItem6.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.LargeGlyph")));
             this.barButtonItem6.Name = "barButtonItem6";
             this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
             // 
             // barButtonItem5
             // 
+            this.barButtonItem5.Border = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.barButtonItem5.Caption = "Exit";
+            this.barButtonItem5.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.Glyph")));
             this.barButtonItem5.Id = 4;
+            this.barButtonItem5.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E));
+            this.barButtonItem5.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.LargeGlyph")));
             this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
             // bar3
             // 
@@ -193,7 +223,7 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(747, 22);
+            this.barDockControlTop.Size = new System.Drawing.Size(747, 26);
             // 
             // barDockControlBottom
             // 
@@ -206,15 +236,15 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 22);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 450);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 26);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 446);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(747, 22);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 450);
+            this.barDockControlRight.Location = new System.Drawing.Point(747, 26);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 446);
             // 
             // layoutControl1
             // 
@@ -225,7 +255,7 @@
             this.layoutControl1.Controls.Add(this.dtpdate);
             this.layoutControl1.Controls.Add(this.txtquatationnno);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 22);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 26);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(747, 120);
@@ -242,37 +272,38 @@
             // 
             // cmbcustomer
             // 
-            this.cmbcustomer.Location = new System.Drawing.Point(74, 12);
+            this.cmbcustomer.Location = new System.Drawing.Point(83, 12);
             this.cmbcustomer.MenuManager = this.barManager1;
             this.cmbcustomer.Name = "cmbcustomer";
             this.cmbcustomer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbcustomer.Size = new System.Drawing.Size(203, 20);
+            this.cmbcustomer.Size = new System.Drawing.Size(194, 20);
             this.cmbcustomer.StyleController = this.layoutControl1;
             this.cmbcustomer.TabIndex = 9;
+            this.cmbcustomer.SelectedIndexChanged += new System.EventHandler(this.cmbcustomer_SelectedIndexChanged);
             // 
             // txtphone
             // 
-            this.txtphone.Location = new System.Drawing.Point(74, 88);
+            this.txtphone.Location = new System.Drawing.Point(83, 88);
             this.txtphone.MenuManager = this.barManager1;
             this.txtphone.Name = "txtphone";
-            this.txtphone.Size = new System.Drawing.Size(203, 20);
+            this.txtphone.Size = new System.Drawing.Size(194, 20);
             this.txtphone.StyleController = this.layoutControl1;
             this.txtphone.TabIndex = 8;
             // 
             // txtaddress
             // 
-            this.txtaddress.Location = new System.Drawing.Point(74, 36);
+            this.txtaddress.Location = new System.Drawing.Point(83, 36);
             this.txtaddress.MenuManager = this.barManager1;
             this.txtaddress.Name = "txtaddress";
-            this.txtaddress.Size = new System.Drawing.Size(203, 48);
+            this.txtaddress.Size = new System.Drawing.Size(194, 48);
             this.txtaddress.StyleController = this.layoutControl1;
             this.txtaddress.TabIndex = 7;
             // 
             // dtpdate
             // 
             this.dtpdate.EditValue = null;
-            this.dtpdate.Location = new System.Drawing.Point(656, 36);
+            this.dtpdate.Location = new System.Drawing.Point(665, 36);
             this.dtpdate.MenuManager = this.barManager1;
             this.dtpdate.Name = "dtpdate";
             this.dtpdate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -284,16 +315,19 @@
             this.dtpdate.Properties.EditFormat.FormatString = "yyyy/MM/dd";
             this.dtpdate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.dtpdate.Properties.Mask.EditMask = "yyyy/MM/dd";
-            this.dtpdate.Size = new System.Drawing.Size(79, 20);
+            this.dtpdate.Size = new System.Drawing.Size(70, 20);
             this.dtpdate.StyleController = this.layoutControl1;
             this.dtpdate.TabIndex = 6;
             // 
             // txtquatationnno
             // 
-            this.txtquatationnno.Location = new System.Drawing.Point(656, 12);
+            this.txtquatationnno.Location = new System.Drawing.Point(665, 12);
             this.txtquatationnno.MenuManager = this.barManager1;
             this.txtquatationnno.Name = "txtquatationnno";
-            this.txtquatationnno.Size = new System.Drawing.Size(79, 20);
+            this.txtquatationnno.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtquatationnno.Properties.Appearance.Options.UseFont = true;
+            this.txtquatationnno.Properties.ReadOnly = true;
+            this.txtquatationnno.Size = new System.Drawing.Size(70, 20);
             this.txtquatationnno.StyleController = this.layoutControl1;
             this.txtquatationnno.TabIndex = 5;
             // 
@@ -315,12 +349,14 @@
             // 
             // layoutControlItem2
             // 
+            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem2.Control = this.txtquatationnno;
             this.layoutControlItem2.Location = new System.Drawing.Point(582, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(145, 24);
-            this.layoutControlItem2.Text = "Quatation #";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(59, 13);
+            this.layoutControlItem2.Text = "Quotation #";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(68, 13);
             // 
             // layoutControlItem3
             // 
@@ -329,7 +365,7 @@
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(145, 76);
             this.layoutControlItem3.Text = "Date";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(59, 13);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(68, 13);
             // 
             // layoutControlItem4
             // 
@@ -338,7 +374,7 @@
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(269, 52);
             this.layoutControlItem4.Text = "Address";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(59, 13);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(68, 13);
             // 
             // layoutControlItem5
             // 
@@ -347,7 +383,7 @@
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(269, 24);
             this.layoutControlItem5.Text = "Phone No";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(59, 13);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(68, 13);
             // 
             // layoutControlItem1
             // 
@@ -356,7 +392,7 @@
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(269, 24);
             this.layoutControlItem1.Text = "Customer";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(59, 13);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(68, 13);
             // 
             // layoutControlItem7
             // 
@@ -373,16 +409,16 @@
             this.layoutControl2.Controls.Add(this.txtnetamount);
             this.layoutControl2.Controls.Add(this.gridControl1);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl2.Location = new System.Drawing.Point(0, 142);
+            this.layoutControl2.Location = new System.Drawing.Point(0, 146);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(747, 330);
+            this.layoutControl2.Size = new System.Drawing.Size(747, 326);
             this.layoutControl2.TabIndex = 9;
             this.layoutControl2.Text = "layoutControl2";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(12, 298);
+            this.labelControl2.Location = new System.Drawing.Point(12, 294);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(577, 13);
             this.labelControl2.StyleController = this.layoutControl2;
@@ -390,10 +426,13 @@
             // 
             // txtnetamount
             // 
-            this.txtnetamount.Location = new System.Drawing.Point(653, 298);
+            this.txtnetamount.Location = new System.Drawing.Point(663, 294);
             this.txtnetamount.MenuManager = this.barManager1;
             this.txtnetamount.Name = "txtnetamount";
-            this.txtnetamount.Size = new System.Drawing.Size(82, 20);
+            this.txtnetamount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnetamount.Properties.Appearance.Options.UseFont = true;
+            this.txtnetamount.Properties.ReadOnly = true;
+            this.txtnetamount.Size = new System.Drawing.Size(72, 20);
             this.txtnetamount.StyleController = this.layoutControl2;
             this.txtnetamount.TabIndex = 5;
             // 
@@ -403,7 +442,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(723, 282);
+            this.gridControl1.Size = new System.Drawing.Size(723, 278);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -422,6 +461,10 @@
             this.totalamount});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsNavigation.AutoFocusNewRow = true;
+            this.gridView1.OptionsNavigation.EnterMoveNextColumn = true;
+            this.gridView1.OptionsNavigation.UseOfficePageNavigation = false;
+            this.gridView1.OptionsNavigation.UseTabKey = false;
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.HiddenEditor += new System.EventHandler(this.gridView1_HiddenEditor);
@@ -430,96 +473,206 @@
             // 
             // slno
             // 
-            this.slno.Caption = "#";
+            this.slno.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slno.AppearanceHeader.Options.UseFont = true;
+            this.slno.AppearanceHeader.Options.UseTextOptions = true;
+            this.slno.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.slno.Caption = "Sl No";
             this.slno.FieldName = "slno";
             this.slno.Name = "slno";
+            this.slno.OptionsColumn.AllowFocus = false;
             this.slno.OptionsColumn.AllowMove = false;
             this.slno.OptionsColumn.AllowSize = false;
+            this.slno.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.slno.OptionsColumn.FixedWidth = true;
+            this.slno.OptionsFilter.AllowAutoFilter = false;
+            this.slno.OptionsFilter.AllowFilter = false;
+            this.slno.OptionsFilter.AllowFilterModeChanging = DevExpress.Utils.DefaultBoolean.False;
+            this.slno.OptionsFilter.FilterBySortField = DevExpress.Utils.DefaultBoolean.False;
+            this.slno.OptionsFilter.ImmediateUpdateAutoFilter = false;
+            this.slno.OptionsFilter.ImmediateUpdatePopupDateFilterOnCheck = DevExpress.Utils.DefaultBoolean.False;
+            this.slno.OptionsFilter.ImmediateUpdatePopupDateFilterOnDateChange = DevExpress.Utils.DefaultBoolean.False;
+            this.slno.OptionsFilter.ShowBlanksFilterItems = DevExpress.Utils.DefaultBoolean.False;
             this.slno.Visible = true;
             this.slno.VisibleIndex = 0;
             this.slno.Width = 30;
             // 
             // barcode
             // 
+            this.barcode.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barcode.AppearanceHeader.Options.UseFont = true;
+            this.barcode.AppearanceHeader.Options.UseTextOptions = true;
+            this.barcode.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.barcode.Caption = "Barcode";
             this.barcode.FieldName = "barcode";
             this.barcode.Name = "barcode";
             this.barcode.OptionsColumn.AllowMove = false;
             this.barcode.OptionsColumn.AllowSize = false;
+            this.barcode.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.barcode.OptionsColumn.FixedWidth = true;
+            this.barcode.OptionsFilter.AllowAutoFilter = false;
+            this.barcode.OptionsFilter.AllowFilter = false;
+            this.barcode.OptionsFilter.AllowFilterModeChanging = DevExpress.Utils.DefaultBoolean.False;
+            this.barcode.OptionsFilter.FilterBySortField = DevExpress.Utils.DefaultBoolean.False;
+            this.barcode.OptionsFilter.ImmediateUpdateAutoFilter = false;
+            this.barcode.OptionsFilter.ImmediateUpdatePopupDateFilterOnCheck = DevExpress.Utils.DefaultBoolean.False;
+            this.barcode.OptionsFilter.ImmediateUpdatePopupDateFilterOnDateChange = DevExpress.Utils.DefaultBoolean.False;
+            this.barcode.OptionsFilter.ShowBlanksFilterItems = DevExpress.Utils.DefaultBoolean.False;
             this.barcode.Visible = true;
             this.barcode.VisibleIndex = 1;
-            this.barcode.Width = 60;
             // 
             // itemcode
             // 
+            this.itemcode.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemcode.AppearanceHeader.Options.UseFont = true;
+            this.itemcode.AppearanceHeader.Options.UseTextOptions = true;
+            this.itemcode.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.itemcode.Caption = "Item Code";
             this.itemcode.FieldName = "itemcode";
             this.itemcode.Name = "itemcode";
+            this.itemcode.OptionsColumn.AllowFocus = false;
             this.itemcode.OptionsColumn.AllowMove = false;
             this.itemcode.OptionsColumn.AllowSize = false;
+            this.itemcode.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.itemcode.OptionsColumn.FixedWidth = true;
-            this.itemcode.Visible = true;
-            this.itemcode.VisibleIndex = 2;
+            this.itemcode.OptionsFilter.AllowAutoFilter = false;
+            this.itemcode.OptionsFilter.AllowFilter = false;
+            this.itemcode.OptionsFilter.AllowFilterModeChanging = DevExpress.Utils.DefaultBoolean.False;
+            this.itemcode.OptionsFilter.FilterBySortField = DevExpress.Utils.DefaultBoolean.False;
+            this.itemcode.OptionsFilter.ImmediateUpdateAutoFilter = false;
+            this.itemcode.OptionsFilter.ImmediateUpdatePopupDateFilterOnCheck = DevExpress.Utils.DefaultBoolean.False;
+            this.itemcode.OptionsFilter.ImmediateUpdatePopupDateFilterOnDateChange = DevExpress.Utils.DefaultBoolean.False;
+            this.itemcode.OptionsFilter.ShowBlanksFilterItems = DevExpress.Utils.DefaultBoolean.False;
             this.itemcode.Width = 60;
             // 
             // description
             // 
+            this.description.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.description.AppearanceHeader.Options.UseFont = true;
+            this.description.AppearanceHeader.Options.UseTextOptions = true;
+            this.description.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.description.Caption = "Descriptions";
             this.description.FieldName = "description";
             this.description.Name = "description";
             this.description.OptionsColumn.AllowMove = false;
             this.description.OptionsColumn.AllowSize = false;
+            this.description.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.description.OptionsColumn.FixedWidth = true;
+            this.description.OptionsFilter.AllowAutoFilter = false;
+            this.description.OptionsFilter.AllowFilter = false;
+            this.description.OptionsFilter.AllowFilterModeChanging = DevExpress.Utils.DefaultBoolean.False;
+            this.description.OptionsFilter.FilterBySortField = DevExpress.Utils.DefaultBoolean.False;
+            this.description.OptionsFilter.ImmediateUpdateAutoFilter = false;
+            this.description.OptionsFilter.ImmediateUpdatePopupDateFilterOnCheck = DevExpress.Utils.DefaultBoolean.False;
+            this.description.OptionsFilter.ImmediateUpdatePopupDateFilterOnDateChange = DevExpress.Utils.DefaultBoolean.False;
+            this.description.OptionsFilter.ShowBlanksFilterItems = DevExpress.Utils.DefaultBoolean.False;
             this.description.Visible = true;
-            this.description.VisibleIndex = 3;
+            this.description.VisibleIndex = 2;
             this.description.Width = 200;
             // 
             // brandname
             // 
+            this.brandname.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brandname.AppearanceHeader.Options.UseFont = true;
+            this.brandname.AppearanceHeader.Options.UseTextOptions = true;
+            this.brandname.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.brandname.Caption = "Brand Name";
             this.brandname.FieldName = "brandName";
             this.brandname.Name = "brandname";
+            this.brandname.OptionsColumn.AllowFocus = false;
             this.brandname.OptionsColumn.AllowMove = false;
             this.brandname.OptionsColumn.AllowSize = false;
+            this.brandname.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.brandname.OptionsColumn.FixedWidth = true;
+            this.brandname.OptionsFilter.AllowAutoFilter = false;
+            this.brandname.OptionsFilter.AllowFilter = false;
+            this.brandname.OptionsFilter.AllowFilterModeChanging = DevExpress.Utils.DefaultBoolean.False;
+            this.brandname.OptionsFilter.FilterBySortField = DevExpress.Utils.DefaultBoolean.False;
+            this.brandname.OptionsFilter.ImmediateUpdateAutoFilter = false;
+            this.brandname.OptionsFilter.ImmediateUpdatePopupDateFilterOnCheck = DevExpress.Utils.DefaultBoolean.False;
+            this.brandname.OptionsFilter.ImmediateUpdatePopupDateFilterOnDateChange = DevExpress.Utils.DefaultBoolean.False;
+            this.brandname.OptionsFilter.ShowBlanksFilterItems = DevExpress.Utils.DefaultBoolean.False;
             this.brandname.Visible = true;
-            this.brandname.VisibleIndex = 4;
+            this.brandname.VisibleIndex = 3;
             this.brandname.Width = 200;
             // 
             // quantity
             // 
+            this.quantity.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantity.AppearanceHeader.Options.UseFont = true;
+            this.quantity.AppearanceHeader.Options.UseTextOptions = true;
+            this.quantity.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.quantity.Caption = "Quantity";
             this.quantity.FieldName = "quantity";
             this.quantity.Name = "quantity";
             this.quantity.OptionsColumn.AllowMove = false;
             this.quantity.OptionsColumn.AllowSize = false;
+            this.quantity.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.quantity.OptionsColumn.FixedWidth = true;
+            this.quantity.OptionsFilter.AllowAutoFilter = false;
+            this.quantity.OptionsFilter.AllowFilter = false;
+            this.quantity.OptionsFilter.AllowFilterModeChanging = DevExpress.Utils.DefaultBoolean.False;
+            this.quantity.OptionsFilter.FilterBySortField = DevExpress.Utils.DefaultBoolean.False;
+            this.quantity.OptionsFilter.ImmediateUpdateAutoFilter = false;
+            this.quantity.OptionsFilter.ImmediateUpdatePopupDateFilterOnCheck = DevExpress.Utils.DefaultBoolean.False;
+            this.quantity.OptionsFilter.ImmediateUpdatePopupDateFilterOnDateChange = DevExpress.Utils.DefaultBoolean.False;
+            this.quantity.OptionsFilter.ShowBlanksFilterItems = DevExpress.Utils.DefaultBoolean.False;
             this.quantity.Visible = true;
-            this.quantity.VisibleIndex = 5;
+            this.quantity.VisibleIndex = 4;
             // 
             // unitprice
             // 
+            this.unitprice.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unitprice.AppearanceHeader.Options.UseFont = true;
+            this.unitprice.AppearanceHeader.Options.UseTextOptions = true;
+            this.unitprice.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.unitprice.Caption = "Unit Price";
+            this.unitprice.DisplayFormat.FormatString = "#.00";
+            this.unitprice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.unitprice.FieldName = "unitPrice";
             this.unitprice.Name = "unitprice";
+            this.unitprice.OptionsColumn.AllowFocus = false;
             this.unitprice.OptionsColumn.AllowMove = false;
             this.unitprice.OptionsColumn.AllowSize = false;
+            this.unitprice.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.unitprice.OptionsColumn.FixedWidth = true;
+            this.unitprice.OptionsFilter.AllowAutoFilter = false;
+            this.unitprice.OptionsFilter.AllowFilter = false;
+            this.unitprice.OptionsFilter.AllowFilterModeChanging = DevExpress.Utils.DefaultBoolean.False;
+            this.unitprice.OptionsFilter.FilterBySortField = DevExpress.Utils.DefaultBoolean.False;
+            this.unitprice.OptionsFilter.ImmediateUpdateAutoFilter = false;
+            this.unitprice.OptionsFilter.ImmediateUpdatePopupDateFilterOnCheck = DevExpress.Utils.DefaultBoolean.False;
+            this.unitprice.OptionsFilter.ImmediateUpdatePopupDateFilterOnDateChange = DevExpress.Utils.DefaultBoolean.False;
+            this.unitprice.OptionsFilter.ShowBlanksFilterItems = DevExpress.Utils.DefaultBoolean.False;
             this.unitprice.Visible = true;
-            this.unitprice.VisibleIndex = 6;
+            this.unitprice.VisibleIndex = 5;
             // 
             // totalamount
             // 
+            this.totalamount.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalamount.AppearanceHeader.Options.UseFont = true;
+            this.totalamount.AppearanceHeader.Options.UseTextOptions = true;
+            this.totalamount.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.totalamount.Caption = "Total Amount";
+            this.totalamount.DisplayFormat.FormatString = "#.00";
+            this.totalamount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.totalamount.FieldName = "totalAmount";
             this.totalamount.Name = "totalamount";
+            this.totalamount.OptionsColumn.AllowFocus = false;
             this.totalamount.OptionsColumn.AllowMove = false;
             this.totalamount.OptionsColumn.AllowSize = false;
+            this.totalamount.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.totalamount.OptionsColumn.FixedWidth = true;
+            this.totalamount.OptionsFilter.AllowAutoFilter = false;
+            this.totalamount.OptionsFilter.AllowFilter = false;
+            this.totalamount.OptionsFilter.AllowFilterModeChanging = DevExpress.Utils.DefaultBoolean.False;
+            this.totalamount.OptionsFilter.FilterBySortField = DevExpress.Utils.DefaultBoolean.False;
+            this.totalamount.OptionsFilter.ImmediateUpdateAutoFilter = false;
+            this.totalamount.OptionsFilter.ImmediateUpdatePopupDateFilterOnCheck = DevExpress.Utils.DefaultBoolean.False;
+            this.totalamount.OptionsFilter.ImmediateUpdatePopupDateFilterOnDateChange = DevExpress.Utils.DefaultBoolean.False;
+            this.totalamount.OptionsFilter.ShowBlanksFilterItems = DevExpress.Utils.DefaultBoolean.False;
             this.totalamount.Visible = true;
-            this.totalamount.VisibleIndex = 7;
+            this.totalamount.VisibleIndex = 6;
             // 
             // layoutControlGroup2
             // 
@@ -531,7 +684,7 @@
             this.layoutControlItem9});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(747, 330);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(747, 326);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem6
@@ -539,23 +692,25 @@
             this.layoutControlItem6.Control = this.gridControl1;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(727, 286);
+            this.layoutControlItem6.Size = new System.Drawing.Size(727, 282);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
             // layoutControlItem8
             // 
+            this.layoutControlItem8.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem8.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem8.Control = this.txtnetamount;
-            this.layoutControlItem8.Location = new System.Drawing.Point(581, 286);
+            this.layoutControlItem8.Location = new System.Drawing.Point(581, 282);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(146, 24);
             this.layoutControlItem8.Text = "Net Amount";
-            this.layoutControlItem8.TextSize = new System.Drawing.Size(57, 13);
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(67, 13);
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.labelControl2;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 286);
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 282);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(581, 24);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
@@ -574,7 +729,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "Sales_Quotation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sales_Quotation";
+            this.Text = "Sales Quotation";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Sales_Quotation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

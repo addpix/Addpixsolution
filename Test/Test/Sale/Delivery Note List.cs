@@ -38,5 +38,25 @@ namespace Test
         {
             loadData();
         }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            try
+            {
+                System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+                string deliveryNo = row["deliveryNo"].ToString();
+                Delivery_Note deliveryNote = new Delivery_Note();
+                deliveryNote.deliveryNoteNo = deliveryNo;
+                deliveryNote.ShowDialog();
+                loadData();
+
+            }
+            catch (Exception) { }
+        }
     }
 }

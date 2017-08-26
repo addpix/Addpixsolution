@@ -21,13 +21,15 @@ namespace Test
 
         private void New_Lost_Load(object sender, EventArgs e)
         {
+            dtpdate.EditValue = DateTime.Now;
             Purchase.database.DamageData damageData = new Purchase.database.DamageData();
             damageData.FnConn();
             DataTable dt1 = damageData.FillData("M", "", "spLost");
             if (dt1.Rows.Count > 0)
             {
                 int slno = Convert.ToInt32(dt1.Rows[0][0].ToString()) + 1;
-                txtlostno.Text = "Ls000" + slno;
+                string no = slno + "";
+                txtlostno.Text = "LS"+no.PadLeft(5,'0');
             }
             DataTable dt = new DataTable();
             dt.Columns.Add("slno", Type.GetType("System.Int32"));
@@ -220,6 +222,35 @@ namespace Test
                     return;
                 }
             }
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                DataTable source = gridControl1.DataSource as DataTable;
+                source.Clear();
+                gridControl1.DataSource = source;
+                dtpdate.EditValue = DateTime.Now;
+                Purchase.database.DamageData damageData = new Purchase.database.DamageData();
+                damageData.FnConn();
+                DataTable dt1 = damageData.FillData("M", "", "spLost");
+                damageData.FnTrans();
+                if (dt1.Rows.Count > 0)
+                {
+                    int slno = Convert.ToInt32(dt1.Rows[0][0].ToString()) + 1;
+                    string no = slno + "";
+                    txtlostno.Text = "LS" + no.PadLeft(5, '0');
+                }
+                txtremark.Text = "";
+                txtuser.Text = "";
+            }
+            catch (Exception ex) { }
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
         }
     }
 }

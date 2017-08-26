@@ -88,7 +88,28 @@ namespace Test.Inventory.Database
             }
         }
 
-        public DataTable GetRow(String ColumnName, String ColumnValue)
+        public String GetMaxValue()
+        {
+            try
+            {
+                DataTable dtReturnTable = new DataTable();
+                Cmd = new SqlCommand("spProduct", Con, Trans);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.AddWithValue("@OPERATION", "MAX");
+                SqlDataAdapter adp = new SqlDataAdapter(Cmd);
+
+                adp.Fill(dtReturnTable);
+                return dtReturnTable.Rows[0]["productCode"] + "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+
+        public DataTable GetRow(String Value)
         {
             try
             {
@@ -96,9 +117,8 @@ namespace Test.Inventory.Database
 
                 Cmd = new SqlCommand("spProduct", Con, Trans);
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.Parameters.AddWithValue("@OPERATION", "SW");
-                Cmd.Parameters.AddWithValue("@COLUMN_NAME", ColumnName);
-                Cmd.Parameters.AddWithValue("@COLUMN_VALUE", ColumnValue);
+                Cmd.Parameters.AddWithValue("@OPERATION", "SR");
+                Cmd.Parameters.AddWithValue("@PRODUCT_CODE", Value);
                 SqlDataAdapter adp = new SqlDataAdapter(Cmd);
 
                 adp.Fill(dtReturnTable);
@@ -110,13 +130,23 @@ namespace Test.Inventory.Database
                 return new DataTable();
             }
         }
+        
+        public void DeleteData(String Value)
+        {
+            Cmd = new SqlCommand("spProduct", Con, Trans);
 
-        public void fnTransactionData()
+            Cmd.CommandType = CommandType.StoredProcedure;
+            Cmd.Parameters.AddWithValue("@OPERATION", "D");
+            Cmd.Parameters.AddWithValue("@PRODUCT_CODE", Value);
+            Cmd.ExecuteNonQuery();
+        }
+
+        public void fnTransactionData(String Operation)
         {
             Cmd = new SqlCommand("spProduct", Con, Trans);
             Cmd.CommandType = CommandType.StoredProcedure;
 
-            Cmd.Parameters.AddWithValue("@OPERATION", "I");
+            Cmd.Parameters.AddWithValue("@OPERATION", Operation);
             Cmd.Parameters.AddWithValue("@PRODUCT_CODE", ProdCode);
             Cmd.Parameters.AddWithValue("@QR_CODE", QRCode);
             Cmd.Parameters.AddWithValue("@ITEM_NAME", ItemName);

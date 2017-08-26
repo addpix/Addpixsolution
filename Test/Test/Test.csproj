@@ -35,6 +35,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.BonusSkins.v15.1" />
     <Reference Include="DevExpress.Data.v15.1" />
     <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -56,6 +59,7 @@
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Security" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -83,6 +87,97 @@
     </Compile>
     <Compile Include="Accounts\Contra Voucher.Designer.cs">
       <DependentUpon>Contra Voucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commen Form\Functions\DateConverter.cs" />
+    <Compile Include="Company Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company Registration.designer.cs">
+      <DependentUpon>Company Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CR-Barcode.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR-Barcode.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR-MRR.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR-MRR.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR-PurchaseItemDamage.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR-PurchaseItemDamage.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR-PurchaseItemLost.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR-PurchaseItemLost.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR-PurchaseOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR-PurchaseOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR-PurchaseQuatation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR-PurchaseQuatation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR-PurchaseRequst.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR-PurchaseRequst.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR-SalarySlip.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR-SalarySlip.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR-SalesDeliveryNote.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR-SalesDeliveryNote.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR-SalesInvoiceNormal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR-SalesInvoiceNormal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR-SalesInvoiceQuatation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR-SalesInvoiceQuatation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR-SalesInvoiceThermal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR-SalesInvoiceThermal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR-WarentyClaim.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR-WarentyClaim.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Create Location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create Location.Designer.cs">
+      <DependentUpon>Create Location.cs</DependentUpon>
     </Compile>
     <Compile Include="Hr\Employee Right.cs">
       <SubType>Form</SubType>
@@ -224,6 +319,37 @@
     </Compile>
     <Compile Include="Master\Database\CustomerData.cs" />
     <Compile Include="Master\Database\SupplierData.cs" />
+    <Compile Include="Inventory\Meterial Reciept Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\Meterial Reciept Report.Designer.cs">
+      <DependentUpon>Meterial Reciept Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\database\discountData.cs" />
+    <Compile Include="Purchase\Price Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\Price Update.designer.cs">
+      <DependentUpon>Price Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\Item Filter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\Item Filter.designer.cs">
+      <DependentUpon>Item Filter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\Proforma Invoice List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\Proforma Invoice List.designer.cs">
+      <DependentUpon>Proforma Invoice List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\Proforma Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\Proforma Invoice.designer.cs">
+      <DependentUpon>Proforma Invoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Purchase\Create Barcode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,9 +373,17 @@
     <Compile Include="Purchase\Product List.designer.cs">
       <DependentUpon>Product List.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchase\Requst for Quatation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requst for Quatation.Designer.cs">
+      <DependentUpon>Requst for Quatation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\Database\PerformanceInvoiceData.cs" />
     <Compile Include="Sale\Database\QuatationData.cs" />
     <Compile Include="Sale\Database\SalesData.cs" />
     <Compile Include="Sale\Database\SalesDeliveryData.cs" />
+    <Compile Include="Sale\Database\SalesReturnData.cs" />
     <Compile Include="Sale\Database\WarrantyClameData.cs" />
     <Compile Include="Sale\Delivery Note List.cs">
       <SubType>Form</SubType>
@@ -347,12 +481,6 @@
     <Compile Include="Inventory\Meterial Receipt Report.Designer.cs">
       <DependentUpon>Meterial Receipt Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventory\MRR.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inventory\MRR.Designer.cs">
-      <DependentUpon>MRR.cs</DependentUpon>
-    </Compile>
     <Compile Include="Master\New Supplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -414,12 +542,6 @@
     </Compile>
     <Compile Include="Commen Form\Purchase Requst.Designer.cs">
       <DependentUpon>Purchase Requst.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Purchase\RFQ.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Purchase\RFQ.Designer.cs">
-      <DependentUpon>RFQ.cs</DependentUpon>
     </Compile>
     <Compile Include="Sale\Sales Invoice View.cs">
       <SubType>Form</SubType>
@@ -502,6 +624,64 @@
     <EmbeddedResource Include="Accounts\Contra Voucher.resx">
       <DependentUpon>Contra Voucher.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Company Registration.resx">
+      <DependentUpon>Company Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR-Barcode.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR-Barcode.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR-MRR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR-MRR.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR-PurchaseItemDamage.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR-PurchaseItemDamage.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR-PurchaseItemLost.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR-PurchaseItemLost.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR-PurchaseOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR-PurchaseOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR-PurchaseQuatation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR-PurchaseQuatation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR-PurchaseRequst.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR-PurchaseRequst.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR-SalarySlip.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR-SalarySlip.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR-SalesDeliveryNote.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR-SalesDeliveryNote.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR-SalesInvoiceNormal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR-SalesInvoiceNormal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR-SalesInvoiceQuatation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR-SalesInvoiceQuatation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR-SalesInvoiceThermal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR-SalesInvoiceThermal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR-WarentyClaim.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR-WarentyClaim.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create Location.resx">
+      <DependentUpon>Create Location.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hr\Employee Right.resx">
       <DependentUpon>Employee Right.cs</DependentUpon>
     </EmbeddedResource>
@@ -562,6 +742,21 @@
     <EmbeddedResource Include="Accounts\Receipt Voucher.resx">
       <DependentUpon>Receipt Voucher.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Meterial Reciept Report.resx">
+      <DependentUpon>Meterial Reciept Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\Price Update.resx">
+      <DependentUpon>Price Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Item Filter.resx">
+      <DependentUpon>Item Filter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Proforma Invoice List.resx">
+      <DependentUpon>Proforma Invoice List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\Proforma Invoice.resx">
+      <DependentUpon>Proforma Invoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Purchase\Create Barcode.resx">
       <DependentUpon>Create Barcode.cs</DependentUpon>
     </EmbeddedResource>
@@ -570,6 +765,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Purchase\Product List.resx">
       <DependentUpon>Product List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\Requst for Quatation.resx">
+      <DependentUpon>Requst for Quatation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sale\Delivery Note List.resx">
       <DependentUpon>Delivery Note List.cs</DependentUpon>
@@ -619,9 +817,6 @@
     <EmbeddedResource Include="Inventory\Meterial Receipt Report.resx">
       <DependentUpon>Meterial Receipt Report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\MRR.resx">
-      <DependentUpon>MRR.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Master\New Supplier.resx">
       <DependentUpon>New Supplier.cs</DependentUpon>
     </EmbeddedResource>
@@ -662,9 +857,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Commen Form\Purchase Requst.resx">
       <DependentUpon>Purchase Requst.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Purchase\RFQ.resx">
-      <DependentUpon>RFQ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sale\Sales Invoice View.resx">
       <DependentUpon>Sales Invoice View.cs</DependentUpon>
@@ -716,7 +908,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Print\" />
     <Folder Include="Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
